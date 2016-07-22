@@ -16,6 +16,11 @@
 		E8ACFAFB1D41D4B9004F4C50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFAF91D41D4B9004F4C50 /* LaunchScreen.storyboard */; };
 		E8ACFB061D41D4BA004F4C50 /* SpaceEliteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB051D41D4BA004F4C50 /* SpaceEliteTests.swift */; };
 		E8ACFB111D41D4BA004F4C50 /* SpaceEliteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB101D41D4BA004F4C50 /* SpaceEliteUITests.swift */; };
+		E8ACFB241D41DBE5004F4C50 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB231D41DBE5004F4C50 /* MenuScene.swift */; };
+		E8ACFB261D41DBF6004F4C50 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFB251D41DBF6004F4C50 /* MenuScene.sks */; };
+		E8ACFB291D41DF75004F4C50 /* MenuBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB281D41DF75004F4C50 /* MenuBackground.swift */; };
+		E8ACFB2C1D41E9CC004F4C50 /* MenuButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB2B1D41E9CC004F4C50 /* MenuButtons.swift */; };
+		E8ACFB301D41F1DF004F4C50 /* MenuLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB2F1D41F1DF004F4C50 /* MenuLabels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		E8ACFB0C1D41D4BA004F4C50 /* SpaceEliteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceEliteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8ACFB101D41D4BA004F4C50 /* SpaceEliteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceEliteUITests.swift; sourceTree = "<group>"; };
 		E8ACFB121D41D4BA004F4C50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8ACFB231D41DBE5004F4C50 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		E8ACFB251D41DBF6004F4C50 /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
+		E8ACFB281D41DF75004F4C50 /* MenuBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBackground.swift; sourceTree = "<group>"; };
+		E8ACFB2B1D41E9CC004F4C50 /* MenuButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButtons.swift; sourceTree = "<group>"; };
+		E8ACFB2F1D41F1DF004F4C50 /* MenuLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuLabels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,7 @@
 		E8ACFAEB1D41D4B9004F4C50 /* SpaceElite */ = {
 			isa = PBXGroup;
 			children = (
+				E8ACFB1E1D41DB8B004F4C50 /* Views */,
 				E8ACFAEC1D41D4B9004F4C50 /* AppDelegate.swift */,
 				E8ACFAEE1D41D4B9004F4C50 /* GameScene.sks */,
 				E8ACFAF01D41D4B9004F4C50 /* GameScene.swift */,
@@ -129,6 +140,50 @@
 				E8ACFB121D41D4BA004F4C50 /* Info.plist */,
 			);
 			path = SpaceEliteUITests;
+			sourceTree = "<group>";
+		};
+		E8ACFB1E1D41DB8B004F4C50 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACFB2D1D41EA33004F4C50 /* Menu */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E8ACFB271D41DF2B004F4C50 /* background */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACFB281D41DF75004F4C50 /* MenuBackground.swift */,
+			);
+			name = background;
+			sourceTree = "<group>";
+		};
+		E8ACFB2A1D41E995004F4C50 /* buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACFB2B1D41E9CC004F4C50 /* MenuButtons.swift */,
+			);
+			name = buttons;
+			sourceTree = "<group>";
+		};
+		E8ACFB2D1D41EA33004F4C50 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACFB231D41DBE5004F4C50 /* MenuScene.swift */,
+				E8ACFB251D41DBF6004F4C50 /* MenuScene.sks */,
+				E8ACFB271D41DF2B004F4C50 /* background */,
+				E8ACFB2A1D41E995004F4C50 /* buttons */,
+				E8ACFB2E1D41F1CC004F4C50 /* labels */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		E8ACFB2E1D41F1CC004F4C50 /* labels */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACFB2F1D41F1DF004F4C50 /* MenuLabels.swift */,
+			);
+			name = labels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +254,7 @@
 				TargetAttributes = {
 					E8ACFAE81D41D4B9004F4C50 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8X8LQ28Y8R;
 					};
 					E8ACFB001D41D4BA004F4C50 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -238,6 +294,7 @@
 				E8ACFAEF1D41D4B9004F4C50 /* GameScene.sks in Resources */,
 				E8ACFAFB1D41D4B9004F4C50 /* LaunchScreen.storyboard in Resources */,
 				E8ACFAF81D41D4B9004F4C50 /* Assets.xcassets in Resources */,
+				E8ACFB261D41DBF6004F4C50 /* MenuScene.sks in Resources */,
 				E8ACFAF61D41D4B9004F4C50 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,9 +320,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8ACFB301D41F1DF004F4C50 /* MenuLabels.swift in Sources */,
+				E8ACFB2C1D41E9CC004F4C50 /* MenuButtons.swift in Sources */,
 				E8ACFAF11D41D4B9004F4C50 /* GameScene.swift in Sources */,
+				E8ACFB241D41DBE5004F4C50 /* MenuScene.swift in Sources */,
 				E8ACFAF31D41D4B9004F4C50 /* GameViewController.swift in Sources */,
 				E8ACFAED1D41D4B9004F4C50 /* AppDelegate.swift in Sources */,
+				E8ACFB291D41DF75004F4C50 /* MenuBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,10 +470,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SpaceElite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keenansturtevant.SpaceElite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keenan144dev.SpaceElite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -420,10 +484,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SpaceElite/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.keenansturtevant.SpaceElite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keenan144dev.SpaceElite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
