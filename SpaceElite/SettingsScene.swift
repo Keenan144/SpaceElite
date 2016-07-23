@@ -1,14 +1,15 @@
 //
-//  MenuScene.swift
+//  SettingsScene.swift
 //  SpaceElite
 //
-//  Created by Keenan Sturtevant on 7/21/16.
+//  Created by Keenan Sturtevant on 7/23/16.
 //  Copyright © 2016 Keenan Sturtevant. All rights reserved.
 //
 
 import SpriteKit
 
-class MenuScene: SKScene {
+class SettingsScene: SKScene {
+    var viewController: GameScene!
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         loadBackground()
@@ -37,12 +38,12 @@ class MenuScene: SKScene {
         let action = array[1]
         
         switch action {
-        case "loadSettingsScene":
-            loadSettingsScene()
-        case "loadLeaderboardsScene":
-            loadLeaderboardsScene()
-        case "loadGame":
-            loadGame()
+        case "loadMenuScene":
+            loadMenuScene()
+        case "difficulty":
+            print("DIFFICULTY")
+        case "accountSettings":
+            print("ACCOUNT SETTINGS")
         default:
             return
         }
@@ -62,46 +63,24 @@ class MenuScene: SKScene {
     }
     
     private func addBackground() {
-        MenuBackground(MenuScene: self).addBackground()
+        SettingsBackground(SettingsScene: self).addBackground()
     }
     
     private func addGlitter() {
-        MenuBackground(MenuScene: self).addGlitter()
-
+        SettingsBackground(SettingsScene: self).addGlitter()
+        
     }
     
     private func addNavButtons() {
-        MenuButtons(MenuScene: self).addButtons()
+        SettingsButtons(SettingsScene: self).addButtons()
     }
     
     private func addTitle() {
-        MenuLabels(MenuScene: self).addTitle()
+        SettingsLabels(SettingsScene: self).addTitle()
     }
     
-    private func loadSettingsScene() {
-        if let scene = SettingsScene(fileNamed:"SettingsScene") {
-            let skView = self.view
-            
-            ViewHelper.skviewSettings(skView!)
-            ViewHelper.sceneViewSettings(scene, skView: skView!)
-            
-            skView!.presentScene(scene)
-        }
-    }
-    
-    private func loadLeaderboardsScene() {
-        if let scene = SettingsScene(fileNamed:"SettingsScene") {
-            let skView = self.view
-            
-            ViewHelper.skviewSettings(skView!)
-            ViewHelper.sceneViewSettings(scene, skView: skView!)
-            
-            skView!.presentScene(scene)
-        }
-    }
-    
-    private func loadGame() {
-        if let scene = SettingsScene(fileNamed:"SettingsScene") {
+    private func loadMenuScene() {
+        if let scene = MenuScene(fileNamed:"MenuScene") {
             let skView = self.view
             
             ViewHelper.skviewSettings(skView!)
@@ -111,3 +90,6 @@ class MenuScene: SKScene {
         }
     }
 }
+
+
+

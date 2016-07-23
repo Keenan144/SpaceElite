@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>SpaceElite-DEV.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>SpaceElite.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>E8ACFB0B1D41D4BA004F4C50</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E8ACFB311D43DA79004F4C50</key>
 		<dict>
 			<key>primary</key>
 			<true/>

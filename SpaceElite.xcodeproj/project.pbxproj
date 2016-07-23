@@ -21,6 +21,31 @@
 		E8ACFB291D41DF75004F4C50 /* MenuBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB281D41DF75004F4C50 /* MenuBackground.swift */; };
 		E8ACFB2C1D41E9CC004F4C50 /* MenuButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB2B1D41E9CC004F4C50 /* MenuButtons.swift */; };
 		E8ACFB301D41F1DF004F4C50 /* MenuLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB2F1D41F1DF004F4C50 /* MenuLabels.swift */; };
+		E8ACFB331D43DA79004F4C50 /* MenuLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB2F1D41F1DF004F4C50 /* MenuLabels.swift */; };
+		E8ACFB341D43DA79004F4C50 /* MenuButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB2B1D41E9CC004F4C50 /* MenuButtons.swift */; };
+		E8ACFB351D43DA79004F4C50 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFAF01D41D4B9004F4C50 /* GameScene.swift */; };
+		E8ACFB361D43DA79004F4C50 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB231D41DBE5004F4C50 /* MenuScene.swift */; };
+		E8ACFB371D43DA79004F4C50 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFAF21D41D4B9004F4C50 /* GameViewController.swift */; };
+		E8ACFB381D43DA79004F4C50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFAEC1D41D4B9004F4C50 /* AppDelegate.swift */; };
+		E8ACFB391D43DA79004F4C50 /* MenuBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB281D41DF75004F4C50 /* MenuBackground.swift */; };
+		E8ACFB3C1D43DA79004F4C50 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFAEE1D41D4B9004F4C50 /* GameScene.sks */; };
+		E8ACFB3D1D43DA79004F4C50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFAF91D41D4B9004F4C50 /* LaunchScreen.storyboard */; };
+		E8ACFB3E1D43DA79004F4C50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFAF71D41D4B9004F4C50 /* Assets.xcassets */; };
+		E8ACFB3F1D43DA79004F4C50 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFB251D41DBF6004F4C50 /* MenuScene.sks */; };
+		E8ACFB401D43DA79004F4C50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFAF41D41D4B9004F4C50 /* Main.storyboard */; };
+		E8ACFB461D43DD32004F4C50 /* DEV-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFB451D43DA79004F4C50 /* DEV-Info.plist */; };
+		E8ACFB4E1D43E4A4004F4C50 /* SettingsBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB4D1D43E4A4004F4C50 /* SettingsBackground.swift */; };
+		E8ACFB501D43E4B6004F4C50 /* SettingsButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB4F1D43E4B6004F4C50 /* SettingsButtons.swift */; };
+		E8ACFB521D43E4D2004F4C50 /* SettingsLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB511D43E4D2004F4C50 /* SettingsLabels.swift */; };
+		E8ACFB5E1D43E970004F4C50 /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB5D1D43E970004F4C50 /* SettingsScene.swift */; };
+		E8ACFB5F1D43E978004F4C50 /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB5D1D43E970004F4C50 /* SettingsScene.swift */; };
+		E8ACFB601D43E97C004F4C50 /* SettingsBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB4D1D43E4A4004F4C50 /* SettingsBackground.swift */; };
+		E8ACFB611D43E97F004F4C50 /* SettingsButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB4F1D43E4B6004F4C50 /* SettingsButtons.swift */; };
+		E8ACFB621D43E982004F4C50 /* SettingsLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB511D43E4D2004F4C50 /* SettingsLabels.swift */; };
+		E8ACFB641D43EA55004F4C50 /* SettingsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFB631D43EA55004F4C50 /* SettingsScene.sks */; };
+		E8ACFB651D43EA65004F4C50 /* SettingsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFB631D43EA55004F4C50 /* SettingsScene.sks */; };
+		E8ACFB691D44059F004F4C50 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB681D44059F004F4C50 /* ViewHelper.swift */; };
+		E8ACFB6A1D4405A2004F4C50 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB681D44059F004F4C50 /* ViewHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +86,14 @@
 		E8ACFB281D41DF75004F4C50 /* MenuBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBackground.swift; sourceTree = "<group>"; };
 		E8ACFB2B1D41E9CC004F4C50 /* MenuButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButtons.swift; sourceTree = "<group>"; };
 		E8ACFB2F1D41F1DF004F4C50 /* MenuLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuLabels.swift; sourceTree = "<group>"; };
+		E8ACFB441D43DA79004F4C50 /* SpaceElite-DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceElite-DEV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8ACFB451D43DA79004F4C50 /* DEV-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DEV-Info.plist"; path = "/Users/keenansturtevant/Desktop/SpaceElite/DEV-Info.plist"; sourceTree = "<absolute>"; };
+		E8ACFB4D1D43E4A4004F4C50 /* SettingsBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsBackground.swift; sourceTree = "<group>"; };
+		E8ACFB4F1D43E4B6004F4C50 /* SettingsButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsButtons.swift; sourceTree = "<group>"; };
+		E8ACFB511D43E4D2004F4C50 /* SettingsLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsLabels.swift; sourceTree = "<group>"; };
+		E8ACFB5D1D43E970004F4C50 /* SettingsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
+		E8ACFB631D43EA55004F4C50 /* SettingsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SettingsScene.sks; sourceTree = "<group>"; };
+		E8ACFB681D44059F004F4C50 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +112,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E8ACFB091D41D4BA004F4C50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8ACFB3A1D43DA79004F4C50 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -104,6 +144,7 @@
 				E8ACFAE91D41D4B9004F4C50 /* SpaceElite.app */,
 				E8ACFB011D41D4BA004F4C50 /* SpaceEliteTests.xctest */,
 				E8ACFB0C1D41D4BA004F4C50 /* SpaceEliteUITests.xctest */,
+				E8ACFB441D43DA79004F4C50 /* SpaceElite-DEV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +152,7 @@
 		E8ACFAEB1D41D4B9004F4C50 /* SpaceElite */ = {
 			isa = PBXGroup;
 			children = (
+				E8ACFB661D440588004F4C50 /* shared */,
 				E8ACFB1E1D41DB8B004F4C50 /* Views */,
 				E8ACFAEC1D41D4B9004F4C50 /* AppDelegate.swift */,
 				E8ACFAEE1D41D4B9004F4C50 /* GameScene.sks */,
@@ -120,6 +162,7 @@
 				E8ACFAF71D41D4B9004F4C50 /* Assets.xcassets */,
 				E8ACFAF91D41D4B9004F4C50 /* LaunchScreen.storyboard */,
 				E8ACFAFC1D41D4B9004F4C50 /* Info.plist */,
+				E8ACFB451D43DA79004F4C50 /* DEV-Info.plist */,
 			);
 			path = SpaceElite;
 			sourceTree = "<group>";
@@ -145,6 +188,7 @@
 		E8ACFB1E1D41DB8B004F4C50 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E8ACFB471D43DDB9004F4C50 /* Settings */,
 				E8ACFB2D1D41EA33004F4C50 /* Menu */,
 			);
 			name = Views;
@@ -184,6 +228,58 @@
 				E8ACFB2F1D41F1DF004F4C50 /* MenuLabels.swift */,
 			);
 			name = labels;
+			sourceTree = "<group>";
+		};
+		E8ACFB471D43DDB9004F4C50 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACFB5D1D43E970004F4C50 /* SettingsScene.swift */,
+				E8ACFB631D43EA55004F4C50 /* SettingsScene.sks */,
+				E8ACFB4A1D43DDDE004F4C50 /* background */,
+				E8ACFB4B1D43DDEC004F4C50 /* buttons */,
+				E8ACFB4C1D43DDF3004F4C50 /* labels */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		E8ACFB4A1D43DDDE004F4C50 /* background */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACFB4D1D43E4A4004F4C50 /* SettingsBackground.swift */,
+			);
+			name = background;
+			sourceTree = "<group>";
+		};
+		E8ACFB4B1D43DDEC004F4C50 /* buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACFB4F1D43E4B6004F4C50 /* SettingsButtons.swift */,
+			);
+			name = buttons;
+			sourceTree = "<group>";
+		};
+		E8ACFB4C1D43DDF3004F4C50 /* labels */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACFB511D43E4D2004F4C50 /* SettingsLabels.swift */,
+			);
+			name = labels;
+			sourceTree = "<group>";
+		};
+		E8ACFB661D440588004F4C50 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACFB671D44058F004F4C50 /* helpers */,
+			);
+			name = shared;
+			sourceTree = "<group>";
+		};
+		E8ACFB671D44058F004F4C50 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACFB681D44059F004F4C50 /* ViewHelper.swift */,
+			);
+			name = helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +338,23 @@
 			productReference = E8ACFB0C1D41D4BA004F4C50 /* SpaceEliteUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E8ACFB311D43DA79004F4C50 /* SpaceElite-DEV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8ACFB411D43DA79004F4C50 /* Build configuration list for PBXNativeTarget "SpaceElite-DEV" */;
+			buildPhases = (
+				E8ACFB321D43DA79004F4C50 /* Sources */,
+				E8ACFB3A1D43DA79004F4C50 /* Frameworks */,
+				E8ACFB3B1D43DA79004F4C50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpaceElite-DEV";
+			productName = SpaceElite;
+			productReference = E8ACFB441D43DA79004F4C50 /* SpaceElite-DEV.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -282,6 +395,7 @@
 				E8ACFAE81D41D4B9004F4C50 /* SpaceElite */,
 				E8ACFB001D41D4BA004F4C50 /* SpaceEliteTests */,
 				E8ACFB0B1D41D4BA004F4C50 /* SpaceEliteUITests */,
+				E8ACFB311D43DA79004F4C50 /* SpaceElite-DEV */,
 			);
 		};
 /* End PBXProject section */
@@ -294,6 +408,7 @@
 				E8ACFAEF1D41D4B9004F4C50 /* GameScene.sks in Resources */,
 				E8ACFAFB1D41D4B9004F4C50 /* LaunchScreen.storyboard in Resources */,
 				E8ACFAF81D41D4B9004F4C50 /* Assets.xcassets in Resources */,
+				E8ACFB641D43EA55004F4C50 /* SettingsScene.sks in Resources */,
 				E8ACFB261D41DBF6004F4C50 /* MenuScene.sks in Resources */,
 				E8ACFAF61D41D4B9004F4C50 /* Main.storyboard in Resources */,
 			);
@@ -313,6 +428,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E8ACFB3B1D43DA79004F4C50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8ACFB461D43DD32004F4C50 /* DEV-Info.plist in Resources */,
+				E8ACFB3C1D43DA79004F4C50 /* GameScene.sks in Resources */,
+				E8ACFB651D43EA65004F4C50 /* SettingsScene.sks in Resources */,
+				E8ACFB3D1D43DA79004F4C50 /* LaunchScreen.storyboard in Resources */,
+				E8ACFB3E1D43DA79004F4C50 /* Assets.xcassets in Resources */,
+				E8ACFB3F1D43DA79004F4C50 /* MenuScene.sks in Resources */,
+				E8ACFB401D43DA79004F4C50 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -320,12 +449,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8ACFB501D43E4B6004F4C50 /* SettingsButtons.swift in Sources */,
 				E8ACFB301D41F1DF004F4C50 /* MenuLabels.swift in Sources */,
 				E8ACFB2C1D41E9CC004F4C50 /* MenuButtons.swift in Sources */,
+				E8ACFB4E1D43E4A4004F4C50 /* SettingsBackground.swift in Sources */,
 				E8ACFAF11D41D4B9004F4C50 /* GameScene.swift in Sources */,
 				E8ACFB241D41DBE5004F4C50 /* MenuScene.swift in Sources */,
 				E8ACFAF31D41D4B9004F4C50 /* GameViewController.swift in Sources */,
+				E8ACFB5E1D43E970004F4C50 /* SettingsScene.swift in Sources */,
+				E8ACFB521D43E4D2004F4C50 /* SettingsLabels.swift in Sources */,
 				E8ACFAED1D41D4B9004F4C50 /* AppDelegate.swift in Sources */,
+				E8ACFB691D44059F004F4C50 /* ViewHelper.swift in Sources */,
 				E8ACFB291D41DF75004F4C50 /* MenuBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +477,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8ACFB111D41D4BA004F4C50 /* SpaceEliteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8ACFB321D43DA79004F4C50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8ACFB611D43E97F004F4C50 /* SettingsButtons.swift in Sources */,
+				E8ACFB331D43DA79004F4C50 /* MenuLabels.swift in Sources */,
+				E8ACFB341D43DA79004F4C50 /* MenuButtons.swift in Sources */,
+				E8ACFB601D43E97C004F4C50 /* SettingsBackground.swift in Sources */,
+				E8ACFB351D43DA79004F4C50 /* GameScene.swift in Sources */,
+				E8ACFB361D43DA79004F4C50 /* MenuScene.swift in Sources */,
+				E8ACFB371D43DA79004F4C50 /* GameViewController.swift in Sources */,
+				E8ACFB5F1D43E978004F4C50 /* SettingsScene.swift in Sources */,
+				E8ACFB621D43E982004F4C50 /* SettingsLabels.swift in Sources */,
+				E8ACFB381D43DA79004F4C50 /* AppDelegate.swift in Sources */,
+				E8ACFB6A1D4405A2004F4C50 /* ViewHelper.swift in Sources */,
+				E8ACFB391D43DA79004F4C50 /* MenuBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +695,34 @@
 			};
 			name = Release;
 		};
+		E8ACFB421D43DA79004F4C50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-DEV";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "DEV-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keenan144dev.SpaceElite-DEV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		E8ACFB431D43DA79004F4C50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-DEV";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "DEV-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keenan144dev.SpaceElite-DEV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -577,6 +758,15 @@
 			buildConfigurations = (
 				E8ACFB1C1D41D4BA004F4C50 /* Debug */,
 				E8ACFB1D1D41D4BA004F4C50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8ACFB411D43DA79004F4C50 /* Build configuration list for PBXNativeTarget "SpaceElite-DEV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8ACFB421D43DA79004F4C50 /* Debug */,
+				E8ACFB431D43DA79004F4C50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

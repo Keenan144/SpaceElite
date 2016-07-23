@@ -1,20 +1,20 @@
 //
-//  MenuButtons.swift
+//  SettingsButtons.swift
 //  SpaceElite
 //
-//  Created by Keenan Sturtevant on 7/22/16.
+//  Created by Keenan Sturtevant on 7/23/16.
 //  Copyright © 2016 Keenan Sturtevant. All rights reserved.
 //
 
 import SpriteKit
 
-class MenuButtons: SKNode {
+class SettingsButtons: SKNode {
     var Background: SKScene?
     var size: CGSize
     
-    init (MenuScene:SKScene) {
-        Background = MenuScene
-        size = MenuScene.frame.size
+    init (SettingsScene:SKScene) {
+        Background = SettingsScene
+        size = SettingsScene.frame.size
         super.init()
     }
     
@@ -23,38 +23,39 @@ class MenuButtons: SKNode {
     }
     
     func addButtons() {
-        addSettingsButton()
-        addLeaderboardsButton()
-        addStartGameButton()
+        addDifficultyButton()
+        addAccountSettingsButton()
+        addBackButton()
     }
     
-    private func addSettingsButton() {
+    private func addDifficultyButton() {
         let label = SKLabelNode(fontNamed: "Arial")
-        label.text = "Manage Hanger"
-        label.name = "BTN-loadSettingsScene"
-        label.position = CGPoint(x: 90, y: 20)
-        label.zPosition = 20
-        label.fontSize = 22
-        Background?.addChild(label)
-    }
-    
-    private func addLeaderboardsButton() {
-        let label = SKLabelNode(fontNamed: "Arial")
-        label.text = "Top Scores"
-        label.name = "BTN-loadLeaderboards"
+        label.text = "Difficulty"
+        label.name = "BTN-difficulty"
         label.position = CGPoint(x: 110, y: -32)
         label.zPosition = 20
         label.fontSize = 22
         Background?.addChild(label)
     }
     
-    private func addStartGameButton() {
+    private func addAccountSettingsButton() {
         let label = SKLabelNode(fontNamed: "Arial")
-        label.text = "Launch"
-        label.name = "BTN-loadGame"
-        label.position = CGPoint(x: 110, y: -160)
+        label.text = "Account Settings"
+        label.name = "BTN-accountSettings"
+        label.position = CGPoint(x: 90, y: 20)
+        label.zPosition = 20
+        label.fontSize = 22
+        Background?.addChild(label)
+    }
+    
+    private func addBackButton() {
+        let label = SKLabelNode(fontNamed: "Arial")
+        label.text = "Back"
+        label.name = "BTN-loadMenuScene"
+        label.position = CGPoint(x: 115, y: -160)
         label.zPosition = 20
         label.fontSize = 35
         Background?.addChild(label)
     }
 }
+
