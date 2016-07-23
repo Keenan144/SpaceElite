@@ -254,7 +254,7 @@
 				TargetAttributes = {
 					E8ACFAE81D41D4B9004F4C50 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 8X8LQ28Y8R;
+						DevelopmentTeam = 724X7XMPF4;
 					};
 					E8ACFB001D41D4BA004F4C50 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -561,6 +561,7 @@
 				E8ACFB171D41D4BA004F4C50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8ACFB181D41D4BA004F4C50 /* Build configuration list for PBXNativeTarget "SpaceEliteTests" */ = {
 			isa = XCConfigurationList;
@@ -569,6 +570,7 @@
 				E8ACFB1A1D41D4BA004F4C50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8ACFB1B1D41D4BA004F4C50 /* Build configuration list for PBXNativeTarget "SpaceEliteUITests" */ = {
 			isa = XCConfigurationList;
@@ -577,6 +579,7 @@
 				E8ACFB1D1D41D4BA004F4C50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

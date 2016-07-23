@@ -20,7 +20,14 @@ class MenuScene: SKScene {
         /* Called when a touch begins */
         
         for touch in touches {
+            let node = self.nodeAtPoint(touch.locationInNode(self))
             
+            if (node.name != nil) && (node.name!.rangeOfString("BTN") != nil) {
+                let array = node.name!.componentsSeparatedByString("-")
+                let action = array[1]
+                
+                NSTimer.scheduledTimerWithTimeInterval(0, target: GameViewController(), selector: Selector(action), userInfo: nil, repeats: false)
+            }
         }
     }
     

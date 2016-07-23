@@ -13,7 +13,19 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadMenuScene()
+    }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Release any cached data, images, etc that aren't in use.
+    }
+
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
+    func loadMenuScene() {
         if let scene = MenuScene(fileNamed:"MenuScene") {
             // Configure the view.
             let skView = self.view as! SKView
@@ -31,13 +43,16 @@ class GameViewController: UIViewController {
             skView.presentScene(scene)
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
+    
+    func loadSettings() {
+        print("LOAD SETTINGS")
     }
-
-    override func prefersStatusBarHidden() -> Bool {
-        return true
+    
+    func loadLeaderboards() {
+        print("LOAD LEADERBOARDS")
+    }
+    
+    func loadGame() {
+        print("LOAD GAME")
     }
 }

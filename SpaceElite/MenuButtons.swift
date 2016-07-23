@@ -31,7 +31,7 @@ class MenuButtons: SKNode {
     private func addSettingsButton() {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "Manage Hanger"
-        label.name = "BTN-GoSettings"
+        label.name = "BTN-loadSettings"
         label.position = CGPoint(x: 90, y: 20)
         label.zPosition = 20
         label.fontSize = 22
@@ -41,7 +41,7 @@ class MenuButtons: SKNode {
     private func addLeaderboardsButton() {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "Top Scores"
-        label.name = "BTN-GoLeaderboards"
+        label.name = "BTN-loadLeaderboards"
         label.position = CGPoint(x: 110, y: -32)
         label.zPosition = 20
         label.fontSize = 22
@@ -51,7 +51,7 @@ class MenuButtons: SKNode {
     private func addStartGameButton() {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "Launch"
-        label.name = "BTN-StartGame"
+        label.name = "BTN-loadGame"
         label.position = CGPoint(x: 110, y: -160)
         label.zPosition = 20
         label.fontSize = 35
