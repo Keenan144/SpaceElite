@@ -9,7 +9,6 @@
 import SpriteKit
 
 class SettingsScene: SKScene {
-    var viewController: GameScene!
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         loadBackground()
@@ -44,6 +43,8 @@ class SettingsScene: SKScene {
             print("DIFFICULTY")
         case "accountSettings":
             print("ACCOUNT SETTINGS")
+        case "chooseShip":
+            loadChooseShipScene()
         default:
             return
         }
@@ -89,7 +90,15 @@ class SettingsScene: SKScene {
             skView!.presentScene(scene)
         }
     }
+    
+    private func loadChooseShipScene() {
+        if let scene = ChooseShipScene(fileNamed:"ChooseShipScene") {
+            let skView = self.view
+            
+            ViewHelper.skviewSettings(skView!)
+            ViewHelper.sceneViewSettings(scene, skView: skView!)
+            
+            skView!.presentScene(scene)
+        }
+    }
 }
-
-
-

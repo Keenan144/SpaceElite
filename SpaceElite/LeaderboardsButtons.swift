@@ -1,5 +1,5 @@
 //
-//  SettingsButtons.swift
+//  LeaderboardsButtons.swift
 //  SpaceElite
 //
 //  Created by Keenan Sturtevant on 7/23/16.
@@ -8,13 +8,13 @@
 
 import SpriteKit
 
-class SettingsButtons: SKNode {
+class LeaderboardsButtons: SKNode {
     var Background: SKScene?
     var size: CGSize
     
-    init (SettingsScene:SKScene) {
-        Background = SettingsScene
-        size = SettingsScene.frame.size
+    init (LeaderboardsScene:SKScene) {
+        Background = LeaderboardsScene
+        size = LeaderboardsScene.frame.size
         super.init()
     }
     
@@ -25,7 +25,6 @@ class SettingsButtons: SKNode {
     func addButtons() {
         addDifficultyButton()
         addAccountSettingsButton()
-        addChooseShipButton()
         addBackButton()
     }
     
@@ -43,17 +42,7 @@ class SettingsButtons: SKNode {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "Account Settings"
         label.name = "BTN-accountSettings"
-        label.position = CGPoint(x: 90, y: 40)
-        label.zPosition = 20
-        label.fontSize = 22
-        Background?.addChild(label)
-    }
-    
-    private func addChooseShipButton() {
-        let label = SKLabelNode(fontNamed: "Arial")
-        label.text = "Choose Ship"
-        label.name = "BTN-chooseShip"
-        label.position = CGPoint(x: 90, y: 10)
+        label.position = CGPoint(x: 90, y: 20)
         label.zPosition = 20
         label.fontSize = 22
         Background?.addChild(label)
@@ -69,4 +58,3 @@ class SettingsButtons: SKNode {
         Background?.addChild(label)
     }
 }
-

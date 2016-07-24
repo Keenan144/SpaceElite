@@ -41,7 +41,7 @@ class MenuButtons: SKNode {
     private func addLeaderboardsButton() {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "Top Scores"
-        label.name = "BTN-loadLeaderboards"
+        label.name = "BTN-loadLeaderboardsScene"
         label.position = CGPoint(x: 110, y: -32)
         label.zPosition = 20
         label.fontSize = 22
