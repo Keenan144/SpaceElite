@@ -32,9 +32,9 @@ class MenuButtons: SKNode {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "Manage Hanger"
         label.name = "BTN-loadSettingsScene"
-        label.position = CGPoint(x: 90, y: 20)
+        label.position = CGPoint(x: (size.width / 5), y: (0 - (size.height / 10)))
+        label.fontSize = (size.width / 18)
         label.zPosition = 20
-        label.fontSize = 22
         Background?.addChild(label)
     }
     
@@ -42,9 +42,9 @@ class MenuButtons: SKNode {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "Top Scores"
         label.name = "BTN-loadLeaderboardsScene"
-        label.position = CGPoint(x: 110, y: -32)
+        label.position = CGPoint(x: (size.width / 4), y: (0 - (size.height / 5)))
+        label.fontSize = (size.width / 18)
         label.zPosition = 20
-        label.fontSize = 22
         Background?.addChild(label)
     }
     
@@ -52,9 +52,9 @@ class MenuButtons: SKNode {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "Launch"
         label.name = "BTN-loadGame"
-        label.position = CGPoint(x: 110, y: -160)
+        label.position = CGPoint(x: (size.width / 4), y: (0 - (size.height / 2.5)))
+        label.fontSize = (size.width / 12)
         label.zPosition = 20
-        label.fontSize = 35
         Background?.addChild(label)
     }
 }

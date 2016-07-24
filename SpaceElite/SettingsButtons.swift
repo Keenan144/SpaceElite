@@ -33,9 +33,9 @@ class SettingsButtons: SKNode {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "Difficulty"
         label.name = "BTN-difficulty"
-        label.position = CGPoint(x: 110, y: -32)
+        label.position = CGPoint(x: (size.width / 3.4), y: (0 - (size.height / 3.9)))
+        label.fontSize = (size.width / 18)
         label.zPosition = 20
-        label.fontSize = 22
         Background?.addChild(label)
     }
     
@@ -43,9 +43,9 @@ class SettingsButtons: SKNode {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "Account Settings"
         label.name = "BTN-accountSettings"
-        label.position = CGPoint(x: 90, y: 40)
+        label.position = CGPoint(x: (size.width / 5), y: (0 - (size.height / 12)))
+        label.fontSize = (size.width / 18)
         label.zPosition = 20
-        label.fontSize = 22
         Background?.addChild(label)
     }
     
@@ -53,9 +53,9 @@ class SettingsButtons: SKNode {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "Choose Ship"
         label.name = "BTN-chooseShip"
-        label.position = CGPoint(x: 90, y: 10)
+        label.position = CGPoint(x: (size.width / 4), y: (0 - (size.height / 5.8)))
+        label.fontSize = (size.width / 18)
         label.zPosition = 20
-        label.fontSize = 22
         Background?.addChild(label)
     }
     
@@ -63,9 +63,9 @@ class SettingsButtons: SKNode {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "Back"
         label.name = "BTN-loadMenuScene"
-        label.position = CGPoint(x: 115, y: -160)
+        label.position = CGPoint(x: (size.width / 4), y: (0 - (size.height / 2.5)))
+        label.fontSize = (size.width / 12)
         label.zPosition = 20
-        label.fontSize = 35
         Background?.addChild(label)
     }
 }
