@@ -19,7 +19,7 @@ class ViewHelper: SKScene {
     }
     
     class func sceneViewSettings(scene: SKScene, skView: SKView) -> SKScene {
-        scene.scaleMode = .AspectFill
+        scene.scaleMode = .ResizeFill
         scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         scene.size = skView.bounds.size
         return scene
