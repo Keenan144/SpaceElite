@@ -101,7 +101,7 @@ class MenuScene: SKScene {
     }
     
     private func loadGame() {
-        if let scene = SettingsScene(fileNamed:"SettingsScene") {
+        if let scene = GameScene(fileNamed:"GameScene") {
             let skView = self.view
             
             ViewHelper.skviewSettings(skView!)
