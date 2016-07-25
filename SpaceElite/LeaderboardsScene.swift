@@ -39,10 +39,6 @@ class LeaderboardsScene: SKScene {
         switch action {
         case "loadMenuScene":
             loadMenuScene()
-        case "difficulty":
-            print("DIFFICULTY")
-        case "accountSettings":
-            print("ACCOUNT SETTINGS")
         default:
             return
         }

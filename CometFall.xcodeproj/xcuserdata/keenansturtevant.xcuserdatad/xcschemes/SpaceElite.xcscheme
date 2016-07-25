@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E8ACFAE81D41D4B9004F4C50"
-               BuildableName = "SpaceElite.app"
-               BlueprintName = "SpaceElite"
-               ReferencedContainer = "container:SpaceElite.xcodeproj">
+               BuildableName = "CometFall.app"
+               BlueprintName = "CometFall"
+               ReferencedContainer = "container:CometFall.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E8ACFB001D41D4BA004F4C50"
-               BuildableName = "SpaceEliteTests.xctest"
-               BlueprintName = "SpaceEliteTests"
-               ReferencedContainer = "container:SpaceElite.xcodeproj">
+               BuildableName = "CometFall.xctest"
+               BlueprintName = "CometFallTests"
+               ReferencedContainer = "container:CometFall.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E8ACFB0B1D41D4BA004F4C50"
-               BuildableName = "SpaceEliteUITests.xctest"
-               BlueprintName = "SpaceEliteUITests"
-               ReferencedContainer = "container:SpaceElite.xcodeproj">
+               BuildableName = "CometFall.xctest"
+               BlueprintName = "CometFallUITests"
+               ReferencedContainer = "container:CometFall.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E8ACFAE81D41D4B9004F4C50"
-            BuildableName = "SpaceElite.app"
-            BlueprintName = "SpaceElite"
-            ReferencedContainer = "container:SpaceElite.xcodeproj">
+            BuildableName = "CometFall.app"
+            BlueprintName = "CometFall"
+            ReferencedContainer = "container:CometFall.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E8ACFAE81D41D4B9004F4C50"
-            BuildableName = "SpaceElite.app"
-            BlueprintName = "SpaceElite"
-            ReferencedContainer = "container:SpaceElite.xcodeproj">
+            BuildableName = "CometFall.app"
+            BlueprintName = "CometFall"
+            ReferencedContainer = "container:CometFall.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E8ACFAE81D41D4B9004F4C50"
-            BuildableName = "SpaceElite.app"
-            BlueprintName = "SpaceElite"
-            ReferencedContainer = "container:SpaceElite.xcodeproj">
+            BuildableName = "CometFall.app"
+            BlueprintName = "CometFall"
+            ReferencedContainer = "container:CometFall.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

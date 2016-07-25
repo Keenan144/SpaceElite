@@ -37,8 +37,8 @@ class ChooseShipScene: SKScene {
         let action = array[1]
         
         switch action {
-        case "loadMenuScene":
-            loadMenuScene()
+        case "loadSettingsScene":
+            loadSettingsScene()
         case "difficulty":
             print("DIFFICULTY")
         case "accountSettings":
@@ -78,8 +78,8 @@ class ChooseShipScene: SKScene {
         ChooseShipLabels(ChooseShipScene: self).addTitle()
     }
     
-    private func loadMenuScene() {
-        if let scene = MenuScene(fileNamed:"MenuScene") {
+    private func loadSettingsScene() {
+        if let scene = SettingsScene(fileNamed:"SettingsScene") {
             let skView = self.view
             
             ViewHelper.skviewSettings(skView!)

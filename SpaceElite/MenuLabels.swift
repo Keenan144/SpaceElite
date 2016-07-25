@@ -28,9 +28,9 @@ class MenuLabels: SKLabelNode {
     
     private func addTitleLabel() {
         let label = SKLabelNode(fontNamed: "Arial")
-        label.text = "International Space Elite"
+        label.text = "Comet Fall"
         label.name = "LBL-Title"
-        label.position = CGPoint(x: (size.width / 35), y: (0 + (size.height / 20)))
+        label.position = CGPoint(x: (size.width / 4.4), y: (0 + (size.height / 20)))
         label.fontSize = (size.width / 14)
         label.zPosition = 20
 //        label.fontColor = UIColor(red: 3.0, green: 169.0, blue: 244.0, alpha: 1.0)

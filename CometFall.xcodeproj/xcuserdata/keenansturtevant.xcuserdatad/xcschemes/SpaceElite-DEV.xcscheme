@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E8ACFB311D43DA79004F4C50"
-               BuildableName = "SpaceElite-DEV.app"
-               BlueprintName = "SpaceElite-DEV"
-               ReferencedContainer = "container:SpaceElite.xcodeproj">
+               BuildableName = "CometFall.app"
+               BlueprintName = "CometFall-DEV"
+               ReferencedContainer = "container:CometFall.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E8ACFB311D43DA79004F4C50"
-            BuildableName = "SpaceElite-DEV.app"
-            BlueprintName = "SpaceElite-DEV"
-            ReferencedContainer = "container:SpaceElite.xcodeproj">
+            BuildableName = "CometFall.app"
+            BlueprintName = "CometFall-DEV"
+            ReferencedContainer = "container:CometFall.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E8ACFB311D43DA79004F4C50"
-            BuildableName = "SpaceElite-DEV.app"
-            BlueprintName = "SpaceElite-DEV"
-            ReferencedContainer = "container:SpaceElite.xcodeproj">
+            BuildableName = "CometFall.app"
+            BlueprintName = "CometFall-DEV"
+            ReferencedContainer = "container:CometFall.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,9 +79,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E8ACFB311D43DA79004F4C50"
-            BuildableName = "SpaceElite-DEV.app"
-            BlueprintName = "SpaceElite-DEV"
-            ReferencedContainer = "container:SpaceElite.xcodeproj">
+            BuildableName = "CometFall.app"
+            BlueprintName = "CometFall-DEV"
+            ReferencedContainer = "container:CometFall.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
