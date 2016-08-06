@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E834D6EC1D568517004ED2D9 /* FunctionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6EB1D568517004ED2D9 /* FunctionHelper.swift */; };
+		E834D6ED1D568517004ED2D9 /* FunctionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6EB1D568517004ED2D9 /* FunctionHelper.swift */; };
 		E85444471D45C18900102BE2 /* Boundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444461D45C18900102BE2 /* Boundaries.swift */; };
 		E85444481D45C18900102BE2 /* Boundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444461D45C18900102BE2 /* Boundaries.swift */; };
 		E854444B1D45C56100102BE2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444A1D45C56100102BE2 /* Player.swift */; };
 		E854444C1D45C56100102BE2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444A1D45C56100102BE2 /* Player.swift */; };
 		E854444F1D45CA2F00102BE2 /* GameBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444E1D45CA2F00102BE2 /* GameBackground.swift */; };
 		E85444501D45CA2F00102BE2 /* GameBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444E1D45CA2F00102BE2 /* GameBackground.swift */; };
+		E85444531D4C686D00102BE2 /* GamesceneButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444521D4C686D00102BE2 /* GamesceneButtons.swift */; };
+		E85444541D4C686D00102BE2 /* GamesceneButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444521D4C686D00102BE2 /* GamesceneButtons.swift */; };
+		E85444571D4C6A4900102BE2 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444561D4C6A4900102BE2 /* Enemy.swift */; };
+		E85444581D4C6A4900102BE2 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444561D4C6A4900102BE2 /* Enemy.swift */; };
 		E8ACFAED1D41D4B9004F4C50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFAEC1D41D4B9004F4C50 /* AppDelegate.swift */; };
 		E8ACFAEF1D41D4B9004F4C50 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFAEE1D41D4B9004F4C50 /* GameScene.sks */; };
 		E8ACFAF11D41D4B9004F4C50 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFAF01D41D4B9004F4C50 /* GameScene.swift */; };
@@ -93,9 +99,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E834D6EB1D568517004ED2D9 /* FunctionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionHelper.swift; sourceTree = "<group>"; };
 		E85444461D45C18900102BE2 /* Boundaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boundaries.swift; sourceTree = "<group>"; };
 		E854444A1D45C56100102BE2 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		E854444E1D45CA2F00102BE2 /* GameBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBackground.swift; sourceTree = "<group>"; };
+		E85444521D4C686D00102BE2 /* GamesceneButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesceneButtons.swift; sourceTree = "<group>"; };
+		E85444561D4C6A4900102BE2 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		E8ACFAE91D41D4B9004F4C50 /* CometFall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CometFall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8ACFAEC1D41D4B9004F4C50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8ACFAEE1D41D4B9004F4C50 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -171,11 +180,13 @@
 		E85444441D45BBE000102BE2 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				E854444D1D45CA0D00102BE2 /* background */,
-				E85444491D45C53E00102BE2 /* player */,
-				E85444451D45C17500102BE2 /* boundaries */,
 				E8ACFAEE1D41D4B9004F4C50 /* GameScene.sks */,
 				E8ACFAF01D41D4B9004F4C50 /* GameScene.swift */,
+				E854444D1D45CA0D00102BE2 /* background */,
+				E85444511D4C683E00102BE2 /* buttons */,
+				E85444491D45C53E00102BE2 /* player */,
+				E85444551D4C6A1900102BE2 /* enemy */,
+				E85444451D45C17500102BE2 /* boundaries */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -202,6 +213,22 @@
 				E854444E1D45CA2F00102BE2 /* GameBackground.swift */,
 			);
 			name = background;
+			sourceTree = "<group>";
+		};
+		E85444511D4C683E00102BE2 /* buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E85444521D4C686D00102BE2 /* GamesceneButtons.swift */,
+			);
+			name = buttons;
+			sourceTree = "<group>";
+		};
+		E85444551D4C6A1900102BE2 /* enemy */ = {
+			isa = PBXGroup;
+			children = (
+				E85444561D4C6A4900102BE2 /* Enemy.swift */,
+			);
+			name = enemy;
 			sourceTree = "<group>";
 		};
 		E8ACFAE01D41D4B9004F4C50 = {
@@ -355,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				E8ACFB681D44059F004F4C50 /* ViewHelper.swift */,
+				E834D6EB1D568517004ED2D9 /* FunctionHelper.swift */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -606,11 +634,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E85444531D4C686D00102BE2 /* GamesceneButtons.swift in Sources */,
 				E854444B1D45C56100102BE2 /* Player.swift in Sources */,
 				E8ACFB501D43E4B6004F4C50 /* SettingsButtons.swift in Sources */,
 				E85444471D45C18900102BE2 /* Boundaries.swift in Sources */,
 				E8ACFB301D41F1DF004F4C50 /* MenuLabels.swift in Sources */,
 				E8ACFB2C1D41E9CC004F4C50 /* MenuButtons.swift in Sources */,
+				E85444571D4C6A4900102BE2 /* Enemy.swift in Sources */,
 				E8ACFB791D44259C004F4C50 /* LeaderboardsButtons.swift in Sources */,
 				E8ACFB4E1D43E4A4004F4C50 /* SettingsBackground.swift in Sources */,
 				E8ACFAF11D41D4B9004F4C50 /* GameScene.swift in Sources */,
@@ -625,6 +655,7 @@
 				E8ACFB701D44253E004F4C50 /* LeaderboardsScene.swift in Sources */,
 				E8ACFB8F1D4528C3004F4C50 /* ChooseShipButtons.swift in Sources */,
 				E8ACFB8D1D4528B5004F4C50 /* ChooseShipBackground.swift in Sources */,
+				E834D6EC1D568517004ED2D9 /* FunctionHelper.swift in Sources */,
 				E8ACFB7B1D4425A8004F4C50 /* LeaderboardsLabels.swift in Sources */,
 				E854444F1D45CA2F00102BE2 /* GameBackground.swift in Sources */,
 				E8ACFB291D41DF75004F4C50 /* MenuBackground.swift in Sources */,
@@ -652,11 +683,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E85444541D4C686D00102BE2 /* GamesceneButtons.swift in Sources */,
 				E854444C1D45C56100102BE2 /* Player.swift in Sources */,
 				E8ACFB611D43E97F004F4C50 /* SettingsButtons.swift in Sources */,
 				E85444481D45C18900102BE2 /* Boundaries.swift in Sources */,
 				E8ACFB331D43DA79004F4C50 /* MenuLabels.swift in Sources */,
 				E8ACFB341D43DA79004F4C50 /* MenuButtons.swift in Sources */,
+				E85444581D4C6A4900102BE2 /* Enemy.swift in Sources */,
 				E8ACFB7F1D4428FF004F4C50 /* LeaderboardsButtons.swift in Sources */,
 				E8ACFB601D43E97C004F4C50 /* SettingsBackground.swift in Sources */,
 				E8ACFB351D43DA79004F4C50 /* GameScene.swift in Sources */,
@@ -671,6 +704,7 @@
 				E8ACFB7D1D4428F8004F4C50 /* LeaderboardsScene.swift in Sources */,
 				E8ACFB951D4540E2004F4C50 /* ChooseShipButtons.swift in Sources */,
 				E8ACFB941D4540DE004F4C50 /* ChooseShipBackground.swift in Sources */,
+				E834D6ED1D568517004ED2D9 /* FunctionHelper.swift in Sources */,
 				E8ACFB801D442902004F4C50 /* LeaderboardsLabels.swift in Sources */,
 				E85444501D45CA2F00102BE2 /* GameBackground.swift in Sources */,
 				E8ACFB391D43DA79004F4C50 /* MenuBackground.swift in Sources */,
@@ -751,6 +785,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -791,6 +826,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

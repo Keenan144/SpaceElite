@@ -11,7 +11,10 @@ import SpriteKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var player = SKNode()
+    var enemy = SKNode()
     var lastUpdateTime: NSTimeInterval = 0
+    var realFPS = Double()
+    var myTimer = NSTimer()
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
@@ -20,8 +23,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         Boundaries(GameScene: self).setBoundaries()
         player = Player(GameScene: self).spawn(0x1 << 1, rockCategory: 0x1 << 2)
+        enemy = Enemy(GameScene: self).spawn(0x1 << 1, rockCategory: 0x1 << 2)
         //        start()
         loadBackground()
+        loadButtons()
+        enemyMovementTimer()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -46,6 +52,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             var touchLocation = touch.locationInNode(self)
             touchLocation = touch.locationInNode(self)
             player.position.x = touchLocation.x
+            print(player.position.x)
         }
     }
     
@@ -53,8 +60,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Called before each frame is rendered */
         let deltaTime = currentTime - lastUpdateTime
         let currentFPS = 1 / deltaTime
-        
+    
+        realFPS = currentFPS
         lastUpdateTime = currentTime
+    }
+    
+    func enemyMovementTimer() {
+        myTimer =  NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("moveEnemy"), userInfo: nil, repeats: true)
+    }
+    
+    func moveEnemy() {
+        print("moveEnemy")
+          Enemy(GameScene: self).move(self.enemy)
     }
     
     func buttonPressed(node: SKNode) {
@@ -62,6 +79,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let action = array[1]
         
         switch action {
+        case "pause":
+            self.paused = true
+            loadHUD()
+            self.childNodeWithName("BTN-pause")?.removeFromParent()
+        case "resume":
+            self.paused = false
+            self.childNodeWithName("BTN-loadMenuScene")?.removeFromParent()
+            self.childNodeWithName("BTN-loadLeaderboardsScene")?.removeFromParent()
+            self.childNodeWithName("BTN-resume")?.removeFromParent()
+            loadButtons()
+        case "loadMenuScene":
+            self.removeAllActions()
+            self.removeAllChildren()
+            myTimer.invalidate()
+            loadMenuScene()
         case "loadSettingsScene":
             loadSettingsScene()
         case "loadLeaderboardsScene":
@@ -76,6 +108,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addGlitter()
     }
     
+    func loadButtons() {
+        addNavButtons()
+    }
+    
+    func loadHUD() {
+        GamesceneButtons(Gamescene: self).addHUD()
+    }
+    
     private func addBackground() {
         MenuBackground(MenuScene: self).addBackground()
     }
@@ -83,6 +123,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private func addGlitter() {
         MenuBackground(MenuScene: self).addGlitter()
         
+    }
+    
+    private func addNavButtons() {
+        GamesceneButtons(Gamescene: self).addButtons()
     }
     
     private func loadSettingsScene() {
@@ -98,6 +142,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     private func loadLeaderboardsScene() {
         if let scene = LeaderboardsScene(fileNamed:"LeaderboardsScene") {
+            let skView = self.view
+            
+            ViewHelper.skviewSettings(skView!)
+            ViewHelper.sceneViewSettings(scene, skView: skView!)
+            
+            skView!.presentScene(scene)
+        }
+    }
+    
+    private func loadMenuScene() {
+        if let scene = MenuScene(fileNamed:"MenuScene") {
             let skView = self.view
             
             ViewHelper.skviewSettings(skView!)
