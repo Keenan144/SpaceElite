@@ -38,7 +38,7 @@ class LeaderboardsScene: SKScene {
         
         switch action {
         case "loadMenuScene":
-            loadMenuScene()
+            GameViewController().loadMenuScene(self.view! as SKView)
         default:
             return
         }
@@ -72,16 +72,5 @@ class LeaderboardsScene: SKScene {
     
     private func addTitle() {
         LeaderboardsLabels(LeaderboardsScene: self).addTitle()
-    }
-    
-    private func loadMenuScene() {
-        if let scene = MenuScene(fileNamed:"MenuScene") {
-            let skView = self.view
-            
-            ViewHelper.skviewSettings(skView!)
-            ViewHelper.sceneViewSettings(scene, skView: skView!)
-            
-            skView!.presentScene(scene)
-        }
     }
 }

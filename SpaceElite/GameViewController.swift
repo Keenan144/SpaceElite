@@ -13,7 +13,7 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadMenuScene()
+        loadMenuScene(self.view as! SKView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,21 +25,21 @@ class GameViewController: UIViewController {
         return true
     }
     
-    func loadMenuScene() {
+    func loadMenuScene(view: SKView) {
         if let scene = MenuScene(fileNamed:"MenuScene") {
             // Configure the view.
-                let skView = self.view as! SKView
-                ViewHelper.skviewSettings(skView)
-                ViewHelper.sceneViewSettings(scene, skView: skView)
-            
-                skView.presentScene(scene)
-            }
+            let skView = view
+            ViewHelper.skviewSettings(skView)
+            ViewHelper.sceneViewSettings(scene, skView: skView)
+        
+            skView.presentScene(scene)
+        }
     }
     
-    func loadSettingsScene() {
+    func loadSettingsScene(view: SKView) {
         if let scene =  SettingsScene(fileNamed:"SettingsScene") {
             // Configure the view.
-            let skView = self.view as! SKView
+            let skView = view
             ViewHelper.skviewSettings(skView)
             ViewHelper.sceneViewSettings(scene, skView: skView)
             
@@ -47,10 +47,10 @@ class GameViewController: UIViewController {
         }
     }
     
-    func loadLeaderboards() {
+    func loadLeaderboards(view: SKView) {
         if let scene = MenuScene(fileNamed:"MenuScene") {
             // Configure the view.
-            let skView = self.view as! SKView
+            let skView = view
             ViewHelper.skviewSettings(skView)
             ViewHelper.sceneViewSettings(scene, skView: skView)
             
@@ -58,14 +58,40 @@ class GameViewController: UIViewController {
         }
     }
     
-    func loadGame() {
+    func loadGame(view: SKView) {
         if let scene = MenuScene(fileNamed:"MenuScene") {
             // Configure the view.
-            let skView = self.view as! SKView
+            let skView = view
             ViewHelper.skviewSettings(skView)
             ViewHelper.sceneViewSettings(scene, skView: skView)
             
             skView.presentScene(scene)
         }
+    }
+    
+    func loadChooseShipScene(view: SKView) {
+        if let scene = ChooseShipScene(fileNamed:"ChooseShipScene") {
+            let skView = view
+            
+            ViewHelper.skviewSettings(skView)
+            ViewHelper.sceneViewSettings(scene, skView: skView)
+            
+            skView.presentScene(scene)
+        }
+    }
+    
+    func loadLeaderboardsScene(view: SKView) {
+        if let scene = LeaderboardsScene(fileNamed:"LeaderboardsScene") {
+            let skView = view
+            
+            ViewHelper.skviewSettings(skView)
+            ViewHelper.sceneViewSettings(scene, skView: skView)
+            
+            skView.presentScene(scene)
+        }
+    }
+    
+    func loadHUD(scene: SKScene) {
+        GamesceneButtons(Gamescene: scene).addHUD()
     }
 }

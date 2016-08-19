@@ -18,16 +18,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
+        
         view.showsPhysics = true
         physicsWorld.contactDelegate = self
         
-        Boundaries(GameScene: self).setBoundaries()
-        player = Player(GameScene: self).spawn(0x1 << 1, rockCategory: 0x1 << 2)
-        enemy = Enemy(GameScene: self).spawn(0x1 << 1, rockCategory: 0x1 << 2)
-        //        start()
-        loadBackground()
-        loadButtons()
-        enemyMovementTimer()
+        initGameScene()
+        initGamePlayer()
+        GameState.load()
+        GameEngine().start()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -35,24 +33,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         for touch in touches {
             let node = self.nodeAtPoint(touch.locationInNode(self))
-            var touchLocation = touch.locationInNode(self)
+            let touchLocation = touch.locationInNode(self)
             
             if (node.name != nil) && (node.name!.rangeOfString("BTN") != nil) {
                 buttonPressed(node)
             } else {
-                touchLocation = touch.locationInNode(self)
                 player.position.x = touchLocation.x
-                print(player.position.x)
             }
         }
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch in touches{
-            var touchLocation = touch.locationInNode(self)
-            touchLocation = touch.locationInNode(self)
+            let touchLocation = touch.locationInNode(self)
             player.position.x = touchLocation.x
-            print(player.position.x)
         }
     }
     
@@ -65,13 +59,45 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         lastUpdateTime = currentTime
     }
     
-    func enemyMovementTimer() {
-        myTimer =  NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: Selector("moveEnemy"), userInfo: nil, repeats: true)
+    func initGameScene() {
+        setBoundaries()
+        loadBackground()
+        loadButtons()
+//        enemyMovementTimer()
     }
     
-    func moveEnemy() {
-        print("moveEnemy")
-          Enemy(GameScene: self).move(self.enemy)
+    func didBeginContact(contact: SKPhysicsContact) {
+        
+//        if (contact.bodyA.categoryBitMask == boundaryCategory) {
+//            contact.bodyB.node?.removeFromParent()
+//            print("GAMESCENE: scoreIncresed")
+//            increaseScore()
+//            refreshScoreView()
+//        }
+//        if (contact.bodyA.categoryBitMask == shipCategory) {
+//            contact.bodyB.node?.physicsBody?.collisionBitMask = 0
+//            if (contact.bodyB.node?.name == "Health") {
+//                contact.bodyB.node?.removeFromParent()
+//                increaseHealth()
+//            } else if (contact.bodyB.node?.name == "ScoreBump") {
+//                contact.bodyB.node?.removeFromParent()
+//                bumpScore()
+//            } else if (contact.bodyB.node?.name == "Invincibility") {
+//                contact.bodyB.node?.removeFromParent()
+//                makeInvincible()
+//                showInvincibleLabel()
+//            } else if (contact.bodyB.node?.name == "Rock") {
+//                if Helper.isInvincible() == false {
+//                    contact.bodyB.node?.r/emoveFromParent()
+//                    SpaceShip.deductHealth(Helper.deductHealth())
+//                    if SpaceShip.dead() {
+//                        stopRocks()
+//                        endGame()
+//                    }
+//                }
+//            }
+//            refreshHealthView()
+//        }
     }
     
     func buttonPressed(node: SKNode) {
@@ -81,10 +107,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         switch action {
         case "pause":
             self.paused = true
-            loadHUD()
+            GameViewController().loadHUD(self)
             self.childNodeWithName("BTN-pause")?.removeFromParent()
         case "resume":
             self.paused = false
+            self.childNodeWithName("div")?.removeFromParent()
             self.childNodeWithName("BTN-loadMenuScene")?.removeFromParent()
             self.childNodeWithName("BTN-loadLeaderboardsScene")?.removeFromParent()
             self.childNodeWithName("BTN-resume")?.removeFromParent()
@@ -93,11 +120,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.removeAllActions()
             self.removeAllChildren()
             myTimer.invalidate()
-            loadMenuScene()
+            GameViewController().loadMenuScene(self.view! as SKView)
         case "loadSettingsScene":
-            loadSettingsScene()
+            GameViewController().loadSettingsScene(self.view! as SKView)
         case "loadLeaderboardsScene":
-            loadLeaderboardsScene()
+            GameViewController().loadLeaderboardsScene(self.view! as SKView)
         default:
             return
         }
@@ -116,6 +143,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         GamesceneButtons(Gamescene: self).addHUD()
     }
     
+    private func initGamePlayer() {
+        player = Player(GameScene: self).spawn(0x1 << 1, rockCategory: 0x1 << 2)
+    }
+    
+    private func initGameEnemy() {
+        enemy = Enemy(GameScene: self).spawn(0x1 << 1, rockCategory: 0x1 << 2)
+    }
+    
+    private func setBoundaries() {
+        Boundaries(GameScene: self).setBoundaries()
+    }
+    
     private func addBackground() {
         MenuBackground(MenuScene: self).addBackground()
     }
@@ -127,38 +166,5 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     private func addNavButtons() {
         GamesceneButtons(Gamescene: self).addButtons()
-    }
-    
-    private func loadSettingsScene() {
-        if let scene = SettingsScene(fileNamed:"SettingsScene") {
-            let skView = self.view
-            
-            ViewHelper.skviewSettings(skView!)
-            ViewHelper.sceneViewSettings(scene, skView: skView!)
-            
-            skView!.presentScene(scene)
-        }
-    }
-    
-    private func loadLeaderboardsScene() {
-        if let scene = LeaderboardsScene(fileNamed:"LeaderboardsScene") {
-            let skView = self.view
-            
-            ViewHelper.skviewSettings(skView!)
-            ViewHelper.sceneViewSettings(scene, skView: skView!)
-            
-            skView!.presentScene(scene)
-        }
-    }
-    
-    private func loadMenuScene() {
-        if let scene = MenuScene(fileNamed:"MenuScene") {
-            let skView = self.view
-            
-            ViewHelper.skviewSettings(skView!)
-            ViewHelper.sceneViewSettings(scene, skView: skView!)
-            
-            skView!.presentScene(scene)
-        }
     }
 }

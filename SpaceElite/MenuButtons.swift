@@ -29,32 +29,20 @@ class MenuButtons: SKNode {
     }
     
     private func addSettingsButton() {
-        let label = SKLabelNode(fontNamed: "Arial")
-        label.text = "Manage Hanger"
-        label.name = "BTN-loadSettingsScene"
-        label.position = CGPoint(x: (size.width / 5), y: (0 - (size.height / 10)))
-        label.fontSize = (size.width / 18)
-        label.zPosition = 20
+        let label = ViewHelper.createButton("Manage Hanger", name: "BTN-loadSettingsScene", xCord: (size.width / 5), yChord: (0 - (size.height / 10)), fontSize: (size.width / 18), zPosition: 20)
+
         Background?.addChild(label)
     }
     
     private func addLeaderboardsButton() {
-        let label = SKLabelNode(fontNamed: "Arial")
-        label.text = "Top Scores"
-        label.name = "BTN-loadLeaderboardsScene"
-        label.position = CGPoint(x: (size.width / 4), y: (0 - (size.height / 5)))
-        label.fontSize = (size.width / 18)
-        label.zPosition = 20
+        let label = ViewHelper.createButton("Top Scores", name: "BTN-loadLeaderboardsScene", xCord: (size.width / 4), yChord: (0 - (size.height / 5)), fontSize: (size.width / 18), zPosition: 20)
+
         Background?.addChild(label)
     }
     
     private func addStartGameButton() {
-        let label = SKLabelNode(fontNamed: "Arial")
-        label.text = "Launch"
-        label.name = "BTN-loadGame"
-        label.position = CGPoint(x: (size.width / 4), y: (0 - (size.height / 2.5)))
-        label.fontSize = (size.width / 12)
-        label.zPosition = 20
+        let label = ViewHelper.createButton("Launch", name: "BTN-loadGame", xCord: (size.width / 4), yChord: (0 - (size.height / 2.5)), fontSize: (size.width / 12), zPosition: 20)
+
         Background?.addChild(label)
     }
 }

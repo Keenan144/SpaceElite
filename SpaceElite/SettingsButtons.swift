@@ -30,42 +30,26 @@ class SettingsButtons: SKNode {
     }
     
     private func addDifficultyButton() {
-        let label = SKLabelNode(fontNamed: "Arial")
-        label.text = "Difficulty"
-        label.name = "BTN-difficulty"
-        label.position = CGPoint(x: (size.width / 3.4), y: (0 - (size.height / 3.9)))
-        label.fontSize = (size.width / 18)
-        label.zPosition = 20
+        let label = ViewHelper.createButton("Difficulty", name: "BTN-difficulty", xCord: (size.width / 3.4), yChord: (0 - (size.height / 3.9)), fontSize: (size.width / 18), zPosition: 20)
+        
         Background?.addChild(label)
     }
     
     private func addAccountSettingsButton() {
-        let label = SKLabelNode(fontNamed: "Arial")
-        label.text = "Account Settings"
-        label.name = "BTN-accountSettings"
-        label.position = CGPoint(x: (size.width / 5), y: (0 - (size.height / 12)))
-        label.fontSize = (size.width / 18)
-        label.zPosition = 20
+        let label = ViewHelper.createButton("Account Settings", name: "BTN-accountSettings", xCord: (size.width / 5), yChord: (0 - (size.height / 12)), fontSize: (size.width / 18), zPosition: 20)
+
         Background?.addChild(label)
     }
     
     private func addChooseShipButton() {
-        let label = SKLabelNode(fontNamed: "Arial")
-        label.text = "Choose Ship"
-        label.name = "BTN-chooseShip"
-        label.position = CGPoint(x: (size.width / 4), y: (0 - (size.height / 5.8)))
-        label.fontSize = (size.width / 18)
-        label.zPosition = 20
+        let label = ViewHelper.createButton("Choose Ship", name: "BTN-chooseShip", xCord: (size.width / 4), yChord: (0 - (size.height / 5.8)), fontSize: (size.width / 18), zPosition: 20)
+
         Background?.addChild(label)
     }
     
     private func addBackButton() {
-        let label = SKLabelNode(fontNamed: "Arial")
-        label.text = "Back"
-        label.name = "BTN-loadMenuScene"
-        label.position = CGPoint(x: (size.width / 4), y: (0 - (size.height / 2.5)))
-        label.fontSize = (size.width / 12)
-        label.zPosition = 20
+        let label = ViewHelper.createButton("Back", name: "BTN-loadMenuScene", xCord: (size.width / 4), yChord: (0 - (size.height / 2.5)), fontSize: (size.width / 12), zPosition: 20)
+
         Background?.addChild(label)
     }
 }

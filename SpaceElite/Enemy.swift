@@ -37,12 +37,14 @@ class Enemy: SKNode {
         ship.physicsBody?.usesPreciseCollisionDetection = true
         ship.physicsBody?.categoryBitMask = shipCategory
         ship.physicsBody?.contactTestBitMask = rockCategory
-        ship.position = CGPoint(x: 0, y: (0 + size.height / 4))
+        ship.position = CGPoint(x: 0, y: ((size.height / 2) + size.height))
         ship.zPosition = 20
         ship.name = "Ship"
         
         print("SPACESHIP: spawn")
         Background!.addChild(ship)
+        let action = SKAction.moveToY((0 + size.height / 4), duration: 2.0)
+        ship.runAction(action)
         return ship
     }
     

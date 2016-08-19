@@ -27,12 +27,8 @@ class LeaderboardsButtons: SKNode {
     }
     
     private func addBackButton() {
-        let label = SKLabelNode(fontNamed: "Arial")
-        label.text = "Back"
-        label.name = "BTN-loadMenuScene"
-        label.position = CGPoint(x: (size.width / 4), y: (0 - (size.height / 2.5)))
-        label.fontSize = (size.width / 12)
-        label.zPosition = 20
+        let label = ViewHelper.createButton("Back", name: "BTN-loadMenuScene", xCord: (size.width / 4), yChord: (0 - (size.height / 2.5)), fontSize: (size.width / 12), zPosition: 20)
+
         Background?.addChild(label)
     }
 }

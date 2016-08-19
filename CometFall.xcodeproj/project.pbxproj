@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		E834D6EC1D568517004ED2D9 /* FunctionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6EB1D568517004ED2D9 /* FunctionHelper.swift */; };
 		E834D6ED1D568517004ED2D9 /* FunctionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6EB1D568517004ED2D9 /* FunctionHelper.swift */; };
+		E834D6F01D56B2A5004ED2D9 /* Rock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6EF1D56B2A5004ED2D9 /* Rock.swift */; };
+		E834D6F11D56B2A5004ED2D9 /* Rock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6EF1D56B2A5004ED2D9 /* Rock.swift */; };
+		E834D6F31D56B2D8004ED2D9 /* PhysicsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6F21D56B2D8004ED2D9 /* PhysicsHelper.swift */; };
+		E834D6F41D56B2D8004ED2D9 /* PhysicsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6F21D56B2D8004ED2D9 /* PhysicsHelper.swift */; };
+		E834D6F81D66B741004ED2D9 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6F71D66B741004ED2D9 /* GameEngine.swift */; };
+		E834D6F91D66B741004ED2D9 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6F71D66B741004ED2D9 /* GameEngine.swift */; };
+		E834D6FB1D66BEF5004ED2D9 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6FA1D66BEF5004ED2D9 /* GameState.swift */; };
+		E834D6FC1D66BEF5004ED2D9 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6FA1D66BEF5004ED2D9 /* GameState.swift */; };
 		E85444471D45C18900102BE2 /* Boundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444461D45C18900102BE2 /* Boundaries.swift */; };
 		E85444481D45C18900102BE2 /* Boundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444461D45C18900102BE2 /* Boundaries.swift */; };
 		E854444B1D45C56100102BE2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444A1D45C56100102BE2 /* Player.swift */; };
@@ -100,6 +108,10 @@
 
 /* Begin PBXFileReference section */
 		E834D6EB1D568517004ED2D9 /* FunctionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionHelper.swift; sourceTree = "<group>"; };
+		E834D6EF1D56B2A5004ED2D9 /* Rock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rock.swift; sourceTree = "<group>"; };
+		E834D6F21D56B2D8004ED2D9 /* PhysicsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsHelper.swift; sourceTree = "<group>"; };
+		E834D6F71D66B741004ED2D9 /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
+		E834D6FA1D66BEF5004ED2D9 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		E85444461D45C18900102BE2 /* Boundaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boundaries.swift; sourceTree = "<group>"; };
 		E854444A1D45C56100102BE2 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		E854444E1D45CA2F00102BE2 /* GameBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBackground.swift; sourceTree = "<group>"; };
@@ -177,14 +189,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E834D6EE1D56B294004ED2D9 /* rocks */ = {
+			isa = PBXGroup;
+			children = (
+				E834D6EF1D56B2A5004ED2D9 /* Rock.swift */,
+			);
+			name = rocks;
+			sourceTree = "<group>";
+		};
+		E834D6F51D66B70E004ED2D9 /* GameEngine */ = {
+			isa = PBXGroup;
+			children = (
+				E834D6F71D66B741004ED2D9 /* GameEngine.swift */,
+			);
+			name = GameEngine;
+			sourceTree = "<group>";
+		};
+		E834D6F61D66B71D004ED2D9 /* GameState */ = {
+			isa = PBXGroup;
+			children = (
+				E834D6FA1D66BEF5004ED2D9 /* GameState.swift */,
+			);
+			name = GameState;
+			sourceTree = "<group>";
+		};
 		E85444441D45BBE000102BE2 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				E8ACFAEE1D41D4B9004F4C50 /* GameScene.sks */,
 				E8ACFAF01D41D4B9004F4C50 /* GameScene.swift */,
+				E8ACFAEE1D41D4B9004F4C50 /* GameScene.sks */,
 				E854444D1D45CA0D00102BE2 /* background */,
 				E85444511D4C683E00102BE2 /* buttons */,
 				E85444491D45C53E00102BE2 /* player */,
+				E834D6EE1D56B294004ED2D9 /* rocks */,
 				E85444551D4C6A1900102BE2 /* enemy */,
 				E85444451D45C17500102BE2 /* boundaries */,
 			);
@@ -255,6 +292,8 @@
 		E8ACFAEB1D41D4B9004F4C50 /* SpaceElite */ = {
 			isa = PBXGroup;
 			children = (
+				E834D6F61D66B71D004ED2D9 /* GameState */,
+				E834D6F51D66B70E004ED2D9 /* GameEngine */,
 				E8ACFB661D440588004F4C50 /* shared */,
 				E8ACFB1E1D41DB8B004F4C50 /* Views */,
 				E8ACFAEC1D41D4B9004F4C50 /* AppDelegate.swift */,
@@ -383,6 +422,7 @@
 			children = (
 				E8ACFB681D44059F004F4C50 /* ViewHelper.swift */,
 				E834D6EB1D568517004ED2D9 /* FunctionHelper.swift */,
+				E834D6F21D56B2D8004ED2D9 /* PhysicsHelper.swift */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -635,6 +675,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E85444531D4C686D00102BE2 /* GamesceneButtons.swift in Sources */,
+				E834D6F31D56B2D8004ED2D9 /* PhysicsHelper.swift in Sources */,
+				E834D6F81D66B741004ED2D9 /* GameEngine.swift in Sources */,
 				E854444B1D45C56100102BE2 /* Player.swift in Sources */,
 				E8ACFB501D43E4B6004F4C50 /* SettingsButtons.swift in Sources */,
 				E85444471D45C18900102BE2 /* Boundaries.swift in Sources */,
@@ -655,9 +697,11 @@
 				E8ACFB701D44253E004F4C50 /* LeaderboardsScene.swift in Sources */,
 				E8ACFB8F1D4528C3004F4C50 /* ChooseShipButtons.swift in Sources */,
 				E8ACFB8D1D4528B5004F4C50 /* ChooseShipBackground.swift in Sources */,
+				E834D6F01D56B2A5004ED2D9 /* Rock.swift in Sources */,
 				E834D6EC1D568517004ED2D9 /* FunctionHelper.swift in Sources */,
 				E8ACFB7B1D4425A8004F4C50 /* LeaderboardsLabels.swift in Sources */,
 				E854444F1D45CA2F00102BE2 /* GameBackground.swift in Sources */,
+				E834D6FB1D66BEF5004ED2D9 /* GameState.swift in Sources */,
 				E8ACFB291D41DF75004F4C50 /* MenuBackground.swift in Sources */,
 				E8ACFB861D45285E004F4C50 /* ChooseShipScene.swift in Sources */,
 			);
@@ -684,6 +728,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E85444541D4C686D00102BE2 /* GamesceneButtons.swift in Sources */,
+				E834D6F41D56B2D8004ED2D9 /* PhysicsHelper.swift in Sources */,
+				E834D6F91D66B741004ED2D9 /* GameEngine.swift in Sources */,
 				E854444C1D45C56100102BE2 /* Player.swift in Sources */,
 				E8ACFB611D43E97F004F4C50 /* SettingsButtons.swift in Sources */,
 				E85444481D45C18900102BE2 /* Boundaries.swift in Sources */,
@@ -704,9 +750,11 @@
 				E8ACFB7D1D4428F8004F4C50 /* LeaderboardsScene.swift in Sources */,
 				E8ACFB951D4540E2004F4C50 /* ChooseShipButtons.swift in Sources */,
 				E8ACFB941D4540DE004F4C50 /* ChooseShipBackground.swift in Sources */,
+				E834D6F11D56B2A5004ED2D9 /* Rock.swift in Sources */,
 				E834D6ED1D568517004ED2D9 /* FunctionHelper.swift in Sources */,
 				E8ACFB801D442902004F4C50 /* LeaderboardsLabels.swift in Sources */,
 				E85444501D45CA2F00102BE2 /* GameBackground.swift in Sources */,
+				E834D6FC1D66BEF5004ED2D9 /* GameState.swift in Sources */,
 				E8ACFB391D43DA79004F4C50 /* MenuBackground.swift in Sources */,
 				E8ACFB921D4540D4004F4C50 /* ChooseShipScene.swift in Sources */,
 			);

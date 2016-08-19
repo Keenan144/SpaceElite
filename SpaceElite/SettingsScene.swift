@@ -38,13 +38,13 @@ class SettingsScene: SKScene {
         
         switch action {
         case "loadMenuScene":
-            loadMenuScene()
+            GameViewController().loadMenuScene(self.view! as SKView)
         case "difficulty":
             print("DIFFICULTY")
         case "accountSettings":
             print("ACCOUNT SETTINGS")
         case "chooseShip":
-            loadChooseShipScene()
+            GameViewController().loadChooseShipScene(self.view! as SKView)
         default:
             return
         }
@@ -78,27 +78,5 @@ class SettingsScene: SKScene {
     
     private func addTitle() {
         SettingsLabels(SettingsScene: self).addTitle()
-    }
-    
-    private func loadMenuScene() {
-        if let scene = MenuScene(fileNamed:"MenuScene") {
-            let skView = self.view
-            
-            ViewHelper.skviewSettings(skView!)
-            ViewHelper.sceneViewSettings(scene, skView: skView!)
-            
-            skView!.presentScene(scene)
-        }
-    }
-    
-    private func loadChooseShipScene() {
-        if let scene = ChooseShipScene(fileNamed:"ChooseShipScene") {
-            let skView = self.view
-            
-            ViewHelper.skviewSettings(skView!)
-            ViewHelper.sceneViewSettings(scene, skView: skView!)
-            
-            skView!.presentScene(scene)
-        }
     }
 }

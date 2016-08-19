@@ -24,4 +24,14 @@ class ViewHelper: SKScene {
         scene.size = skView.bounds.size
         return scene
     }
+    
+    class func createButton(text: String, name: String, xCord: CGFloat, yChord: CGFloat, fontSize: CGFloat, zPosition: CGFloat) -> SKLabelNode {
+        let label = SKLabelNode(fontNamed: "Arial")
+        label.text = text
+        label.name = name
+        label.position = CGPoint(x: (xCord), y: (yChord))
+        label.fontSize = fontSize
+        label.zPosition = zPosition
+        return label
+    }
 }

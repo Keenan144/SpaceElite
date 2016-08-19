@@ -38,7 +38,7 @@ class ChooseShipScene: SKScene {
         
         switch action {
         case "loadSettingsScene":
-            loadSettingsScene()
+            GameViewController().loadSettingsScene(self.view! as SKView)
         case "difficulty":
             print("DIFFICULTY")
         case "accountSettings":
@@ -76,16 +76,5 @@ class ChooseShipScene: SKScene {
     
     private func addTitle() {
         ChooseShipLabels(ChooseShipScene: self).addTitle()
-    }
-    
-    private func loadSettingsScene() {
-        if let scene = SettingsScene(fileNamed:"SettingsScene") {
-            let skView = self.view
-            
-            ViewHelper.skviewSettings(skView!)
-            ViewHelper.sceneViewSettings(scene, skView: skView!)
-            
-            skView!.presentScene(scene)
-        }
     }
 }
