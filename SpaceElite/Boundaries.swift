@@ -49,35 +49,35 @@ class Boundaries: SKNode {
         
     }
     
-    func setBottomBoundary(boundaryCategory: UInt32, rockCategory: UInt32, frame: CGRect) -> SKSpriteNode {
-        var boundary = SKSpriteNode(color: UIColor.blackColor(), size: CGSize(width: frame.width, height: 1))
-        boundary.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: frame.width, height: 1))
+    func setBottomBoundary(_ boundaryCategory: UInt32, rockCategory: UInt32, frame: CGRect) -> SKSpriteNode {
+        var boundary = SKSpriteNode(color: UIColor.black, size: CGSize(width: frame.width, height: 1))
+        boundary.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: frame.width, height: 1))
         boundary.position = CGPoint(x: frame.midX, y: frame.minY)
         boundary = setBoundary(boundary, boundaryCategory: boundaryCategory, rockCategory: rockCategory)
         print("Boundary.setBottom")
         return boundary
     }
     
-    func setRightSideBoundary(boundaryCategory: UInt32, rockCategory: UInt32, frame: CGRect) -> SKSpriteNode {
-        var boundary = SKSpriteNode(color: UIColor.blackColor(), size: CGSize(width: 1, height: frame.height))
-        boundary.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 1, height: frame.height))
+    func setRightSideBoundary(_ boundaryCategory: UInt32, rockCategory: UInt32, frame: CGRect) -> SKSpriteNode {
+        var boundary = SKSpriteNode(color: UIColor.black, size: CGSize(width: 1, height: frame.height))
+        boundary.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 1, height: frame.height))
         boundary.position = CGPoint(x: frame.maxX, y: frame.midY)
         boundary = setBoundary(boundary, boundaryCategory: boundaryCategory, rockCategory: rockCategory)
         print("Boundary.setRightSide")
         return boundary
     }
     
-    func setLeftSideBoundary(boundaryCategory: UInt32, rockCategory: UInt32, frame: CGRect) -> SKSpriteNode {
-        var boundary = SKSpriteNode(color: UIColor.blackColor(), size: CGSize(width: 1, height: frame.height))
-        boundary.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: 1, height: frame.height))
+    func setLeftSideBoundary(_ boundaryCategory: UInt32, rockCategory: UInt32, frame: CGRect) -> SKSpriteNode {
+        var boundary = SKSpriteNode(color: UIColor.black, size: CGSize(width: 1, height: frame.height))
+        boundary.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: 1, height: frame.height))
         boundary.position = CGPoint(x: frame.minX, y: frame.midY)
         boundary = setBoundary(boundary, boundaryCategory: boundaryCategory, rockCategory: rockCategory)
         print("Boundary.setLeftSide")
         return boundary
     }
     
-    func setBoundary(boundary: SKSpriteNode, boundaryCategory: UInt32, rockCategory: UInt32) -> SKSpriteNode {
-        boundary.physicsBody?.dynamic = false
+    func setBoundary(_ boundary: SKSpriteNode, boundaryCategory: UInt32, rockCategory: UInt32) -> SKSpriteNode {
+        boundary.physicsBody?.isDynamic = false
         boundary.physicsBody?.categoryBitMask = boundaryCategory
         boundary.physicsBody?.contactTestBitMask = rockCategory
         boundary.physicsBody?.collisionBitMask = 0;

@@ -25,14 +25,14 @@ class Player: SKNode {
     
     static var health = Int()
     
-    func spawn(shipCategory: UInt32, rockCategory: UInt32) -> SKNode {
+    func spawn(_ shipCategory: UInt32, rockCategory: UInt32) -> SKNode {
         let shipSize = CGSize(width: 60, height: 60)
-        let ship = SKSpriteNode(color: UIColor.grayColor(), size: shipSize)
+        let ship = SKSpriteNode(color: UIColor.gray, size: shipSize)
         
         ship.texture = SKTexture(imageNamed: "Spaceship")
         
         ship.physicsBody = SKPhysicsBody(texture: ship.texture!, alphaThreshold: 0, size: shipSize)
-        ship.physicsBody?.dynamic = false
+        ship.physicsBody?.isDynamic = false
         ship.physicsBody?.collisionBitMask = 1;
         ship.physicsBody?.usesPreciseCollisionDetection = true
         ship.physicsBody?.categoryBitMask = shipCategory
@@ -46,7 +46,7 @@ class Player: SKNode {
         return ship
     }
     
-    class func deductHealth(damage: Int) {
+    class func deductHealth(_ damage: Int) {
         health = health - damage
         print("Ship health --> {\(health)}")
     }
@@ -61,7 +61,7 @@ class Player: SKNode {
         return checkHealth(health)
     }
     
-    static func checkHealth(health: Int) -> Bool {
+    static func checkHealth(_ health: Int) -> Bool {
         if health > 1 {
             print("SPACESHIP: checkHealth [FALSE]")
             return false
@@ -70,7 +70,7 @@ class Player: SKNode {
         return true
     }
     
-    static func setShipHealth(newHealth: Int) {
+    static func setShipHealth(_ newHealth: Int) {
         print("SPACESHIP: setShipHealth")
         health = newHealth
     }

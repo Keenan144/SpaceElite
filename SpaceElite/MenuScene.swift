@@ -9,31 +9,31 @@
 import SpriteKit
 
 class MenuScene: SKScene {
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         /* Setup your scene here */
         loadBackground()
         loadButtons()
         loadLabels()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
         
         for touch in touches {
-            let node = self.nodeAtPoint(touch.locationInNode(self))
+            let node = self.atPoint(touch.location(in: self))
             
-            if (node.name != nil) && (node.name!.rangeOfString("BTN") != nil) {
+            if (node.name != nil) && (node.name!.range(of: "BTN") != nil) {
                 buttonPressed(node)
             }
         }
     }
     
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
     }
     
-    func buttonPressed(node: SKNode) {
-        let array = node.name!.componentsSeparatedByString("-")
+    func buttonPressed(_ node: SKNode) {
+        let array = node.name!.components(separatedBy: "-")
         let action = array[1]
         
         switch action {
@@ -61,24 +61,24 @@ class MenuScene: SKScene {
         addTitle()
     }
     
-    private func addBackground() {
+    fileprivate func addBackground() {
         MenuBackground(MenuScene: self).addBackground()
     }
     
-    private func addGlitter() {
+    fileprivate func addGlitter() {
         MenuBackground(MenuScene: self).addGlitter()
 
     }
     
-    private func addNavButtons() {
+    fileprivate func addNavButtons() {
         MenuButtons(MenuScene: self).addButtons()
     }
     
-    private func addTitle() {
+    fileprivate func addTitle() {
         MenuLabels(MenuScene: self).addTitle()
     }
     
-    private func loadSettingsScene() {
+    fileprivate func loadSettingsScene() {
         if let scene = SettingsScene(fileNamed:"SettingsScene") {
             let skView = self.view
             
@@ -89,7 +89,7 @@ class MenuScene: SKScene {
         }
     }
     
-    private func loadLeaderboardsScene() {
+    fileprivate func loadLeaderboardsScene() {
         if let scene = LeaderboardsScene(fileNamed:"LeaderboardsScene") {
             let skView = self.view
             
@@ -100,14 +100,14 @@ class MenuScene: SKScene {
         }
     }
     
-    private func loadGame() {
+    fileprivate func loadGame() {
         if let scene = GameScene(fileNamed:"GameScene") {
             let skView = self.view
             
             ViewHelper.skviewSettings(skView!)
             ViewHelper.sceneViewSettings(scene, skView: skView!)
             
-            skView!.presentScene(scene)
+            skView!.presentScene(scene, transition: SKTransition.fade(with: UIColor.black, duration: 1.0))
         }
     }
 }

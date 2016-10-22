@@ -9,31 +9,31 @@
 import SpriteKit
 
 class ChooseShipScene: SKScene {
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         /* Setup your scene here */
         loadBackground()
         loadButtons()
         loadLabels()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
         
         for touch in touches {
-            let node = self.nodeAtPoint(touch.locationInNode(self))
+            let node = self.atPoint(touch.location(in: self))
             
-            if (node.name != nil) && (node.name!.rangeOfString("BTN") != nil) {
+            if (node.name != nil) && (node.name!.range(of: "BTN") != nil) {
                 buttonPressed(node)
             }
         }
     }
     
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
     }
     
-    func buttonPressed(node: SKNode) {
-        let array = node.name!.componentsSeparatedByString("-")
+    func buttonPressed(_ node: SKNode) {
+        let array = node.name!.components(separatedBy: "-")
         let action = array[1]
         
         switch action {
@@ -61,20 +61,20 @@ class ChooseShipScene: SKScene {
         addTitle()
     }
     
-    private func addBackground() {
+    fileprivate func addBackground() {
         ChooseShipBackground(ChooseShipScene: self).addBackground()
     }
     
-    private func addGlitter() {
+    fileprivate func addGlitter() {
         ChooseShipBackground(ChooseShipScene: self).addGlitter()
         
     }
     
-    private func addNavButtons() {
+    fileprivate func addNavButtons() {
         ChooseShipButtons(ChooseShipScene: self).addButtons()
     }
     
-    private func addTitle() {
+    fileprivate func addTitle() {
         ChooseShipLabels(ChooseShipScene: self).addTitle()
     }
 }

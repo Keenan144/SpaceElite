@@ -10,14 +10,13 @@ import SpriteKit
 
 
 class PhysicsHelper: SKNode {
-    class func setNodePhysics(boostSize: CGSize, boostColor: UIColor, name: String, velocity: CGFloat ) -> SKSpriteNode {
+    class func setNodePhysics(_ boostSize: CGSize, boostColor: UIColor, name: String, velocity: CGFloat ) -> SKSpriteNode {
         let boost = SKSpriteNode(color: boostColor, size: boostSize)
-        boost.texture = SKTexture(imageNamed: "Point")
-        boost.physicsBody = SKPhysicsBody(rectangleOfSize: boostSize)
-        boost.physicsBody?.dynamic = true
+    
+        boost.physicsBody = SKPhysicsBody(rectangleOf: boostSize)
+        boost.physicsBody?.isDynamic = true
         boost.physicsBody?.usesPreciseCollisionDetection = true
         boost.physicsBody?.affectedByGravity = false
-        boost.physicsBody?.velocity.dy = velocity
         boost.name = name
         
         return boost

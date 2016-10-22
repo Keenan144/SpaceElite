@@ -26,7 +26,7 @@ class LeaderboardsLabels: SKLabelNode {
         addTitleLabel()
     }
     
-    private func addTitleLabel() {
+    fileprivate func addTitleLabel() {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "Leaderboards"
         label.name = "LBL-Title"

@@ -9,45 +9,78 @@
 import SpriteKit
 
 class SettingsScene: SKScene {
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         /* Setup your scene here */
         loadBackground()
         loadButtons()
         loadLabels()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
         
         for touch in touches {
-            let node = self.nodeAtPoint(touch.locationInNode(self))
+            let node = self.atPoint(touch.location(in: self))
             
-            if (node.name != nil) && (node.name!.rangeOfString("BTN") != nil) {
+            if (node.name != nil) && (node.name!.range(of: "BTN") != nil) {
                 buttonPressed(node)
+            } else if (node.name != nil) && (node.name!.range(of: "TGL") != nil) {
+                togglePressed(node)
             }
         }
     }
     
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
     }
     
-    func buttonPressed(node: SKNode) {
-        let array = node.name!.componentsSeparatedByString("-")
+    func buttonPressed(_ node: SKNode) {
+        let array = node.name!.components(separatedBy: "-")
         let action = array[1]
+        print(action)
         
         switch action {
         case "loadMenuScene":
             GameViewController().loadMenuScene(self.view! as SKView)
         case "difficulty":
-            print("DIFFICULTY")
+            removeAllChildren()
+            addBackground()
+            GameViewController().loadDifficultySettingsScene(self.scene! as SKScene)
         case "accountSettings":
-            print("ACCOUNT SETTINGS")
+            removeAllChildren()
+            addBackground()
+            GameViewController().loadAccountSettingsScene(self.scene! as SKScene)
+        case "loadSettingsScene":
+            GameViewController().loadSettingsScene(self.view! as SKView)
         case "chooseShip":
             GameViewController().loadChooseShipScene(self.view! as SKView)
+        case "easyDifficulity":
+            GameSettings().setDifficulty("easy")
+        case "normalDifficulity":
+            GameSettings().setDifficulty("normal")
+        case "hardDifficulity":
+            GameSettings().setDifficulty("hard")
         default:
             return
         }
+    }
+    
+    func togglePressed(_ node: SKNode) {
+        let array = node.name!.components(separatedBy: "-")
+        let action = array[1]
+        print(action)
+        
+        switch action {
+        case "controlType":
+            GameSettings().setControlType()
+        case "gameType":
+            GameSettings().setGameType()
+        default:
+            return
+        }
+        removeAllChildren()
+        addBackground()
+        GameViewController().loadAccountSettingsScene(self.scene! as SKScene)
     }
     
     func loadBackground() {
@@ -63,20 +96,20 @@ class SettingsScene: SKScene {
         addTitle()
     }
     
-    private func addBackground() {
+    fileprivate func addBackground() {
         SettingsBackground(SettingsScene: self).addBackground()
     }
     
-    private func addGlitter() {
+    fileprivate func addGlitter() {
         SettingsBackground(SettingsScene: self).addGlitter()
         
     }
     
-    private func addNavButtons() {
+    fileprivate func addNavButtons() {
         SettingsButtons(SettingsScene: self).addButtons()
     }
     
-    private func addTitle() {
+    fileprivate func addTitle() {
         SettingsLabels(SettingsScene: self).addTitle()
     }
 }

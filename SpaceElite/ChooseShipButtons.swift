@@ -26,7 +26,7 @@ class ChooseShipButtons: SKNode {
         addBackButton()
     }
     
-    private func addBackButton() {
+    fileprivate func addBackButton() {
         let label = ViewHelper.createButton("Back", name: "BTN-loadSettingsScene", xCord: (size.width / 4), yChord: (0 - (size.height / 2.5)), fontSize: (size.width / 12), zPosition: 20)
 
         Background?.addChild(label)

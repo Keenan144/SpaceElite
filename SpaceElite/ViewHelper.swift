@@ -9,7 +9,7 @@
 import SpriteKit
 
 class ViewHelper: SKScene {
-    class func skviewSettings(skView: SKView) -> SKView {
+    class func skviewSettings(_ skView: SKView) -> SKView {
         skView.showsFPS = true
         skView.showsNodeCount = true
         
@@ -18,14 +18,14 @@ class ViewHelper: SKScene {
         return skView
     }
     
-    class func sceneViewSettings(scene: SKScene, skView: SKView) -> SKScene {
-        scene.scaleMode = .ResizeFill
+    class func sceneViewSettings(_ scene: SKScene, skView: SKView) -> SKScene {
+        scene.scaleMode = .resizeFill
         scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         scene.size = skView.bounds.size
         return scene
     }
     
-    class func createButton(text: String, name: String, xCord: CGFloat, yChord: CGFloat, fontSize: CGFloat, zPosition: CGFloat) -> SKLabelNode {
+    class func createButton(_ text: String, name: String, xCord: CGFloat, yChord: CGFloat, fontSize: CGFloat, zPosition: CGFloat) -> SKLabelNode {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = text
         label.name = name
@@ -33,5 +33,15 @@ class ViewHelper: SKScene {
         label.fontSize = fontSize
         label.zPosition = zPosition
         return label
+    }
+    
+    class func createExitButton(xCord: CGFloat, yChord: CGFloat) -> SKNode {
+        let buttonSize = CGSize(width: 30, height: 30)
+        let button = SKSpriteNode(color: UIColor.gray, size: buttonSize)
+        button.zPosition = 100
+        button.position = CGPoint(x: (xCord), y: (yChord))
+        button.name = "BTN-resume"
+        button.texture = SKTexture(imageNamed: "BTN_exit_01")
+        return button
     }
 }

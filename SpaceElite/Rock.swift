@@ -11,14 +11,16 @@ import SpriteKit
 class Rock: SKSpriteNode {
     
     class func spawn() -> SKSpriteNode {
-        let boostColor = UIColor.blueColor()
-        let boostSize = CGSize(width: 30, height: 40)
-        
+        let boostColor = UIColor.blue
+        let boostSize = CGSize(width: 20, height: 20)
+
         let boost = PhysicsHelper.setNodePhysics(boostSize, boostColor: boostColor, name: "Rock", velocity: -550)
         
-        boost.texture = SKTexture(imageNamed: "Rock")
-        boost.physicsBody = SKPhysicsBody(texture: boost.texture!, alphaThreshold: 0, size: boostSize)
-        boost.physicsBody?.allowsRotation = false
+//        boost.texture = SKTexture(imageNamed: "Spaceship")
+//        boost.physicsBody = SKPhysicsBody(rectangleOfSize: boostSize)
+//        boost.physicsBody?.allowsRotation = false
+        
+        boost.zPosition = 20
         
         return boost
     }

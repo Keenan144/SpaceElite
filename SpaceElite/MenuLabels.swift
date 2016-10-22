@@ -26,7 +26,7 @@ class MenuLabels: SKLabelNode {
         addTitleLabel()
     }
     
-    private func addTitleLabel() {
+    fileprivate func addTitleLabel() {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "Comet Fall"
         label.name = "LBL-Title"

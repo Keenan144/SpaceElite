@@ -9,7 +9,15 @@
 import SpriteKit
 
 class FunctionHelper: SKScene {
-    func randomInRange(lo: CGFloat, hi : CGFloat) -> CGFloat {
+    func randomInRange(_ lo: CGFloat, hi : CGFloat) -> CGFloat {
         return lo + CGFloat(arc4random_uniform(UInt32(hi - lo + 1)))
+    }
+    
+    func randomSpawnPoint(_ valueLowX: CGFloat, valueHighX: CGFloat, valueY: CGFloat) -> CGPoint {
+        return CGPoint(x: randomInRange(valueLowX, hi: valueHighX), y: valueY + 100)
+    }
+    
+    func randomTime(_ lo: Double, hi : Double) -> TimeInterval {
+        return lo + Double(arc4random_uniform(UInt32(hi - lo + 1)))
     }
 }
