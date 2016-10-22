@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E834D6EC1D568517004ED2D9 /* FunctionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6EB1D568517004ED2D9 /* FunctionHelper.swift */; };
+		E834D6ED1D568517004ED2D9 /* FunctionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6EB1D568517004ED2D9 /* FunctionHelper.swift */; };
+		E834D6F01D56B2A5004ED2D9 /* Rock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6EF1D56B2A5004ED2D9 /* Rock.swift */; };
+		E834D6F11D56B2A5004ED2D9 /* Rock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6EF1D56B2A5004ED2D9 /* Rock.swift */; };
+		E834D6F31D56B2D8004ED2D9 /* PhysicsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6F21D56B2D8004ED2D9 /* PhysicsHelper.swift */; };
+		E834D6F41D56B2D8004ED2D9 /* PhysicsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6F21D56B2D8004ED2D9 /* PhysicsHelper.swift */; };
+		E834D6F81D66B741004ED2D9 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6F71D66B741004ED2D9 /* GameEngine.swift */; };
+		E834D6F91D66B741004ED2D9 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6F71D66B741004ED2D9 /* GameEngine.swift */; };
+		E834D6FB1D66BEF5004ED2D9 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6FA1D66BEF5004ED2D9 /* GameState.swift */; };
+		E834D6FC1D66BEF5004ED2D9 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6FA1D66BEF5004ED2D9 /* GameState.swift */; };
+		E834D6FF1D6A0C02004ED2D9 /* WorldOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6FE1D6A0C02004ED2D9 /* WorldOne.swift */; };
+		E834D7001D6A0C02004ED2D9 /* WorldOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6FE1D6A0C02004ED2D9 /* WorldOne.swift */; };
+		E85444471D45C18900102BE2 /* Boundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444461D45C18900102BE2 /* Boundaries.swift */; };
+		E85444481D45C18900102BE2 /* Boundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444461D45C18900102BE2 /* Boundaries.swift */; };
+		E854444B1D45C56100102BE2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444A1D45C56100102BE2 /* Player.swift */; };
+		E854444C1D45C56100102BE2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444A1D45C56100102BE2 /* Player.swift */; };
+		E854444F1D45CA2F00102BE2 /* GameBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444E1D45CA2F00102BE2 /* GameBackground.swift */; };
+		E85444501D45CA2F00102BE2 /* GameBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444E1D45CA2F00102BE2 /* GameBackground.swift */; };
+		E85444531D4C686D00102BE2 /* GamesceneButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444521D4C686D00102BE2 /* GamesceneButtons.swift */; };
+		E85444541D4C686D00102BE2 /* GamesceneButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444521D4C686D00102BE2 /* GamesceneButtons.swift */; };
+		E85444571D4C6A4900102BE2 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444561D4C6A4900102BE2 /* Enemy.swift */; };
+		E85444581D4C6A4900102BE2 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444561D4C6A4900102BE2 /* Enemy.swift */; };
+		E88760F91D70DE7B00CE4504 /* Boost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88760F81D70DE7B00CE4504 /* Boost.swift */; };
+		E88760FA1D70DE7B00CE4504 /* Boost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88760F81D70DE7B00CE4504 /* Boost.swift */; };
 		E8ACFAED1D41D4B9004F4C50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFAEC1D41D4B9004F4C50 /* AppDelegate.swift */; };
 		E8ACFAEF1D41D4B9004F4C50 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFAEE1D41D4B9004F4C50 /* GameScene.sks */; };
 		E8ACFAF11D41D4B9004F4C50 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFAF01D41D4B9004F4C50 /* GameScene.swift */; };
@@ -31,7 +55,6 @@
 		E8ACFB3D1D43DA79004F4C50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFAF91D41D4B9004F4C50 /* LaunchScreen.storyboard */; };
 		E8ACFB3F1D43DA79004F4C50 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFB251D41DBF6004F4C50 /* MenuScene.sks */; };
 		E8ACFB401D43DA79004F4C50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFAF41D41D4B9004F4C50 /* Main.storyboard */; };
-		E8ACFB461D43DD32004F4C50 /* DEV-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFB451D43DA79004F4C50 /* DEV-Info.plist */; };
 		E8ACFB4E1D43E4A4004F4C50 /* SettingsBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB4D1D43E4A4004F4C50 /* SettingsBackground.swift */; };
 		E8ACFB501D43E4B6004F4C50 /* SettingsButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB4F1D43E4B6004F4C50 /* SettingsButtons.swift */; };
 		E8ACFB521D43E4D2004F4C50 /* SettingsLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB511D43E4D2004F4C50 /* SettingsLabels.swift */; };
@@ -66,7 +89,8 @@
 		E8ACFB941D4540DE004F4C50 /* ChooseShipBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB8C1D4528B5004F4C50 /* ChooseShipBackground.swift */; };
 		E8ACFB951D4540E2004F4C50 /* ChooseShipButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB8E1D4528C3004F4C50 /* ChooseShipButtons.swift */; };
 		E8ACFB961D4540E6004F4C50 /* ChooseShipLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB901D4528D8004F4C50 /* ChooseShipLabels.swift */; };
-		E8ACFB971D454121004F4C50 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFAFC1D41D4B9004F4C50 /* Info.plist */; };
+		E8EFC6CB1D6CF7DB00D1868A /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EFC6CA1D6CF7DB00D1868A /* GameSettings.swift */; };
+		E8EFC6CC1D6CF7DB00D1868A /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EFC6CA1D6CF7DB00D1868A /* GameSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +111,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E834D6EB1D568517004ED2D9 /* FunctionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionHelper.swift; sourceTree = "<group>"; };
+		E834D6EF1D56B2A5004ED2D9 /* Rock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rock.swift; sourceTree = "<group>"; };
+		E834D6F21D56B2D8004ED2D9 /* PhysicsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsHelper.swift; sourceTree = "<group>"; };
+		E834D6F71D66B741004ED2D9 /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
+		E834D6FA1D66BEF5004ED2D9 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		E834D6FE1D6A0C02004ED2D9 /* WorldOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldOne.swift; sourceTree = "<group>"; };
+		E85444461D45C18900102BE2 /* Boundaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boundaries.swift; sourceTree = "<group>"; };
+		E854444A1D45C56100102BE2 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		E854444E1D45CA2F00102BE2 /* GameBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBackground.swift; sourceTree = "<group>"; };
+		E85444521D4C686D00102BE2 /* GamesceneButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesceneButtons.swift; sourceTree = "<group>"; };
+		E85444561D4C6A4900102BE2 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		E88760F81D70DE7B00CE4504 /* Boost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boost.swift; sourceTree = "<group>"; };
 		E8ACFAE91D41D4B9004F4C50 /* CometFall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CometFall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8ACFAEC1D41D4B9004F4C50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8ACFAEE1D41D4B9004F4C50 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -125,6 +161,7 @@
 		E8ACFB8C1D4528B5004F4C50 /* ChooseShipBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseShipBackground.swift; sourceTree = "<group>"; };
 		E8ACFB8E1D4528C3004F4C50 /* ChooseShipButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseShipButtons.swift; sourceTree = "<group>"; };
 		E8ACFB901D4528D8004F4C50 /* ChooseShipLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseShipLabels.swift; sourceTree = "<group>"; };
+		E8EFC6CA1D6CF7DB00D1868A /* GameSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +196,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E834D6EE1D56B294004ED2D9 /* rocks */ = {
+			isa = PBXGroup;
+			children = (
+				E834D6EF1D56B2A5004ED2D9 /* Rock.swift */,
+				E88760F81D70DE7B00CE4504 /* Boost.swift */,
+			);
+			name = rocks;
+			sourceTree = "<group>";
+		};
+		E834D6F51D66B70E004ED2D9 /* GameEngine */ = {
+			isa = PBXGroup;
+			children = (
+				E834D6F71D66B741004ED2D9 /* GameEngine.swift */,
+			);
+			name = GameEngine;
+			sourceTree = "<group>";
+		};
+		E834D6F61D66B71D004ED2D9 /* GameState */ = {
+			isa = PBXGroup;
+			children = (
+				E834D6FA1D66BEF5004ED2D9 /* GameState.swift */,
+				E8EFC6CA1D6CF7DB00D1868A /* GameSettings.swift */,
+			);
+			name = GameState;
+			sourceTree = "<group>";
+		};
+		E834D6FD1D6A0BE4004ED2D9 /* OverWorld */ = {
+			isa = PBXGroup;
+			children = (
+				E834D6FE1D6A0C02004ED2D9 /* WorldOne.swift */,
+			);
+			name = OverWorld;
+			sourceTree = "<group>";
+		};
+		E85444441D45BBE000102BE2 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				E8ACFAF01D41D4B9004F4C50 /* GameScene.swift */,
+				E8ACFAEE1D41D4B9004F4C50 /* GameScene.sks */,
+				E854444D1D45CA0D00102BE2 /* background */,
+				E85444511D4C683E00102BE2 /* buttons */,
+				E85444491D45C53E00102BE2 /* player */,
+				E834D6EE1D56B294004ED2D9 /* rocks */,
+				E85444551D4C6A1900102BE2 /* enemy */,
+				E85444451D45C17500102BE2 /* boundaries */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		E85444451D45C17500102BE2 /* boundaries */ = {
+			isa = PBXGroup;
+			children = (
+				E85444461D45C18900102BE2 /* Boundaries.swift */,
+			);
+			name = boundaries;
+			sourceTree = "<group>";
+		};
+		E85444491D45C53E00102BE2 /* player */ = {
+			isa = PBXGroup;
+			children = (
+				E854444A1D45C56100102BE2 /* Player.swift */,
+			);
+			name = player;
+			sourceTree = "<group>";
+		};
+		E854444D1D45CA0D00102BE2 /* background */ = {
+			isa = PBXGroup;
+			children = (
+				E854444E1D45CA2F00102BE2 /* GameBackground.swift */,
+			);
+			name = background;
+			sourceTree = "<group>";
+		};
+		E85444511D4C683E00102BE2 /* buttons */ = {
+			isa = PBXGroup;
+			children = (
+				E85444521D4C686D00102BE2 /* GamesceneButtons.swift */,
+			);
+			name = buttons;
+			sourceTree = "<group>";
+		};
+		E85444551D4C6A1900102BE2 /* enemy */ = {
+			isa = PBXGroup;
+			children = (
+				E85444561D4C6A4900102BE2 /* Enemy.swift */,
+			);
+			name = enemy;
+			sourceTree = "<group>";
+		};
 		E8ACFAE01D41D4B9004F4C50 = {
 			isa = PBXGroup;
 			children = (
@@ -183,11 +309,12 @@
 		E8ACFAEB1D41D4B9004F4C50 /* SpaceElite */ = {
 			isa = PBXGroup;
 			children = (
+				E834D6FD1D6A0BE4004ED2D9 /* OverWorld */,
+				E834D6F61D66B71D004ED2D9 /* GameState */,
+				E834D6F51D66B70E004ED2D9 /* GameEngine */,
 				E8ACFB661D440588004F4C50 /* shared */,
 				E8ACFB1E1D41DB8B004F4C50 /* Views */,
 				E8ACFAEC1D41D4B9004F4C50 /* AppDelegate.swift */,
-				E8ACFAEE1D41D4B9004F4C50 /* GameScene.sks */,
-				E8ACFAF01D41D4B9004F4C50 /* GameScene.swift */,
 				E8ACFAF21D41D4B9004F4C50 /* GameViewController.swift */,
 				E8ACFAF41D41D4B9004F4C50 /* Main.storyboard */,
 				E8ACFAF71D41D4B9004F4C50 /* Assets.xcassets */,
@@ -219,6 +346,7 @@
 		E8ACFB1E1D41DB8B004F4C50 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E85444441D45BBE000102BE2 /* Game */,
 				E8ACFB841D452824004F4C50 /* ChooseShip */,
 				E8ACFB6E1D44252B004F4C50 /* Leaderboards */,
 				E8ACFB471D43DDB9004F4C50 /* Settings */,
@@ -311,6 +439,8 @@
 			isa = PBXGroup;
 			children = (
 				E8ACFB681D44059F004F4C50 /* ViewHelper.swift */,
+				E834D6EB1D568517004ED2D9 /* FunctionHelper.swift */,
+				E834D6F21D56B2D8004ED2D9 /* PhysicsHelper.swift */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -467,23 +597,27 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Keenan Sturtevant";
 				TargetAttributes = {
 					E8ACFAE81D41D4B9004F4C50 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 724X7XMPF4;
+						LastSwiftMigration = 0800;
 					};
 					E8ACFB001D41D4BA004F4C50 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = E8ACFAE81D41D4B9004F4C50;
 					};
 					E8ACFB0B1D41D4BA004F4C50 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = E8ACFAE81D41D4B9004F4C50;
 					};
 					E8ACFB311D43DA79004F4C50 = {
 						DevelopmentTeam = 724X7XMPF4;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -515,7 +649,6 @@
 			files = (
 				E8ACFAEF1D41D4B9004F4C50 /* GameScene.sks in Resources */,
 				E8ACFAFB1D41D4B9004F4C50 /* LaunchScreen.storyboard in Resources */,
-				E8ACFB971D454121004F4C50 /* Info.plist in Resources */,
 				E8ACFB721D442554004F4C50 /* LeaderboardsScene.sks in Resources */,
 				E8ACFB641D43EA55004F4C50 /* SettingsScene.sks in Resources */,
 				E8ACFB831D45275E004F4C50 /* Assets.xcassets in Resources */,
@@ -543,7 +676,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8ACFB461D43DD32004F4C50 /* DEV-Info.plist in Resources */,
 				E8ACFB3C1D43DA79004F4C50 /* GameScene.sks in Resources */,
 				E8ACFB7C1D4428F5004F4C50 /* LeaderboardsScene.sks in Resources */,
 				E8ACFB651D43EA65004F4C50 /* SettingsScene.sks in Resources */,
@@ -562,13 +694,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E85444531D4C686D00102BE2 /* GamesceneButtons.swift in Sources */,
+				E834D6F31D56B2D8004ED2D9 /* PhysicsHelper.swift in Sources */,
+				E834D6F81D66B741004ED2D9 /* GameEngine.swift in Sources */,
+				E854444B1D45C56100102BE2 /* Player.swift in Sources */,
 				E8ACFB501D43E4B6004F4C50 /* SettingsButtons.swift in Sources */,
+				E85444471D45C18900102BE2 /* Boundaries.swift in Sources */,
+				E834D6FF1D6A0C02004ED2D9 /* WorldOne.swift in Sources */,
 				E8ACFB301D41F1DF004F4C50 /* MenuLabels.swift in Sources */,
 				E8ACFB2C1D41E9CC004F4C50 /* MenuButtons.swift in Sources */,
+				E85444571D4C6A4900102BE2 /* Enemy.swift in Sources */,
 				E8ACFB791D44259C004F4C50 /* LeaderboardsButtons.swift in Sources */,
 				E8ACFB4E1D43E4A4004F4C50 /* SettingsBackground.swift in Sources */,
 				E8ACFAF11D41D4B9004F4C50 /* GameScene.swift in Sources */,
 				E8ACFB771D442591004F4C50 /* LeaderboardsBackground.swift in Sources */,
+				E88760F91D70DE7B00CE4504 /* Boost.swift in Sources */,
 				E8ACFB241D41DBE5004F4C50 /* MenuScene.swift in Sources */,
 				E8ACFAF31D41D4B9004F4C50 /* GameViewController.swift in Sources */,
 				E8ACFB5E1D43E970004F4C50 /* SettingsScene.swift in Sources */,
@@ -579,7 +719,12 @@
 				E8ACFB701D44253E004F4C50 /* LeaderboardsScene.swift in Sources */,
 				E8ACFB8F1D4528C3004F4C50 /* ChooseShipButtons.swift in Sources */,
 				E8ACFB8D1D4528B5004F4C50 /* ChooseShipBackground.swift in Sources */,
+				E8EFC6CB1D6CF7DB00D1868A /* GameSettings.swift in Sources */,
+				E834D6F01D56B2A5004ED2D9 /* Rock.swift in Sources */,
+				E834D6EC1D568517004ED2D9 /* FunctionHelper.swift in Sources */,
 				E8ACFB7B1D4425A8004F4C50 /* LeaderboardsLabels.swift in Sources */,
+				E854444F1D45CA2F00102BE2 /* GameBackground.swift in Sources */,
+				E834D6FB1D66BEF5004ED2D9 /* GameState.swift in Sources */,
 				E8ACFB291D41DF75004F4C50 /* MenuBackground.swift in Sources */,
 				E8ACFB861D45285E004F4C50 /* ChooseShipScene.swift in Sources */,
 			);
@@ -605,13 +750,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E85444541D4C686D00102BE2 /* GamesceneButtons.swift in Sources */,
+				E834D6F41D56B2D8004ED2D9 /* PhysicsHelper.swift in Sources */,
+				E834D6F91D66B741004ED2D9 /* GameEngine.swift in Sources */,
+				E854444C1D45C56100102BE2 /* Player.swift in Sources */,
 				E8ACFB611D43E97F004F4C50 /* SettingsButtons.swift in Sources */,
+				E85444481D45C18900102BE2 /* Boundaries.swift in Sources */,
+				E834D7001D6A0C02004ED2D9 /* WorldOne.swift in Sources */,
 				E8ACFB331D43DA79004F4C50 /* MenuLabels.swift in Sources */,
 				E8ACFB341D43DA79004F4C50 /* MenuButtons.swift in Sources */,
+				E85444581D4C6A4900102BE2 /* Enemy.swift in Sources */,
 				E8ACFB7F1D4428FF004F4C50 /* LeaderboardsButtons.swift in Sources */,
 				E8ACFB601D43E97C004F4C50 /* SettingsBackground.swift in Sources */,
 				E8ACFB351D43DA79004F4C50 /* GameScene.swift in Sources */,
 				E8ACFB7E1D4428FD004F4C50 /* LeaderboardsBackground.swift in Sources */,
+				E88760FA1D70DE7B00CE4504 /* Boost.swift in Sources */,
 				E8ACFB361D43DA79004F4C50 /* MenuScene.swift in Sources */,
 				E8ACFB371D43DA79004F4C50 /* GameViewController.swift in Sources */,
 				E8ACFB5F1D43E978004F4C50 /* SettingsScene.swift in Sources */,
@@ -622,7 +775,12 @@
 				E8ACFB7D1D4428F8004F4C50 /* LeaderboardsScene.swift in Sources */,
 				E8ACFB951D4540E2004F4C50 /* ChooseShipButtons.swift in Sources */,
 				E8ACFB941D4540DE004F4C50 /* ChooseShipBackground.swift in Sources */,
+				E8EFC6CC1D6CF7DB00D1868A /* GameSettings.swift in Sources */,
+				E834D6F11D56B2A5004ED2D9 /* Rock.swift in Sources */,
+				E834D6ED1D568517004ED2D9 /* FunctionHelper.swift in Sources */,
 				E8ACFB801D442902004F4C50 /* LeaderboardsLabels.swift in Sources */,
+				E85444501D45CA2F00102BE2 /* GameBackground.swift in Sources */,
+				E834D6FC1D66BEF5004ED2D9 /* GameState.swift in Sources */,
 				E8ACFB391D43DA79004F4C50 /* MenuBackground.swift in Sources */,
 				E8ACFB921D4540D4004F4C50 /* ChooseShipScene.swift in Sources */,
 			);
@@ -677,8 +835,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -701,6 +861,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -723,8 +884,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -741,8 +904,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -760,6 +925,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.keenan144dev.SpaceElite;
 				PRODUCT_NAME = CometFall;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -775,6 +941,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.keenan144dev.SpaceElite;
 				PRODUCT_NAME = CometFall;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -787,6 +954,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.keenansturtevant.SpaceEliteTests;
 				PRODUCT_NAME = CometFall;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CometFall.app/CometFall";
 			};
 			name = Debug;
@@ -799,6 +967,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.keenansturtevant.SpaceEliteTests;
 				PRODUCT_NAME = CometFall;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CometFall.app/CometFall";
 			};
 			name = Release;
@@ -811,6 +980,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.keenansturtevant.SpaceEliteUITests;
 				PRODUCT_NAME = CometFall;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SpaceElite;
 			};
 			name = Debug;
@@ -822,6 +992,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.keenansturtevant.SpaceEliteUITests;
 				PRODUCT_NAME = CometFall;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SpaceElite;
 			};
 			name = Release;
@@ -838,6 +1009,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.keenan144dev.SpaceElite-DEV";
 				PRODUCT_NAME = CometFall;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -853,6 +1025,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.keenan144dev.SpaceElite-DEV";
 				PRODUCT_NAME = CometFall;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

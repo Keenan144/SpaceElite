@@ -26,7 +26,7 @@ class ChooseShipLabels: SKLabelNode {
         addTitleLabel()
     }
     
-    private func addTitleLabel() {
+    fileprivate func addTitleLabel() {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "ChooseShip"
         label.name = "LBL-Title"

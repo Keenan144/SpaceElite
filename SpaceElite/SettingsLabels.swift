@@ -26,7 +26,7 @@ class SettingsLabels: SKLabelNode {
         addTitleLabel()
     }
     
-    private func addTitleLabel() {
+    fileprivate func addTitleLabel() {
         let label = SKLabelNode(fontNamed: "Arial")
         label.text = "Hanger"
         label.name = "LBL-Title"
