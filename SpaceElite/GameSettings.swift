@@ -61,10 +61,6 @@ class GameSettings: SKNode {
         return settingsData.object(forKey: "gameType") as! String
         
     }
-
-    func reset() {
-        setGameSettingsToDefault()
-    }
     
     func loadSettings() {
         if settingsData.object(forKey: "controlType") == nil {
@@ -78,5 +74,9 @@ class GameSettings: SKNode {
         if settingsData.object(forKey: "gameType") == nil {
             setGameType()
         }
+    }
+    
+    func reset() {
+        setGameSettingsToDefault()
     }
 }

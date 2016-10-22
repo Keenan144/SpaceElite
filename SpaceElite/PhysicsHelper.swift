@@ -10,7 +10,7 @@ import SpriteKit
 
 
 class PhysicsHelper: SKNode {
-    class func setNodePhysics(_ boostSize: CGSize, boostColor: UIColor, name: String, velocity: CGFloat ) -> SKSpriteNode {
+    class func setNodePhysics(_ boostSize: CGSize, boostColor: UIColor, name: String ) -> SKSpriteNode {
         let boost = SKSpriteNode(color: boostColor, size: boostSize)
     
         boost.physicsBody = SKPhysicsBody(rectangleOf: boostSize)

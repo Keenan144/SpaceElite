@@ -49,8 +49,8 @@ class GameState: SKNode {
         return gameStateData.object(forKey: "lastSession")!
     }
     
-    func getHighScores() {
-        let playerScore = getScore()
+    func getHighScores() -> Any {
+        return getScore()
     }
     
     func getLevel() -> Int {

@@ -38,7 +38,13 @@ class LeaderboardsScene: SKScene {
         
         switch action {
         case "loadMenuScene":
-            GameViewController().loadMenuScene(self.view! as SKView)
+            GameViewController().loadScene(scene: "MenuScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
+        case "loadSettingsScene":
+            GameViewController().loadScene(scene: "SettingsScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
+        case "loadLeaderboardsScene":
+            GameViewController().loadScene(scene: "LeaderboardsScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
+        case "newGame":
+            GameViewController().loadScene(scene: "GameScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
         default:
             return
         }

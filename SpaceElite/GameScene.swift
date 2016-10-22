@@ -111,20 +111,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.isPaused = true
             myTimer.invalidate()
             boostTimer.invalidate()
-            GameViewController().loadHUD(self)
+            gameTimer.invalidate()
             self.childNode(withName: "BTN-pause")?.removeFromParent()
+            GameViewController().loadHUD(self)
         case "resume":
             resumeGame()
             loadButtons()
         case "loadMenuScene":
             endGame()
-            GameViewController().loadMenuScene(self.view! as SKView)
+            GameViewController().loadScene(scene: "MenuScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
         case "loadSettingsScene":
-            GameViewController().loadSettingsScene(self.view! as SKView)
+            GameViewController().loadScene(scene: "SettingsScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
         case "loadLeaderboardsScene":
-            GameState().postScore()
+            GameViewController().loadScene(scene: "LeaderboardsScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
         case "newGame":
-            GameViewController().loadGame(self.view! as SKView)
+            GameViewController().loadScene(scene: "GameScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
         default:
             return
         }
@@ -164,10 +165,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
             self.addChild(rock)
             rock.run(SKAction.sequence([moveAction, removeRock, SKAction.run(increaseScore)]))
-            
-            if GameState().getScore() > 1200 && GameState().getScore() < 1211 && GameSettings().getGameType() == "cometFall" {
-                spawnBoss()
-            }
         }
     }
     
@@ -185,7 +182,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func initGameScene() {
-        setBoundaries()
+//        setBoundaries()
         loadBackground()
         loadButtons()
         AddScoreLabel()
@@ -250,28 +247,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         GamesceneButtons(Gamescene: self).addGameOver()
     }
     
-    func spawnBoss() {
-        initGameEnemy()
-        Enemy(GameScene: self).move(enemy)
-        enemyMovementTimer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(moveEnemy), userInfo: nil, repeats: true)
-    }
-    
-    func moveEnemy() {
-        Enemy(GameScene: self).move(enemy)
-    }
-    
     fileprivate func initGamePlayer() {
         player = Player(GameScene: self).spawn(0x1 << 1, rockCategory: 0x1 << 2)
         contactDone = true
-    }
-    
-    fileprivate func initGameEnemy() {
-        enemy = Enemy(GameScene: self).spawn(0x1 << 1, rockCategory: 0x1 << 2)
-        
-    }
-    
-    fileprivate func setBoundaries() {
-        Boundaries(GameScene: self).setBoundaries()
     }
     
     fileprivate func addBackground() {
@@ -283,15 +261,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     fileprivate func resumeGame() {
-        rockSpawnerTimer()
-        boostSpawnerTimer()
-        self.isPaused = false
         self.childNode(withName: "div")?.removeFromParent()
         self.childNode(withName: "BTN-loadMenuScene")?.removeFromParent()
         self.childNode(withName: "BTN-loadLeaderboardsScene")?.removeFromParent()
         self.childNode(withName: "BTN-resume")?.removeFromParent()
         self.childNode(withName: "LBL-difficulity")?.removeFromParent()
         self.childNode(withName: "LBL-controlType")?.removeFromParent()
+        self.isPaused = false
+        rockSpawnerTimer()
+        boostSpawnerTimer()
+        startGameTimer()
     }
     
     fileprivate func endGame() {

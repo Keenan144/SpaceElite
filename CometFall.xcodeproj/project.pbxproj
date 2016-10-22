@@ -17,18 +17,12 @@
 		E834D6F91D66B741004ED2D9 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6F71D66B741004ED2D9 /* GameEngine.swift */; };
 		E834D6FB1D66BEF5004ED2D9 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6FA1D66BEF5004ED2D9 /* GameState.swift */; };
 		E834D6FC1D66BEF5004ED2D9 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6FA1D66BEF5004ED2D9 /* GameState.swift */; };
-		E834D6FF1D6A0C02004ED2D9 /* WorldOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6FE1D6A0C02004ED2D9 /* WorldOne.swift */; };
-		E834D7001D6A0C02004ED2D9 /* WorldOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6FE1D6A0C02004ED2D9 /* WorldOne.swift */; };
-		E85444471D45C18900102BE2 /* Boundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444461D45C18900102BE2 /* Boundaries.swift */; };
-		E85444481D45C18900102BE2 /* Boundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444461D45C18900102BE2 /* Boundaries.swift */; };
 		E854444B1D45C56100102BE2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444A1D45C56100102BE2 /* Player.swift */; };
 		E854444C1D45C56100102BE2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444A1D45C56100102BE2 /* Player.swift */; };
 		E854444F1D45CA2F00102BE2 /* GameBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444E1D45CA2F00102BE2 /* GameBackground.swift */; };
 		E85444501D45CA2F00102BE2 /* GameBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444E1D45CA2F00102BE2 /* GameBackground.swift */; };
 		E85444531D4C686D00102BE2 /* GamesceneButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444521D4C686D00102BE2 /* GamesceneButtons.swift */; };
 		E85444541D4C686D00102BE2 /* GamesceneButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444521D4C686D00102BE2 /* GamesceneButtons.swift */; };
-		E85444571D4C6A4900102BE2 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444561D4C6A4900102BE2 /* Enemy.swift */; };
-		E85444581D4C6A4900102BE2 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85444561D4C6A4900102BE2 /* Enemy.swift */; };
 		E88760F91D70DE7B00CE4504 /* Boost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88760F81D70DE7B00CE4504 /* Boost.swift */; };
 		E88760FA1D70DE7B00CE4504 /* Boost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88760F81D70DE7B00CE4504 /* Boost.swift */; };
 		E8ACFAED1D41D4B9004F4C50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFAEC1D41D4B9004F4C50 /* AppDelegate.swift */; };
@@ -116,12 +110,9 @@
 		E834D6F21D56B2D8004ED2D9 /* PhysicsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsHelper.swift; sourceTree = "<group>"; };
 		E834D6F71D66B741004ED2D9 /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		E834D6FA1D66BEF5004ED2D9 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
-		E834D6FE1D6A0C02004ED2D9 /* WorldOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldOne.swift; sourceTree = "<group>"; };
-		E85444461D45C18900102BE2 /* Boundaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boundaries.swift; sourceTree = "<group>"; };
 		E854444A1D45C56100102BE2 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		E854444E1D45CA2F00102BE2 /* GameBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBackground.swift; sourceTree = "<group>"; };
 		E85444521D4C686D00102BE2 /* GamesceneButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesceneButtons.swift; sourceTree = "<group>"; };
-		E85444561D4C6A4900102BE2 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		E88760F81D70DE7B00CE4504 /* Boost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boost.swift; sourceTree = "<group>"; };
 		E8ACFAE91D41D4B9004F4C50 /* CometFall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CometFall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8ACFAEC1D41D4B9004F4C50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -222,14 +213,6 @@
 			name = GameState;
 			sourceTree = "<group>";
 		};
-		E834D6FD1D6A0BE4004ED2D9 /* OverWorld */ = {
-			isa = PBXGroup;
-			children = (
-				E834D6FE1D6A0C02004ED2D9 /* WorldOne.swift */,
-			);
-			name = OverWorld;
-			sourceTree = "<group>";
-		};
 		E85444441D45BBE000102BE2 /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,18 +222,8 @@
 				E85444511D4C683E00102BE2 /* buttons */,
 				E85444491D45C53E00102BE2 /* player */,
 				E834D6EE1D56B294004ED2D9 /* rocks */,
-				E85444551D4C6A1900102BE2 /* enemy */,
-				E85444451D45C17500102BE2 /* boundaries */,
 			);
 			name = Game;
-			sourceTree = "<group>";
-		};
-		E85444451D45C17500102BE2 /* boundaries */ = {
-			isa = PBXGroup;
-			children = (
-				E85444461D45C18900102BE2 /* Boundaries.swift */,
-			);
-			name = boundaries;
 			sourceTree = "<group>";
 		};
 		E85444491D45C53E00102BE2 /* player */ = {
@@ -277,14 +250,6 @@
 			name = buttons;
 			sourceTree = "<group>";
 		};
-		E85444551D4C6A1900102BE2 /* enemy */ = {
-			isa = PBXGroup;
-			children = (
-				E85444561D4C6A4900102BE2 /* Enemy.swift */,
-			);
-			name = enemy;
-			sourceTree = "<group>";
-		};
 		E8ACFAE01D41D4B9004F4C50 = {
 			isa = PBXGroup;
 			children = (
@@ -309,7 +274,6 @@
 		E8ACFAEB1D41D4B9004F4C50 /* SpaceElite */ = {
 			isa = PBXGroup;
 			children = (
-				E834D6FD1D6A0BE4004ED2D9 /* OverWorld */,
 				E834D6F61D66B71D004ED2D9 /* GameState */,
 				E834D6F51D66B70E004ED2D9 /* GameEngine */,
 				E8ACFB661D440588004F4C50 /* shared */,
@@ -699,11 +663,8 @@
 				E834D6F81D66B741004ED2D9 /* GameEngine.swift in Sources */,
 				E854444B1D45C56100102BE2 /* Player.swift in Sources */,
 				E8ACFB501D43E4B6004F4C50 /* SettingsButtons.swift in Sources */,
-				E85444471D45C18900102BE2 /* Boundaries.swift in Sources */,
-				E834D6FF1D6A0C02004ED2D9 /* WorldOne.swift in Sources */,
 				E8ACFB301D41F1DF004F4C50 /* MenuLabels.swift in Sources */,
 				E8ACFB2C1D41E9CC004F4C50 /* MenuButtons.swift in Sources */,
-				E85444571D4C6A4900102BE2 /* Enemy.swift in Sources */,
 				E8ACFB791D44259C004F4C50 /* LeaderboardsButtons.swift in Sources */,
 				E8ACFB4E1D43E4A4004F4C50 /* SettingsBackground.swift in Sources */,
 				E8ACFAF11D41D4B9004F4C50 /* GameScene.swift in Sources */,
@@ -755,11 +716,8 @@
 				E834D6F91D66B741004ED2D9 /* GameEngine.swift in Sources */,
 				E854444C1D45C56100102BE2 /* Player.swift in Sources */,
 				E8ACFB611D43E97F004F4C50 /* SettingsButtons.swift in Sources */,
-				E85444481D45C18900102BE2 /* Boundaries.swift in Sources */,
-				E834D7001D6A0C02004ED2D9 /* WorldOne.swift in Sources */,
 				E8ACFB331D43DA79004F4C50 /* MenuLabels.swift in Sources */,
 				E8ACFB341D43DA79004F4C50 /* MenuButtons.swift in Sources */,
-				E85444581D4C6A4900102BE2 /* Enemy.swift in Sources */,
 				E8ACFB7F1D4428FF004F4C50 /* LeaderboardsButtons.swift in Sources */,
 				E8ACFB601D43E97C004F4C50 /* SettingsBackground.swift in Sources */,
 				E8ACFB351D43DA79004F4C50 /* GameScene.swift in Sources */,

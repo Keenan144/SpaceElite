@@ -14,12 +14,10 @@ class Boost: SKSpriteNode {
         let boostColor = UIColor.green
         let boostSize = CGSize(width: 35, height: 35)
         
-        let boost = PhysicsHelper.setNodePhysics(boostSize, boostColor: boostColor, name: "Health", velocity: -550)
+        let boost = PhysicsHelper.setNodePhysics(boostSize, boostColor: boostColor, name: "Health")
         
-        //        boost.texture = SKTexture(imageNamed: "Spaceship")
-        //        boost.physicsBody = SKPhysicsBody(rectangleOfSize: boostSize)
-        //        boost.physicsBody?.allowsRotation = false
-        
+        boost.texture = SKTexture(imageNamed: "NODE_health_pack_01")
+
         boost.zPosition = 20
         
         return boost
