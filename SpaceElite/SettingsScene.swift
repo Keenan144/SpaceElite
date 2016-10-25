@@ -23,7 +23,7 @@ class SettingsScene: SKScene {
                 let array = node.name!.components(separatedBy: "-")
                 let action = array[1]
                 
-                TouchController().buttonPressed(action: action, view: self.view! as SKView)
+                TouchController().buttonPressed(action: action, view: self.view! as SKView, scene: self.scene! as SKScene)
             }
         }
     }
@@ -34,10 +34,6 @@ class SettingsScene: SKScene {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         TouchController().touchesEnded(touches, with: event)
-    }
-    
-    override func update(_ currentTime: TimeInterval) {
-        /* Called before each frame is rendered */
     }
     
     func loadBackground() {
@@ -51,6 +47,17 @@ class SettingsScene: SKScene {
     
     func loadLabels() {
         addTitle()
+    }
+    
+    func loadDifficultySettingsScene(scene: SKScene) {
+        scene.removeAllChildren()
+        SettingsButtons(SettingsScene: scene).loadDifficultyScene()
+    }
+
+    func accountSettings(scene: SKScene) {
+        scene.removeAllChildren()
+        SettingsBackground(SettingsScene: scene).addBackground()
+        SettingsButtons(SettingsScene: scene).loadAccountScene()
     }
     
     fileprivate func addBackground() {

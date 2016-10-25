@@ -37,6 +37,7 @@ class SettingsButtons: SKNode {
     }
     
     func loadAccountScene() {
+        self.removeAllChildren()
         addBackButton2()
         addGameTypeToggle()
         addControlTypeToggle()

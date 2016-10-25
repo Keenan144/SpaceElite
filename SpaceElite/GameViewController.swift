@@ -33,17 +33,4 @@ class GameViewController: UIViewController {
             
             skView.presentScene(scene, transition: SKTransition.fade(with: fadeColor, duration: TimeInterval(fadeDuration)))
     }
-    
-    func loadHUD(_ scene: SKScene) {
-        GamesceneButtons(Gamescene: scene).addHUD()
-    }
-    
-    func loadDifficultySettingsScene(_ scene: SKScene) {
-        SettingsButtons(SettingsScene: scene).loadDifficultyScene()
-    }
-    
-    func loadAccountSettingsScene(_ scene: SKScene) {
-        SettingsButtons(SettingsScene: scene).loadAccountScene()
-    }
-    
 }

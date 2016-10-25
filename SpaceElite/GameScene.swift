@@ -45,7 +45,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let array = node.name!.components(separatedBy: "-")
                 let action = array[1]
                 
-                TouchController().buttonPressed(action: action, view: self.view! as SKView)
+                TouchController().buttonPressed(action: action, view: self.view! as SKView, scene: self.scene! as SKScene)
             }
         }
     }
@@ -203,6 +203,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func loadGameOver() {
         GamesceneButtons(Gamescene: self).addGameOver()
+    }
+    
+    func loadHUD(_ scene: SKScene) {
+        GamesceneButtons(Gamescene: scene).addHUD()
+    }
+    
+    func pause(scene: SKScene) {
+        scene.isPaused = true
+        GameState().toggleGameOver(true)
+        scene.removeAllActions()
+        myTimer.invalidate()
+        gameTimer.invalidate()
+        boostTimer.invalidate()
+        GamesceneButtons(Gamescene: scene).addHUD()
+    }
+    
+    func resume(scene: SKScene) {
+        GameState().toggleGameOver(false)
+        scene.childNode(withName: "div")?.removeFromParent()
+        scene.childNode(withName: "BTN-loadMenuScene")?.removeFromParent()
+        scene.childNode(withName: "BTN-loadLeaderboardsScene")?.removeFromParent()
+        scene.childNode(withName: "BTN-resume")?.removeFromParent()
+        scene.childNode(withName: "LBL-difficulity")?.removeFromParent()
+        scene.childNode(withName: "LBL-controlType")?.removeFromParent()
+        scene.isPaused = false
+        rockSpawnerTimer()
+        boostSpawnerTimer()
+        startGameTimer()
     }
     
     fileprivate func initGamePlayer() {

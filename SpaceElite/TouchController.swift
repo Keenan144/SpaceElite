@@ -12,9 +12,7 @@ import SpriteKit
 class TouchController: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
-        for touch in touches {
-            
-        }
+
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -31,7 +29,7 @@ class TouchController: SKScene {
         print("!!! Touches Ended !!!")
     }
     
-    func buttonPressed(action: String, view: SKView) {
+    func buttonPressed(action: String, view: SKView, scene: SKScene) {
         
         DispatchQueue.global(qos: .background).async {
             let gameState = GameState().saveGameState()
@@ -39,18 +37,10 @@ class TouchController: SKScene {
              DispatchQueue.main.async {
                 switch action {
                 case "pause":
-                    self.isPaused = true
-                    //            myTimer.invalidate()
-                    //            boostTimer.invalidate()
-                    //            gameTimer.invalidate()
-                    //            self.childNode(withName: "BTN-pause")?.removeFromParent()
-                    GameViewController().loadHUD(self)
+                    GameScene(fileNamed: "GameScene")!.pause(scene: scene)
                 case "resume":
-                    print("resume")
-                    //            resumeGame()
-                //            loadButtons()
+                    GameScene(fileNamed: "GameScene")!.resume(scene: scene)
                 case "loadMenuScene":
-                    //            endGame()
                     GameViewController().loadScene(scene: MenuScene(fileNamed: "MenuScene")!, view: view, fadeColor: UIColor.black, fadeDuration: 0.2)
                 case "loadSettingsScene":
                     GameViewController().loadScene(scene: SettingsScene(fileNamed: "SettingsScene")!, view: view, fadeColor: UIColor.black, fadeDuration: 0.2)
@@ -59,26 +49,10 @@ class TouchController: SKScene {
                 case "newGame":
                     GameViewController().loadScene(scene: GameScene(fileNamed: "GameScene")!, view: view, fadeColor: UIColor.black, fadeDuration: 0.2)
                 case "difficulty":
-                    print("difficulity")
-                    //            removeAllChildren()
-                    //            addBackground()
-                //            GameViewController().loadDifficultySettingsScene(self.scene! as SKScene)
+                    SettingsScene(fileNamed: "SettingsScene")!.loadDifficultySettingsScene(scene: scene)
                 case "accountSettings":
-                    print("account settings")
-                    //            removeAllChildren()
-                    //            addBackground()
-                //            GameViewController().loadAccountSettingsScene(self.scene! as SKScene)
-                case "easyDifficulity":
-                    GameSettings().setDifficulty("easy")
-                case "normalDifficulity":
-                    GameSettings().setDifficulty("normal")
-                case "hardDifficulity":
-                    GameSettings().setDifficulty("hard")
-                case "accountSettings":
-                    print("ACCOUNT SETTINGS")
+                    SettingsScene(fileNamed: "SettingsScene")!.accountSettings(scene: scene)
                 case "loadGame":
-                    //            loadGame()
-                    print("loadGame")
                     GameViewController().loadScene(scene: GameScene(fileNamed: "GameScene")!, view: view, fadeColor: UIColor.black, fadeDuration: 0.2)
                 default:
                     return
@@ -97,11 +71,14 @@ class TouchController: SKScene {
             GameSettings().setControlType()
         case "gameType":
             GameSettings().setGameType()
+        case "easyDifficulity":
+            GameSettings().setDifficulty("easy")
+        case "normalDifficulity":
+            GameSettings().setDifficulty("normal")
+        case "hardDifficulity":
+            GameSettings().setDifficulty("hard")
         default:
             return
         }
-        removeAllChildren()
-//        addBackground()
-        GameViewController().loadAccountSettingsScene(self.scene! as SKScene)
     }
 }
