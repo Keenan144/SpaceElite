@@ -17,6 +17,8 @@
 		E834D6F91D66B741004ED2D9 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6F71D66B741004ED2D9 /* GameEngine.swift */; };
 		E834D6FB1D66BEF5004ED2D9 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6FA1D66BEF5004ED2D9 /* GameState.swift */; };
 		E834D6FC1D66BEF5004ED2D9 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6FA1D66BEF5004ED2D9 /* GameState.swift */; };
+		E842E52D1DBEE64C0039976F /* TouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E842E52C1DBEE64C0039976F /* TouchController.swift */; };
+		E842E52E1DBEE64C0039976F /* TouchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E842E52C1DBEE64C0039976F /* TouchController.swift */; };
 		E854444B1D45C56100102BE2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444A1D45C56100102BE2 /* Player.swift */; };
 		E854444C1D45C56100102BE2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444A1D45C56100102BE2 /* Player.swift */; };
 		E854444F1D45CA2F00102BE2 /* GameBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E854444E1D45CA2F00102BE2 /* GameBackground.swift */; };
@@ -110,6 +112,7 @@
 		E834D6F21D56B2D8004ED2D9 /* PhysicsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsHelper.swift; sourceTree = "<group>"; };
 		E834D6F71D66B741004ED2D9 /* GameEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		E834D6FA1D66BEF5004ED2D9 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		E842E52C1DBEE64C0039976F /* TouchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchController.swift; sourceTree = "<group>"; };
 		E854444A1D45C56100102BE2 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		E854444E1D45CA2F00102BE2 /* GameBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBackground.swift; sourceTree = "<group>"; };
 		E85444521D4C686D00102BE2 /* GamesceneButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesceneButtons.swift; sourceTree = "<group>"; };
@@ -280,6 +283,7 @@
 				E8ACFB1E1D41DB8B004F4C50 /* Views */,
 				E8ACFAEC1D41D4B9004F4C50 /* AppDelegate.swift */,
 				E8ACFAF21D41D4B9004F4C50 /* GameViewController.swift */,
+				E842E52C1DBEE64C0039976F /* TouchController.swift */,
 				E8ACFAF41D41D4B9004F4C50 /* Main.storyboard */,
 				E8ACFAF71D41D4B9004F4C50 /* Assets.xcassets */,
 				E8ACFAF91D41D4B9004F4C50 /* LaunchScreen.storyboard */,
@@ -684,6 +688,7 @@
 				E834D6F01D56B2A5004ED2D9 /* Rock.swift in Sources */,
 				E834D6EC1D568517004ED2D9 /* FunctionHelper.swift in Sources */,
 				E8ACFB7B1D4425A8004F4C50 /* LeaderboardsLabels.swift in Sources */,
+				E842E52D1DBEE64C0039976F /* TouchController.swift in Sources */,
 				E854444F1D45CA2F00102BE2 /* GameBackground.swift in Sources */,
 				E834D6FB1D66BEF5004ED2D9 /* GameState.swift in Sources */,
 				E8ACFB291D41DF75004F4C50 /* MenuBackground.swift in Sources */,
@@ -737,6 +742,7 @@
 				E834D6F11D56B2A5004ED2D9 /* Rock.swift in Sources */,
 				E834D6ED1D568517004ED2D9 /* FunctionHelper.swift in Sources */,
 				E8ACFB801D442902004F4C50 /* LeaderboardsLabels.swift in Sources */,
+				E842E52E1DBEE64C0039976F /* TouchController.swift in Sources */,
 				E85444501D45CA2F00102BE2 /* GameBackground.swift in Sources */,
 				E834D6FC1D66BEF5004ED2D9 /* GameState.swift in Sources */,
 				E8ACFB391D43DA79004F4C50 /* MenuBackground.swift in Sources */,

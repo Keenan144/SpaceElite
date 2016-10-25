@@ -17,35 +17,28 @@ class MenuScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        /* Called when a touch begins */
-        
         for touch in touches {
             let node = self.atPoint(touch.location(in: self))
-            
-            if (node.name != nil) && (node.name!.range(of: "BTN") != nil) {
-                buttonPressed(node)
+            if (node.name) != nil {
+                let array = node.name!.components(separatedBy: "-")
+                let action = array[1]
+                
+                TouchController().buttonPressed(action: action, view: self.view! as SKView)
             }
         }
     }
     
-    override func update(_ currentTime: TimeInterval) {
-        /* Called before each frame is rendered */
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        TouchController().touchesMoved(touches, with: event)
     }
     
-    func buttonPressed(_ node: SKNode) {
-        let array = node.name!.components(separatedBy: "-")
-        let action = array[1]
-        
-        switch action {
-        case "loadSettingsScene":
-            loadSettingsScene()
-        case "loadLeaderboardsScene":
-            loadLeaderboardsScene()
-        case "loadGame":
-            loadGame()
-        default:
-            return
-        }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        TouchController().touchesEnded(touches, with: event)
+    }
+    
+    
+    override func update(_ currentTime: TimeInterval) {
+        /* Called before each frame is rendered */
     }
     
     func loadBackground() {

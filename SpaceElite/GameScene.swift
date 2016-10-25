@@ -39,38 +39,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        /* Called when a touch begins */
         for touch in touches {
             let node = self.atPoint(touch.location(in: self))
-            
-            player.removeAllActions()
-            
-            if (node.name != nil) && (node.name!.range(of: "BTN") != nil) {
-                buttonPressed(node)
-            } else if GameSettings().getControlType() == "touchToMove" {
-                if touch.location(in: self).x > 0 {
-                    let moveAction = SKAction.move(to: CGPoint(x: self.frame.maxX, y: player.position.y), duration: 0.4)
-                    player.run(moveAction)
-                } else {
-                    let moveAction = SKAction.move(to: CGPoint(x: self.frame.minX, y: player.position.y), duration: 0.4)
-                    player.run(moveAction)
-                }
+            if (node.name) != nil {
+                let array = node.name!.components(separatedBy: "-")
+                let action = array[1]
+                
+                TouchController().buttonPressed(action: action, view: self.view! as SKView)
             }
         }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        player.removeAllActions()
-        if GameSettings().getControlType() == "dragToMove" {
-            for touch in touches{
-                let touchLocation = touch.location(in: self)
-                player.position.x = touchLocation.x
-            }
-        }
+        TouchController().touchesMoved(touches, with: event)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        player.removeAllActions()
+        TouchController().touchesEnded(touches, with: event)
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -80,6 +65,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //    
 //        realFPS = currentFPS
 //        lastUpdateTime = currentTime
+    }
+    
+    func movePlayer(moveAction: SKAction) {
+        player.run(moveAction)
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -98,37 +87,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func didEnd(_ contact: SKPhysicsContact) {
         contactDone = true
-    }
-    
-    func buttonPressed(_ node: SKNode) {
-        let array = node.name!.components(separatedBy: "-")
-        let action = array[1]
-        
-        GameState().saveGameState()
-        
-        switch action {
-        case "pause":
-            self.isPaused = true
-            myTimer.invalidate()
-            boostTimer.invalidate()
-            gameTimer.invalidate()
-            self.childNode(withName: "BTN-pause")?.removeFromParent()
-            GameViewController().loadHUD(self)
-        case "resume":
-            resumeGame()
-            loadButtons()
-        case "loadMenuScene":
-            endGame()
-            GameViewController().loadScene(scene: "MenuScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
-        case "loadSettingsScene":
-            GameViewController().loadScene(scene: "SettingsScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
-        case "loadLeaderboardsScene":
-            GameViewController().loadScene(scene: "LeaderboardsScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
-        case "newGame":
-            GameViewController().loadScene(scene: "GameScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
-        default:
-            return
-        }
     }
     
     func rockSpawnerTimer() {

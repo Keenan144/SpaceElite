@@ -13,7 +13,7 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        GameViewController().loadScene(scene: "MenuScene", view: self.view! as! SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
+        GameViewController().loadScene(scene: MenuScene(fileNamed: "MenuScene")!, view: self.view! as! SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,15 +25,13 @@ class GameViewController: UIViewController {
 //        return true
 //    }
     
-    func loadScene(scene: String, view: SKView, fadeColor: UIColor, fadeDuration: Float) {
-        if let scene = MenuScene(fileNamed:scene) {
+    func loadScene(scene: SKScene, view: SKView, fadeColor: UIColor, fadeDuration: Float) {
             // Configure the view.
             let skView = view
             ViewHelper.skviewSettings(skView)
             ViewHelper.sceneViewSettings(scene, skView: skView)
             
             skView.presentScene(scene, transition: SKTransition.fade(with: fadeColor, duration: TimeInterval(fadeDuration)))
-        }
     }
     
     func loadHUD(_ scene: SKScene) {

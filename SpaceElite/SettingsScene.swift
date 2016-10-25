@@ -17,72 +17,27 @@ class SettingsScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        /* Called when a touch begins */
-        
         for touch in touches {
             let node = self.atPoint(touch.location(in: self))
-            
-            if (node.name != nil) && (node.name!.range(of: "BTN") != nil) {
-                buttonPressed(node)
-            } else if (node.name != nil) && (node.name!.range(of: "TGL") != nil) {
-                togglePressed(node)
+            if (node.name) != nil {
+                let array = node.name!.components(separatedBy: "-")
+                let action = array[1]
+                
+                TouchController().buttonPressed(action: action, view: self.view! as SKView)
             }
         }
     }
     
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        TouchController().touchesMoved(touches, with: event)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        TouchController().touchesEnded(touches, with: event)
+    }
+    
     override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
-    }
-    
-    func buttonPressed(_ node: SKNode) {
-        let array = node.name!.components(separatedBy: "-")
-        let action = array[1]
-        print(action)
-        
-        switch action {
-        case "loadMenuScene":
-            GameViewController().loadScene(scene: "MenuScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
-        case "loadSettingsScene":
-            GameViewController().loadScene(scene: "SettingsScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
-        case "loadLeaderboardsScene":
-            GameViewController().loadScene(scene: "LeaderboardsScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
-        case "newGame":
-            GameViewController().loadScene(scene: "GameScene", view: self.view! as SKView, fadeColor: UIColor.black, fadeDuration: 0.2)
-        case "difficulty":
-            removeAllChildren()
-            addBackground()
-            GameViewController().loadDifficultySettingsScene(self.scene! as SKScene)
-        case "accountSettings":
-            removeAllChildren()
-            addBackground()
-            GameViewController().loadAccountSettingsScene(self.scene! as SKScene)
-        case "easyDifficulity":
-            GameSettings().setDifficulty("easy")
-        case "normalDifficulity":
-            GameSettings().setDifficulty("normal")
-        case "hardDifficulity":
-            GameSettings().setDifficulty("hard")
-        default:
-            return
-        }
-    }
-    
-    func togglePressed(_ node: SKNode) {
-        let array = node.name!.components(separatedBy: "-")
-        let action = array[1]
-        print(action)
-        
-        switch action {
-        case "controlType":
-            GameSettings().setControlType()
-        case "gameType":
-            GameSettings().setGameType()
-        default:
-            return
-        }
-        removeAllChildren()
-        addBackground()
-        GameViewController().loadAccountSettingsScene(self.scene! as SKScene)
     }
     
     func loadBackground() {
