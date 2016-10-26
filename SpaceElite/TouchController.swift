@@ -11,7 +11,6 @@ import SpriteKit
 
 class TouchController: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        /* Called when a touch begins */
 
     }
 
@@ -19,14 +18,12 @@ class TouchController: SKScene {
         if GameSettings().getControlType() == "dragToMove" {
             for touch in touches{
                 let touchLocation = touch.location(in: self)
-                print(touchLocation)
-                
             }
         }
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("!!! Touches Ended !!!")
+        
     }
     
     func buttonPressed(action: String, view: SKView, scene: SKScene) {

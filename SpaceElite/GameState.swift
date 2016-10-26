@@ -24,8 +24,8 @@ class GameState: SKNode {
     
     func saveGameState() -> NSDictionary {
         var gameData = NSDictionary()
-        gameData = {
-                ["score":"\(self.getScore())",
+        gameData = {[
+                "score":"\(self.getScore())",
                 "health":"\(self.getPlayerHealth())",
                 "rockFallRate":"\(self.determineRockSpeed())",
                 "rockSpawnRate":"\(self.determineRockSpawnSpeed())",
@@ -35,8 +35,8 @@ class GameState: SKNode {
                 "controlType":"\(GameSettings().getControlType())",
                 "difficulty":"\(GameSettings().getDifficulty())",
                 "gameType":"\(GameSettings().getGameType())",
-                "uuid":"\(UIDevice.current.identifierForVendor?.uuidString))"]
-        }()
+                "uuid":"\(UIDevice.current.identifierForVendor?.uuidString))"
+            ]}()
         gameStateData.set(gameData, forKey: "thisSession")
         return gameData
     }

@@ -192,15 +192,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func loadHUD() {
-        GamesceneButtons(Gamescene: self).addHUD()
+        GamesceneButtons().addHUD(scene: self.scene! as SKScene)
     }
     
     func loadGameOver() {
-        GamesceneButtons(Gamescene: self).addGameOver()
+        GamesceneButtons().addGameOver(scene: self.scene! as SKScene)
     }
     
     func loadHUD(_ scene: SKScene) {
-        GamesceneButtons(Gamescene: scene).addHUD()
+        GamesceneButtons().addHUD(scene: self.scene! as SKScene)
     }
     
     func pause(scene: SKScene) {
@@ -210,7 +210,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         myTimer.invalidate()
         gameTimer.invalidate()
         boostTimer.invalidate()
-        GamesceneButtons(Gamescene: scene).addHUD()
+        GamesceneButtons().addHUD(scene: scene)
     }
     
     func resume(scene: SKScene) {
@@ -237,7 +237,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     fileprivate func addNavButtons() {
-        GamesceneButtons(Gamescene: self).addButtons()
+        GamesceneButtons().addButtons(scene: self.scene! as SKScene)
     }
     
     fileprivate func resumeGame() {

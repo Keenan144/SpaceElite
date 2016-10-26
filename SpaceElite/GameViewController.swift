@@ -21,10 +21,6 @@ class GameViewController: UIViewController {
         // Release any cached data, images, etc that aren't in use.
     }
     
-//    override func prefersStatusBarHidden() -> Bool {
-//        return true
-//    }
-    
     func loadScene(scene: SKScene, view: SKView, fadeColor: UIColor, fadeDuration: Float) {
             // Configure the view.
             let skView = view

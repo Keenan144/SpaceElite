@@ -12,8 +12,6 @@ class ViewHelper: SKScene {
     class func skviewSettings(_ skView: SKView) {
         skView.showsFPS = true
         skView.showsNodeCount = true
-        
-        /* Sprite Kit applies additional optimizations to improve rendering performance */
         skView.ignoresSiblingOrder = true
     }
     
@@ -21,7 +19,6 @@ class ViewHelper: SKScene {
         scene.scaleMode = .resizeFill
         scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         scene.size = skView.bounds.size
-        
     }
     
     class func createButton(_ text: String, name: String, xCord: CGFloat, yChord: CGFloat, fontSize: CGFloat, zPosition: CGFloat) -> SKLabelNode {
