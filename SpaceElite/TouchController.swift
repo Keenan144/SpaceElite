@@ -61,7 +61,7 @@ class TouchController: SKScene {
         }
     }
     
-    func togglePressed(_ node: SKNode) {
+    func togglePressed(_ node: SKNode, scene: SKScene) {
         let array = node.name!.components(separatedBy: "-")
         let action = array[1]
         print(action)
@@ -69,8 +69,10 @@ class TouchController: SKScene {
         switch action {
         case "controlType":
             GameSettings().setControlType()
+            SettingsScene(fileNamed: "SettingsScene")!.accountSettings(scene: scene)
         case "gameType":
             GameSettings().setGameType()
+            SettingsScene(fileNamed: "SettingsScene")!.accountSettings(scene: scene)
         case "easyDifficulity":
             GameSettings().setDifficulty("easy")
         case "normalDifficulity":

@@ -21,8 +21,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var enemyMovementTimer = Timer()
     var healthLabel = SKLabelNode()
     var scoreLabel = SKLabelNode()
-    
     var contactDone = Bool()
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            let node = self.atPoint(touch.location(in: self))
+            if (node.name) != nil {
+                let array = node.name!.components(separatedBy: "-")
+                if array[0] == "BTN" {
+                    let action = array[1]
+                    TouchController().buttonPressed(action: action, view: self.view! as SKView, scene: self.scene! as SKScene)
+                }
+            } else {
+                player.position.x = touch.location(in: self).x
+            }
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            player.position.x = touch.location(in: self).x
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        player.removeAllActions()
+    }
     
     override func didMove(to view: SKView) {
         /* Setup your scene here */
@@ -38,36 +62,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         initGamePlayer()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch in touches {
-            let node = self.atPoint(touch.location(in: self))
-            if (node.name) != nil {
-                let array = node.name!.components(separatedBy: "-")
-                let action = array[1]
-                
-                TouchController().buttonPressed(action: action, view: self.view! as SKView, scene: self.scene! as SKScene)
-            }
-        }
-    }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        TouchController().touchesMoved(touches, with: event)
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        TouchController().touchesEnded(touches, with: event)
-    }
-    
-    override func update(_ currentTime: TimeInterval) {
-        /* Called before each frame is rendered */
-//        let deltaTime = currentTime - lastUpdateTime
-//        let currentFPS = 1 / deltaTime
-//    
-//        realFPS = currentFPS
-//        lastUpdateTime = currentTime
-    }
-    
-    func movePlayer(moveAction: SKAction) {
+    func movePlayerWithAction(moveAction: SKAction) {
         player.run(moveAction)
     }
     
@@ -81,7 +76,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 contact.bodyB.node?.removeFromParent()
                 increasePlayerHealth()
             }
-//            contact.bodyB.node?.removeFromParent()
         }
     }
     

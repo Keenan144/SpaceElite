@@ -12,7 +12,7 @@ class Boost: SKSpriteNode {
     
     class func spawn() -> SKSpriteNode {
         let boostColor = UIColor.green
-        let boostSize = CGSize(width: 35, height: 35)
+        let boostSize = CGSize(width: 33, height: 33)
         
         let boost = PhysicsHelper.setNodePhysics(boostSize, boostColor: boostColor, name: "Health")
         
