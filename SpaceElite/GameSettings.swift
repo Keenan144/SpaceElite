@@ -18,26 +18,10 @@ class GameSettings: SKNode {
         settingsData.set("gameType", forKey: "cometFall")
     }
     
-    func setControlType() {
-        if (settingsData.object(forKey: "controlType") == nil) || (settingsData.object(forKey: "controlType") as! String == "dragToMove") {
-            settingsData.set("touchToMove", forKey: "controlType")
-        } else {
-            settingsData.set("dragToMove", forKey: "controlType")
-        }
-    }
-    
     func setDifficulty(_ value: String) {
         settingsData.set("\(value)", forKey: "difficulity")
         print("Game Difficulity set to: \(settingsData.object(forKey: "difficulity"))")
         print("Game Difficulity sould have been set to: \(value)")
-    }
-    
-    func setGameType() {
-        if (settingsData.object(forKey: "gameType") == nil) || (settingsData.object(forKey: "gameType") as! String == "cometFall") {
-            settingsData.set("practice", forKey: "gameType")
-        } else {
-            settingsData.set("cometFall", forKey: "gameType")
-        }
     }
     
     func getControlType() -> String {
@@ -78,5 +62,21 @@ class GameSettings: SKNode {
     
     func reset() {
         setGameSettingsToDefault()
+    }
+    
+    func setControlType() {
+        if (settingsData.object(forKey: "controlType") == nil) || (settingsData.object(forKey: "controlType") as! String == "dragToMove") {
+            settingsData.set("touchToMove", forKey: "controlType")
+        } else {
+            settingsData.set("dragToMove", forKey: "controlType")
+        }
+    }
+    
+    func setGameType() {
+        if (settingsData.object(forKey: "gameType") == nil) || (settingsData.object(forKey: "gameType") as! String == "cometFall") {
+            settingsData.set("practice", forKey: "gameType")
+        } else {
+            settingsData.set("cometFall", forKey: "gameType")
+        }
     }
 }

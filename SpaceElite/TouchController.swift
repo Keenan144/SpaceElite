@@ -29,7 +29,7 @@ class TouchController: SKScene {
     func buttonPressed(action: String, view: SKView, scene: SKScene) {
         
         DispatchQueue.global(qos: .background).async {
-            let gameState = GameState().saveGameState()
+            let gameState = GameState().getGameState()
             print(gameState)
              DispatchQueue.main.async {
                 switch action {

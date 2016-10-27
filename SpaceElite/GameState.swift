@@ -15,6 +15,7 @@ class GameState: SKNode {
     var gameStateData = UserDefaults()
     
     func createGameState() {
+        stateData.set(0, forKey: "flightTime")
         stateData.set(0, forKey: "score")
         stateData.set(100, forKey: "playerHealth")
         stateData.set(1.0, forKey: "rockSpeed")
@@ -27,6 +28,7 @@ class GameState: SKNode {
     func saveGameState() -> NSDictionary {
         var gameData = NSDictionary()
         gameData = {[
+                "flightTime":"\(self.getFlightTime())",
                 "score":"\(self.getScore())",
                 "health":"\(self.getPlayerHealth())",
                 "rockFallRate":"\(self.determineRockSpeed())",
@@ -44,6 +46,33 @@ class GameState: SKNode {
     
     func postGameState() {
         gameStateData.set(saveGameState(), forKey: "lastSession")
+    }
+    
+    func getGameState() -> Any {
+        if let session = gameStateData.object(forKey: "thisSession") {
+            return session
+        }
+        self.saveGameState()
+        return self.getGameState()
+    }
+    
+    func getLastGameState() -> Any {
+        if let session = gameStateData.object(forKey: "lastSession") {
+            return session
+        }
+        self.postGameState()
+        return self.getLastGameState()
+    }
+    
+    func getFlightTime() -> Int {
+        if let time = (stateData.object(forKey: "flightTime")) {
+            return time as! Int
+        }
+        return 0
+    }
+    
+    func setFlightTime(time: Int) {
+        stateData.set(time, forKey: "flightTime")
     }
     
     func getLastSessionData() -> Any {
@@ -94,19 +123,27 @@ class GameState: SKNode {
     
     func determineRockSpeed() -> TimeInterval {
         let score = getScore()
+        print("rock speed rate queried")
         if score > 1500 {
-            return 0.65
+            print("new rock speed rate")
+            return 0.68
         } else if score > 1200 {
-            return 0.67
-        } else if score > 1000 {
+            print("new rock speed rate")
             return 0.70
+        } else if score > 1000 {
+            print("new rock speed rate")
+            return 0.72
         } else if score > 800 {
-            return 0.73
+            print("new rock speed rate")
+            return 0.74
         } else if score > 600 {
-            return 0.75
+            print("new rock speed rate")
+            return 0.76
         } else if score > 400 {
-            return 0.77
+            print("new rock speed rate")
+            return 0.78
         } else if score > 200 {
+            print("new rock speed rate")
             return 0.8
         } else {
             return 1.0
@@ -114,20 +151,28 @@ class GameState: SKNode {
     }
     
     func determineRockSpawnSpeed() -> TimeInterval {
-        let score = getScore()
-        if score > 1500 {
+        let time = self.getFlightTime()
+        print("rock spawn rate queried")
+        if time > 150 {
+            print("new rock spawn rate")
             return 0.2
-        } else if score > 1200 {
+        } else if time > 90 {
+            print("new rock spawn rate")
             return 0.35
-        } else if score > 1000 {
+        } else if time > 60 {
+            print("new rock spawn rate")
             return 0.4
-        } else if score > 800 {
+        } else if time > 40 {
+            print("new rock spawn rate")
             return 0.45
-        } else if score > 600 {
+        } else if time > 30 {
+            print("new rock spawn rate")
             return 0.5
-        } else if score > 400 {
+        } else if time > 20 {
+            print("new rock spawn rate")
             return 0.55
-        } else if score > 200 {
+        } else if time > 10 {
+            print("new rock spawn rate")
             return 0.6
         } else {
             return 0.8

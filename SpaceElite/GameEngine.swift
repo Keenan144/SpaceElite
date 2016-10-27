@@ -14,6 +14,8 @@ class GameEngine: SKScene, SKPhysicsContactDelegate {
         GameState().toggleGameOver(false)
         GameState().setPlayersHealth(100)
         GameState().setScore(0)
+        GameState().setFlightTime(time: 0)
+        
     }
     
     func deductPlayerHealth() {

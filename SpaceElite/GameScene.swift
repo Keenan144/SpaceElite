@@ -63,7 +63,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             contactDone = false
             if contact.bodyB.node?.name == "Rock" {
                 contact.bodyB.node?.removeFromParent()
-                deductPlayerHealth()
+//                deductPlayerHealth()
             } else if contact.bodyB.node?.name == "Health" {
                 contact.bodyB.node?.removeFromParent()
                 increasePlayerHealth()
@@ -76,23 +76,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func rockSpawnerTimer() {
-        myTimer =  Timer.scheduledTimer(timeInterval: GameState().determineRockSpawnSpeed(), target: self, selector: #selector(spawnRock), userInfo: nil, repeats: true)
+        print("starting rock spawner")
+        let spawnRate = GameState().determineRockSpawnSpeed()
+        myTimer =  Timer.scheduledTimer(timeInterval: spawnRate, target: self, selector: #selector(spawnRock), userInfo: nil, repeats: true)
     }
     
     func startGameTimer() {
+        print("starting game timer")
         gameTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(incrementGameTimer), userInfo: nil, repeats: true)
     }
     
     func boostSpawnerTimer() {
+        print("starting boose spawner")
         boostTimer =  Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(spawnBoost), userInfo: nil, repeats: true)
     }
     
     func incrementGameTimer() {
         gameTimerCounter += 1
         if gameTimerCounter % 15 == 0 {
+            GameState().setFlightTime(time: gameTimerCounter)
             myTimer.invalidate()
             rockSpawnerTimer()
-            print("Difficulity Increased")
         }
     }
     
@@ -132,11 +136,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         boostSpawnerTimer()
     }
     
-    func increaseSpawnRate() {
-        myTimer.invalidate()
-        rockSpawnerTimer()
-    }
-    
     func increaseScore() {
         GameState().setScore(GameState().getScore() + 10)
         scoreLabel.text = ("pts \(GameState().getScore())")
@@ -148,7 +147,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             healthLabel.text = ("hp \(GameState().getPlayerHealth())")
         } else {
             endGame()
-            
             loadGameOver()
         }
     }
