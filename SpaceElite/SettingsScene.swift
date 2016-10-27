@@ -23,7 +23,7 @@ class SettingsScene: SKScene {
                 let array = node.name!.components(separatedBy: "-")
                 let action = array[1]
                 if array[0] == "BTN" {
-                    TouchController().buttonPressed(action: action, view: self.view! as SKView, scene: self.scene! as SKScene)
+                    TouchController().buttonPressed(action: action, view: self.view! as SKView, scene: self.scene! as SKScene, thing: self)
                 } else if array[0] == "TGL" {
                     TouchController().togglePressed(node, scene: self.scene! as SKScene)
                 }

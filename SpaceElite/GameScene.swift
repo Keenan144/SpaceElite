@@ -27,7 +27,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let array = node.name!.components(separatedBy: "-")
                 if array[0] == "BTN" {
                     let action = array[1]
-                    TouchController().buttonPressed(action: action, view: self.view! as SKView, scene: self.scene! as SKScene)
+                    TouchController().buttonPressed(action: action, view: self.view! as SKView, scene: self.scene! as SKScene, thing: self)
                 }
             } else {
                 player.position.x = touch.location(in: self).x
@@ -63,7 +63,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             contactDone = false
             if contact.bodyB.node?.name == "Rock" {
                 contact.bodyB.node?.removeFromParent()
-//                deductPlayerHealth()
+                deductPlayerHealth()
             } else if contact.bodyB.node?.name == "Health" {
                 contact.bodyB.node?.removeFromParent()
                 increasePlayerHealth()
@@ -146,8 +146,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             GameState().setPlayersHealth((GameState().getPlayerHealth() - 10))
             healthLabel.text = ("hp \(GameState().getPlayerHealth())")
         } else {
-            endGame()
-            loadGameOver()
+            endGame(thing: self)
+            loadGameOver(scene: self.scene! as SKScene, thing: self)
         }
     }
     
@@ -181,8 +181,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         GamesceneButtons().addHUD(scene: self.scene! as SKScene)
     }
     
-    func loadGameOver() {
-        GamesceneButtons().addGameOver(scene: self.scene! as SKScene)
+    func loadGameOver(scene: SKScene, thing: Any) {
+        GameScene().endGame(thing: thing)
+        GamesceneButtons().addGameOver(scene: scene)
+    }
+    
+    func endGame(thing: Any) {
+        (thing as AnyObject).removeAllActions()
+        (thing as AnyObject).removeAllChildren()
+        (thing as AnyObject).myTimer.invalidate()
+        (thing as AnyObject).gameTimer.invalidate()
+        (thing as AnyObject).boostTimer.invalidate()
+        GameState().saveGameState()
     }
     
     func loadHUD(_ scene: SKScene) {
@@ -237,14 +247,5 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         rockSpawnerTimer()
         boostSpawnerTimer()
         startGameTimer()
-    }
-    
-    fileprivate func endGame() {
-        self.removeAllActions()
-        self.removeAllChildren()
-        myTimer.invalidate()
-        gameTimer.invalidate()
-        boostTimer.invalidate()
-        GameState().saveGameState()
     }
 }

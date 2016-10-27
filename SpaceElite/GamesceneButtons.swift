@@ -43,7 +43,7 @@ class GamesceneButtons: SKNode {
     }
     
     fileprivate func addSettingsButton(scene: SKScene) {
-        let label = ViewHelper.createButton("End Game", name: "BTN-loadMenuScene", xCord: (0), yChord: (0 - (scene.size.height / 7)), fontSize: (scene.size.width / 18), zPosition: 50)
+        let label = ViewHelper.createButton("End Game", name: "BTN-endGame", xCord: (0), yChord: (0 - (scene.size.height / 7)), fontSize: (scene.size.width / 18), zPosition: 50)
         
         label.fontColor = UIColor.black
  

@@ -26,7 +26,7 @@ class TouchController: SKScene {
         
     }
     
-    func buttonPressed(action: String, view: SKView, scene: SKScene) {
+    func buttonPressed(action: String, view: SKView, scene: SKScene, thing: Any) {
         
         DispatchQueue.global(qos: .background).async {
             let gameState = GameState().getGameState()
@@ -51,6 +51,8 @@ class TouchController: SKScene {
                     SettingsScene(fileNamed: "SettingsScene")!.accountSettings(scene: scene)
                 case "loadGame":
                     GameViewController().loadScene(scene: GameScene(fileNamed: "GameScene")!, view: view, fadeColor: UIColor.black, fadeDuration: 0.2)
+                case "endGame":
+                    GameScene().loadGameOver(scene: scene, thing: thing)
                 default:
                     return
                 }
