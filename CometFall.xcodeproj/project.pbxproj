@@ -570,7 +570,7 @@
 				TargetAttributes = {
 					E8ACFAE81D41D4B9004F4C50 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 724X7XMPF4;
+						DevelopmentTeam = 8X8LQ28Y8R;
 						LastSwiftMigration = 0800;
 					};
 					E8ACFB001D41D4BA004F4C50 = {
@@ -584,7 +584,7 @@
 						TestTargetID = E8ACFAE81D41D4B9004F4C50;
 					};
 					E8ACFB311D43DA79004F4C50 = {
-						DevelopmentTeam = 724X7XMPF4;
+						DevelopmentTeam = 8X8LQ28Y8R;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -883,6 +883,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8X8LQ28Y8R;
 				INFOPLIST_FILE = SpaceElite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -899,6 +900,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8X8LQ28Y8R;
 				INFOPLIST_FILE = SpaceElite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -967,6 +969,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-DEV";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8X8LQ28Y8R;
 				INFOPLIST_FILE = "DEV-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -983,6 +986,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-DEV";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8X8LQ28Y8R;
 				INFOPLIST_FILE = "DEV-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

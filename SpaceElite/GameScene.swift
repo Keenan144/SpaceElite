@@ -11,9 +11,6 @@ import SpriteKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var player = SKNode()
-    var enemy = SKNode()
-    var lastUpdateTime: TimeInterval = 0
-    var realFPS = Double()
     var myTimer = Timer()
     var boostTimer = Timer()
     var gameTimer = Timer()
@@ -50,7 +47,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView) {
         /* Setup your scene here */
-        
         view.showsPhysics = false
         physicsWorld.contactDelegate = self
         
@@ -60,10 +56,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         GameSettings().loadSettings()
         initGameScene()
         initGamePlayer()
-    }
-    
-    func movePlayerWithAction(moveAction: SKAction) {
-        player.run(moveAction)
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -97,12 +89,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func incrementGameTimer() {
         gameTimerCounter += 1
-        if gameTimerCounter == 15 {
+        if gameTimerCounter % 15 == 0 {
             myTimer.invalidate()
-            gameTimer.invalidate()
             rockSpawnerTimer()
-            gameTimerCounter = 0
-            startGameTimer()
             print("Difficulity Increased")
         }
     }
@@ -134,7 +123,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func initGameScene() {
-//        setBoundaries()
         loadBackground()
         loadButtons()
         AddScoreLabel()
@@ -259,5 +247,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         myTimer.invalidate()
         gameTimer.invalidate()
         boostTimer.invalidate()
+        GameState().saveGameState()
     }
 }

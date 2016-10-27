@@ -31,7 +31,7 @@ class GamesceneButtons: SKNode {
     
 //    ************************************** Private **************************************
     fileprivate func addBackground(scene: SKScene) {
-        let hudBackGround = ViewHelper.createSKSpriteNode(xCord: 0, yCord: 0, color: UIColor.gray, width: scene.size.width / 1.3, height: scene.size.width / 1.3, zPosition: 30, name: "div", texture: SKTexture(imageNamed: "NODE_hud_01"))
+        let hudBackGround = ViewHelper.createSKSpriteNode(xCord: 0, yCord: 0, color: UIColor.black, width: scene.size.width / 1.3, height: scene.size.width / 1.3, zPosition: 30, name: "div", texture: SKTexture(imageNamed: "NODE_hud_01"))
         
         scene.addChild(hudBackGround)
     }

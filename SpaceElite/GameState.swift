@@ -15,11 +15,13 @@ class GameState: SKNode {
     var gameStateData = UserDefaults()
     
     func createGameState() {
+        stateData.set(0, forKey: "score")
         stateData.set(100, forKey: "playerHealth")
+        stateData.set(1.0, forKey: "rockSpeed")
+        stateData.set(0.8, forKey: "rockSpawnRate")
         stateData.set(false, forKey: "gameOver")
         stateData.set(false, forKey: "bossDead")
         stateData.set(1, forKey: "level")
-        stateData.set(0, forKey: "score")
     }
     
     func saveGameState() -> NSDictionary {
@@ -29,7 +31,6 @@ class GameState: SKNode {
                 "health":"\(self.getPlayerHealth())",
                 "rockFallRate":"\(self.determineRockSpeed())",
                 "rockSpawnRate":"\(self.determineRockSpawnSpeed())",
-                "bossDead":"\(self.isBossDead())",
                 "isGameOver()":"\(self.isGameOver())",
                 "rockSpawnRate":"\(self.determineRockSpeed())",
                 "controlType":"\(GameSettings().getControlType())",
@@ -84,11 +85,11 @@ class GameState: SKNode {
     }
     
     func isGameOver() -> Bool {
-        return stateData.object(forKey: "gameOver") as! Bool
-    }
-    
-    func isBossDead() -> Bool {
-        return stateData.object(forKey: "bossDead") as! Bool
+        if let gameOver = (stateData.object(forKey: "gameOver")) {
+            return gameOver as! Bool
+        }
+        self.toggleGameOver(false)
+        return self.isGameOver()
     }
     
     func determineRockSpeed() -> TimeInterval {
