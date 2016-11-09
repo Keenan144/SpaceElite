@@ -23,7 +23,7 @@ class LeaderboardsScene: SKScene {
                 let array = node.name!.components(separatedBy: "-")
                 let action = array[1]
                 
-                TouchController().buttonPressed(action: action, view: self.view! as SKView, scene: self.scene! as SKScene, thing: self)
+                TouchController().buttonPressed(action: action, view: self.view! as SKView, scene: self.scene! as SKScene, className: self)
             }
         }
     }

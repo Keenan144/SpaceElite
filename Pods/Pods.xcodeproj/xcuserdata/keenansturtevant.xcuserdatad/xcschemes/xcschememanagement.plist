@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-CometFall-DEV.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-CometFall.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-CometFallTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-CometFallUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyBeaver.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>01D8A7F31C88D41F3E36C4A2AFB91D5C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>18A94AFF0853083B0700A27B2921E966</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2A16C0C22207AFD345EADD90CEAFACE3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F1E1060D3C3953E2AEEF447F13DC7A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B389D79F222990B13023F13CE7D4FDF1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

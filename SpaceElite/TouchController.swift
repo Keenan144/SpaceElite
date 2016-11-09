@@ -15,28 +15,28 @@ class TouchController: SKScene {
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if GameSettings().getControlType() == "dragToMove" {
-            for touch in touches{
-                let touchLocation = touch.location(in: self)
-            }
-        }
+
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+
     }
     
-    func buttonPressed(action: String, view: SKView, scene: SKScene, thing: Any) {
-        
+    func buttonPressed(action: String, view: SKView, scene: SKScene, className: Any) {
+        log.debug("action: \(action)")
+        log.debug("view: \(view)")
+        log.debug("scene: \(scene)")
+        log.debug("class: \(className)")
         DispatchQueue.global(qos: .background).async {
-            let gameState = GameState().getGameState()
-            print(gameState)
+            log.info("\(GameState().getGameState())")
              DispatchQueue.main.async {
                 switch action {
                 case "pause":
                     GameScene(fileNamed: "GameScene")!.pause(scene: scene)
                 case "resume":
                     GameScene(fileNamed: "GameScene")!.resume(scene: scene)
+                case "endGame":
+                    GameScene().loadGameOver(scene: scene, className: className)
                 case "loadMenuScene":
                     GameViewController().loadScene(scene: MenuScene(fileNamed: "MenuScene")!, view: view, fadeColor: UIColor.black, fadeDuration: 0.2)
                 case "loadSettingsScene":
@@ -45,14 +45,14 @@ class TouchController: SKScene {
                     GameViewController().loadScene(scene: LeaderboardsScene(fileNamed: "LeaderboardsScene")!, view: view, fadeColor: UIColor.black, fadeDuration: 0.2)
                 case "newGame":
                     GameViewController().loadScene(scene: GameScene(fileNamed: "GameScene")!, view: view, fadeColor: UIColor.black, fadeDuration: 0.2)
+                case "chooseShip":
+                    GameViewController().loadScene(scene: ChooseShipScene(fileNamed: "ChooseShipScene")!, view: view, fadeColor: UIColor.black, fadeDuration: 0.2)
                 case "difficulty":
                     SettingsScene(fileNamed: "SettingsScene")!.loadDifficultySettingsScene(scene: scene)
                 case "accountSettings":
                     SettingsScene(fileNamed: "SettingsScene")!.accountSettings(scene: scene)
                 case "loadGame":
                     GameViewController().loadScene(scene: GameScene(fileNamed: "GameScene")!, view: view, fadeColor: UIColor.black, fadeDuration: 0.2)
-                case "endGame":
-                    GameScene().loadGameOver(scene: scene, thing: thing)
                 default:
                     return
                 }
@@ -63,7 +63,7 @@ class TouchController: SKScene {
     func togglePressed(_ node: SKNode, scene: SKScene) {
         let array = node.name!.components(separatedBy: "-")
         let action = array[1]
-        print(action)
+        log.debug("togglePressed: \(action) for scene: \(scene)")
         
         switch action {
         case "controlType":
@@ -81,5 +81,9 @@ class TouchController: SKScene {
         default:
             return
         }
+    }
+    
+    func chooseShip(ship: String) {
+        GameState().setUserShip(value: ship)
     }
 }

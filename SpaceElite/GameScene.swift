@@ -27,7 +27,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let array = node.name!.components(separatedBy: "-")
                 if array[0] == "BTN" {
                     let action = array[1]
-                    TouchController().buttonPressed(action: action, view: self.view! as SKView, scene: self.scene! as SKScene, thing: self)
+                    TouchController().buttonPressed(action: action, view: self.view! as SKView, scene: self.scene! as SKScene, className: self)
                 }
             } else {
                 player.position.x = touch.location(in: self).x
@@ -76,18 +76,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func rockSpawnerTimer() {
-        print("starting rock spawner")
+        log.debug("starting rock spawner")
         let spawnRate = GameState().determineRockSpawnSpeed()
         myTimer =  Timer.scheduledTimer(timeInterval: spawnRate, target: self, selector: #selector(spawnRock), userInfo: nil, repeats: true)
     }
     
     func startGameTimer() {
-        print("starting game timer")
+        log.debug("starting game timer")
         gameTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(incrementGameTimer), userInfo: nil, repeats: true)
     }
     
     func boostSpawnerTimer() {
-        print("starting boose spawner")
+        log.debug("starting boose spawner")
         boostTimer =  Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(spawnBoost), userInfo: nil, repeats: true)
     }
     
@@ -103,7 +103,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func spawnRock() {
         if GameState().isGameOver() == false {
             let rock = Rock.spawn()
-            print("spawned rock")
+            log.info("spawned rock")
             rock.position = FunctionHelper().randomSpawnPoint((player.position.x - 120), valueHighX: (player.position.x + 120), valueY: frame.maxY)
             let moveAction = SKAction.move(to: CGPoint(x: rock.position.x, y: frame.minY), duration: (GameState().determineRockSpeed()))
             let removeRock = SKAction.removeFromParent()
@@ -116,7 +116,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func spawnBoost() {
         if GameState().isGameOver() == false {
             let rock = Boost.spawn()
-            print("spawned Boost")
+            log.info("spawned Boost")
             rock.position = FunctionHelper().randomSpawnPoint((player.position.x - 220), valueHighX: (player.position.x + 220), valueY: frame.maxY)
             let moveAction = SKAction.move(to: CGPoint(x: rock.position.x, y: frame.minY), duration: (2.0))
             let removeRock = SKAction.removeFromParent()
@@ -146,8 +146,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             GameState().setPlayersHealth((GameState().getPlayerHealth() - 10))
             healthLabel.text = ("hp \(GameState().getPlayerHealth())")
         } else {
-            endGame(thing: self)
-            loadGameOver(scene: self.scene! as SKScene, thing: self)
+            endGame(className: self)
+            loadGameOver(scene: self.scene! as SKScene, className: self)
         }
     }
     
@@ -181,17 +181,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         GamesceneButtons().addHUD(scene: self.scene! as SKScene)
     }
     
-    func loadGameOver(scene: SKScene, thing: Any) {
-        GameScene().endGame(thing: thing)
+    func loadGameOver(scene: SKScene, className: Any) {
+        GameScene().endGame(className: className)
         GamesceneButtons().addGameOver(scene: scene)
     }
     
-    func endGame(thing: Any) {
-        (thing as AnyObject).removeAllActions()
-        (thing as AnyObject).removeAllChildren()
-        (thing as AnyObject).myTimer.invalidate()
-        (thing as AnyObject).gameTimer.invalidate()
-        (thing as AnyObject).boostTimer.invalidate()
+    func endGame(className: Any) {
+        (className as AnyObject).removeAllActions()
+        (className as AnyObject).removeAllChildren()
+        (className as AnyObject).myTimer.invalidate()
+        (className as AnyObject).gameTimer.invalidate()
+        (className as AnyObject).boostTimer.invalidate()
         GameState().saveGameState()
     }
     

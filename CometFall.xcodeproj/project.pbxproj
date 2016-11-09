@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29795F33BE0B55078A497EDA /* Pods_CometFall_DEV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8539143C14ED4B334A06CC46 /* Pods_CometFall_DEV.framework */; };
+		B9A60D1C3B7DB5C6ED0CE465 /* Pods_CometFallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3347C8C02C1519F4497A3E2D /* Pods_CometFallUITests.framework */; };
+		E0FDADBD262430C0E83DD80E /* Pods_CometFallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787F07D36CB7CE85DEDAE033 /* Pods_CometFallTests.framework */; };
+		E2AE10D598BA68E2C18A07BB /* Pods_CometFall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CCD971DDB3992138D800AA /* Pods_CometFall.framework */; };
 		E834D6EC1D568517004ED2D9 /* FunctionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6EB1D568517004ED2D9 /* FunctionHelper.swift */; };
 		E834D6ED1D568517004ED2D9 /* FunctionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6EB1D568517004ED2D9 /* FunctionHelper.swift */; };
 		E834D6F01D56B2A5004ED2D9 /* Rock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E834D6EF1D56B2A5004ED2D9 /* Rock.swift */; };
@@ -74,7 +78,6 @@
 		E8ACFB7F1D4428FF004F4C50 /* LeaderboardsButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB781D44259C004F4C50 /* LeaderboardsButtons.swift */; };
 		E8ACFB801D442902004F4C50 /* LeaderboardsLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB7A1D4425A8004F4C50 /* LeaderboardsLabels.swift */; };
 		E8ACFB821D452758004F4C50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFAF71D41D4B9004F4C50 /* Assets.xcassets */; };
-		E8ACFB831D45275E004F4C50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFAF71D41D4B9004F4C50 /* Assets.xcassets */; };
 		E8ACFB861D45285E004F4C50 /* ChooseShipScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB851D45285E004F4C50 /* ChooseShipScene.swift */; };
 		E8ACFB881D452876004F4C50 /* ChooseShipScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFB871D452876004F4C50 /* ChooseShipScene.sks */; };
 		E8ACFB8D1D4528B5004F4C50 /* ChooseShipBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB8C1D4528B5004F4C50 /* ChooseShipBackground.swift */; };
@@ -85,6 +88,18 @@
 		E8ACFB941D4540DE004F4C50 /* ChooseShipBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB8C1D4528B5004F4C50 /* ChooseShipBackground.swift */; };
 		E8ACFB951D4540E2004F4C50 /* ChooseShipButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB8E1D4528C3004F4C50 /* ChooseShipButtons.swift */; };
 		E8ACFB961D4540E6004F4C50 /* ChooseShipLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACFB901D4528D8004F4C50 /* ChooseShipLabels.swift */; };
+		E8B828451DC2A1D5008C1C53 /* Pods-CometFall.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BF0BDBABA1D863E15BFE2330 /* Pods-CometFall.debug.xcconfig */; };
+		E8B828461DC2A1D9008C1C53 /* Pods-CometFall.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA876665C23485183CB48BED /* Pods-CometFall.release.xcconfig */; };
+		E8B828471DC2A1DC008C1C53 /* Pods-CometFall-DEV.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4E05E6560481014951C3E6F7 /* Pods-CometFall-DEV.debug.xcconfig */; };
+		E8B828481DC2A1DF008C1C53 /* Pods-CometFall-DEV.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6A98B4EC3BBC6105B6BBDD91 /* Pods-CometFall-DEV.release.xcconfig */; };
+		E8B828491DC2A1E3008C1C53 /* Pods-CometFallTests.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 01FD9603AB98206B9C529381 /* Pods-CometFallTests.debug.xcconfig */; };
+		E8B8284A1DC2A1E6008C1C53 /* Pods-CometFallTests.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0C35D72ABA6E3CB888AEC33D /* Pods-CometFallTests.release.xcconfig */; };
+		E8B8284B1DC2A1E9008C1C53 /* Pods-CometFallUITests.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 40266E0A425BFBBF567869E5 /* Pods-CometFallUITests.debug.xcconfig */; };
+		E8B8284C1DC2A1EC008C1C53 /* Pods-CometFallUITests.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 139304DDB7B426FE7FAF5B89 /* Pods-CometFallUITests.release.xcconfig */; };
+		E8B8284E1DC2A402008C1C53 /* project.xcworkspace in Frameworks */ = {isa = PBXBuildFile; fileRef = E8B8284D1DC2A402008C1C53 /* project.xcworkspace */; };
+		E8B8284F1DC3E2A0008C1C53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8ACFAF71D41D4B9004F4C50 /* Assets.xcassets */; };
+		E8B828521DC3E3AE008C1C53 /* Ships.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B828511DC3E3AE008C1C53 /* Ships.swift */; };
+		E8B828531DC3E3AE008C1C53 /* Ships.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B828511DC3E3AE008C1C53 /* Ships.swift */; };
 		E8EFC6CB1D6CF7DB00D1868A /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EFC6CA1D6CF7DB00D1868A /* GameSettings.swift */; };
 		E8EFC6CC1D6CF7DB00D1868A /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EFC6CA1D6CF7DB00D1868A /* GameSettings.swift */; };
 /* End PBXBuildFile section */
@@ -107,6 +122,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01FD9603AB98206B9C529381 /* Pods-CometFallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFallTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CometFallTests/Pods-CometFallTests.debug.xcconfig"; sourceTree = "<group>"; };
+		02624202F31371AA0A104E10 /* Pods-CometFallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFallTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CometFallTests/Pods-CometFallTests.release.xcconfig"; sourceTree = "<group>"; };
+		0C35D72ABA6E3CB888AEC33D /* Pods-CometFallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFallTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CometFallTests/Pods-CometFallTests.release.xcconfig"; sourceTree = "<group>"; };
+		139304DDB7B426FE7FAF5B89 /* Pods-CometFallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFallUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CometFallUITests/Pods-CometFallUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3347C8C02C1519F4497A3E2D /* Pods_CometFallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CometFallUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40266E0A425BFBBF567869E5 /* Pods-CometFallUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFallUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CometFallUITests/Pods-CometFallUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E05E6560481014951C3E6F7 /* Pods-CometFall-DEV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFall-DEV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CometFall-DEV/Pods-CometFall-DEV.debug.xcconfig"; sourceTree = "<group>"; };
+		64876604482A27D79F5F2EDB /* Pods-CometFall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CometFall/Pods-CometFall.debug.xcconfig"; sourceTree = "<group>"; };
+		6A98B4EC3BBC6105B6BBDD91 /* Pods-CometFall-DEV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFall-DEV.release.xcconfig"; path = "Pods/Target Support Files/Pods-CometFall-DEV/Pods-CometFall-DEV.release.xcconfig"; sourceTree = "<group>"; };
+		782801F7DBD3FDDEF7F7844F /* Pods-CometFall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFall.release.xcconfig"; path = "Pods/Target Support Files/Pods-CometFall/Pods-CometFall.release.xcconfig"; sourceTree = "<group>"; };
+		787F07D36CB7CE85DEDAE033 /* Pods_CometFallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CometFallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8539143C14ED4B334A06CC46 /* Pods_CometFall_DEV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CometFall_DEV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		892874800E9681A02050FE37 /* Pods-CometFallUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFallUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CometFallUITests/Pods-CometFallUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA876665C23485183CB48BED /* Pods-CometFall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFall.release.xcconfig"; path = "Pods/Target Support Files/Pods-CometFall/Pods-CometFall.release.xcconfig"; sourceTree = "<group>"; };
+		BF0BDBABA1D863E15BFE2330 /* Pods-CometFall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CometFall/Pods-CometFall.debug.xcconfig"; sourceTree = "<group>"; };
+		BFF48EABECB96632653DC732 /* Pods-CometFall-DEV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFall-DEV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CometFall-DEV/Pods-CometFall-DEV.debug.xcconfig"; sourceTree = "<group>"; };
+		C1047DB1D1560B8AC178907E /* Pods-CometFallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFallTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CometFallTests/Pods-CometFallTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C151E6E42DFBEC2D1EC329E6 /* Pods-CometFallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFallUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CometFallUITests/Pods-CometFallUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D6BBF4F3ABF7A439BD2038AC /* Pods-CometFall-DEV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CometFall-DEV.release.xcconfig"; path = "Pods/Target Support Files/Pods-CometFall-DEV/Pods-CometFall-DEV.release.xcconfig"; sourceTree = "<group>"; };
 		E834D6EB1D568517004ED2D9 /* FunctionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionHelper.swift; sourceTree = "<group>"; };
 		E834D6EF1D56B2A5004ED2D9 /* Rock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rock.swift; sourceTree = "<group>"; };
 		E834D6F21D56B2D8004ED2D9 /* PhysicsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysicsHelper.swift; sourceTree = "<group>"; };
@@ -155,6 +189,9 @@
 		E8ACFB8C1D4528B5004F4C50 /* ChooseShipBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseShipBackground.swift; sourceTree = "<group>"; };
 		E8ACFB8E1D4528C3004F4C50 /* ChooseShipButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseShipButtons.swift; sourceTree = "<group>"; };
 		E8ACFB901D4528D8004F4C50 /* ChooseShipLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseShipLabels.swift; sourceTree = "<group>"; };
+		E8B8284D1DC2A402008C1C53 /* project.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = project.xcworkspace; path = CometFall.xcodeproj/project.xcworkspace; sourceTree = "<group>"; };
+		E8B828511DC3E3AE008C1C53 /* Ships.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ships.swift; sourceTree = "<group>"; };
+		E8CCD971DDB3992138D800AA /* Pods_CometFall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CometFall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8EFC6CA1D6CF7DB00D1868A /* GameSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +200,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8B8284E1DC2A402008C1C53 /* project.xcworkspace in Frameworks */,
+				E2AE10D598BA68E2C18A07BB /* Pods_CometFall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +209,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0FDADBD262430C0E83DD80E /* Pods_CometFallTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +217,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9A60D1C3B7DB5C6ED0CE465 /* Pods_CometFallUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,12 +225,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29795F33BE0B55078A497EDA /* Pods_CometFall_DEV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2054046245B7F443CDC11BA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64876604482A27D79F5F2EDB /* Pods-CometFall.debug.xcconfig */,
+				782801F7DBD3FDDEF7F7844F /* Pods-CometFall.release.xcconfig */,
+				BFF48EABECB96632653DC732 /* Pods-CometFall-DEV.debug.xcconfig */,
+				D6BBF4F3ABF7A439BD2038AC /* Pods-CometFall-DEV.release.xcconfig */,
+				C1047DB1D1560B8AC178907E /* Pods-CometFallTests.debug.xcconfig */,
+				02624202F31371AA0A104E10 /* Pods-CometFallTests.release.xcconfig */,
+				892874800E9681A02050FE37 /* Pods-CometFallUITests.debug.xcconfig */,
+				C151E6E42DFBEC2D1EC329E6 /* Pods-CometFallUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2F66053365CDC15B3393AC60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8B8284D1DC2A402008C1C53 /* project.xcworkspace */,
+				E8CCD971DDB3992138D800AA /* Pods_CometFall.framework */,
+				8539143C14ED4B334A06CC46 /* Pods_CometFall_DEV.framework */,
+				787F07D36CB7CE85DEDAE033 /* Pods_CometFallTests.framework */,
+				3347C8C02C1519F4497A3E2D /* Pods_CometFallUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEECAC8607F41C574C0C663D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF0BDBABA1D863E15BFE2330 /* Pods-CometFall.debug.xcconfig */,
+				BA876665C23485183CB48BED /* Pods-CometFall.release.xcconfig */,
+				4E05E6560481014951C3E6F7 /* Pods-CometFall-DEV.debug.xcconfig */,
+				6A98B4EC3BBC6105B6BBDD91 /* Pods-CometFall-DEV.release.xcconfig */,
+				01FD9603AB98206B9C529381 /* Pods-CometFallTests.debug.xcconfig */,
+				0C35D72ABA6E3CB888AEC33D /* Pods-CometFallTests.release.xcconfig */,
+				40266E0A425BFBBF567869E5 /* Pods-CometFallUITests.debug.xcconfig */,
+				139304DDB7B426FE7FAF5B89 /* Pods-CometFallUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		E834D6EE1D56B294004ED2D9 /* rocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +345,8 @@
 				E8ACFB041D41D4BA004F4C50 /* SpaceEliteTests */,
 				E8ACFB0F1D41D4BA004F4C50 /* SpaceEliteUITests */,
 				E8ACFAEA1D41D4B9004F4C50 /* Products */,
+				2F66053365CDC15B3393AC60 /* Frameworks */,
+				2054046245B7F443CDC11BA4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,6 +364,7 @@
 		E8ACFAEB1D41D4B9004F4C50 /* SpaceElite */ = {
 			isa = PBXGroup;
 			children = (
+				BEECAC8607F41C574C0C663D /* Pods */,
 				E834D6F61D66B71D004ED2D9 /* GameState */,
 				E834D6F51D66B70E004ED2D9 /* GameEngine */,
 				E8ACFB661D440588004F4C50 /* shared */,
@@ -457,6 +545,7 @@
 				E8ACFB8B1D452890004F4C50 /* background */,
 				E8ACFB8A1D452888004F4C50 /* buttons */,
 				E8ACFB891D45287D004F4C50 /* labels */,
+				E8B828501DC3E384008C1C53 /* ships */,
 			);
 			name = ChooseShip;
 			sourceTree = "<group>";
@@ -485,6 +574,14 @@
 			name = background;
 			sourceTree = "<group>";
 		};
+		E8B828501DC3E384008C1C53 /* ships */ = {
+			isa = PBXGroup;
+			children = (
+				E8B828511DC3E3AE008C1C53 /* Ships.swift */,
+			);
+			name = ships;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -492,9 +589,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8ACFB151D41D4BA004F4C50 /* Build configuration list for PBXNativeTarget "CometFall" */;
 			buildPhases = (
+				6E0BD422B50876D4BE959502 /* [CP] Check Pods Manifest.lock */,
 				E8ACFAE51D41D4B9004F4C50 /* Sources */,
 				E8ACFAE61D41D4B9004F4C50 /* Frameworks */,
 				E8ACFAE71D41D4B9004F4C50 /* Resources */,
+				EDFCC1D77C8BB6207D65B91B /* [CP] Embed Pods Frameworks */,
+				3B0575B29239F26BD33352B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -509,9 +609,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8ACFB181D41D4BA004F4C50 /* Build configuration list for PBXNativeTarget "CometFallTests" */;
 			buildPhases = (
+				32001ACB599F5EB1532FD405 /* [CP] Check Pods Manifest.lock */,
 				E8ACFAFD1D41D4BA004F4C50 /* Sources */,
 				E8ACFAFE1D41D4BA004F4C50 /* Frameworks */,
 				E8ACFAFF1D41D4BA004F4C50 /* Resources */,
+				9470FF8007A4D53FFF0217F8 /* [CP] Embed Pods Frameworks */,
+				088367992845AAE20E5A12EF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -527,9 +630,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8ACFB1B1D41D4BA004F4C50 /* Build configuration list for PBXNativeTarget "CometFallUITests" */;
 			buildPhases = (
+				75E3C58D4348F70BAA40E6BE /* [CP] Check Pods Manifest.lock */,
 				E8ACFB081D41D4BA004F4C50 /* Sources */,
 				E8ACFB091D41D4BA004F4C50 /* Frameworks */,
 				E8ACFB0A1D41D4BA004F4C50 /* Resources */,
+				82F0398104F0EAAA6A1F25A1 /* [CP] Embed Pods Frameworks */,
+				46F5D4FDE928BA41125801A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -545,9 +651,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8ACFB411D43DA79004F4C50 /* Build configuration list for PBXNativeTarget "CometFall-DEV" */;
 			buildPhases = (
+				BC6441D87C333FA55E90B32E /* [CP] Check Pods Manifest.lock */,
 				E8ACFB321D43DA79004F4C50 /* Sources */,
 				E8ACFB3A1D43DA79004F4C50 /* Frameworks */,
 				E8ACFB3B1D43DA79004F4C50 /* Resources */,
+				3435FD45937D31F05F4BCD1C /* [CP] Embed Pods Frameworks */,
+				1108A31AEDADAC0A0E136789 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -619,10 +728,12 @@
 				E8ACFAFB1D41D4B9004F4C50 /* LaunchScreen.storyboard in Resources */,
 				E8ACFB721D442554004F4C50 /* LeaderboardsScene.sks in Resources */,
 				E8ACFB641D43EA55004F4C50 /* SettingsScene.sks in Resources */,
-				E8ACFB831D45275E004F4C50 /* Assets.xcassets in Resources */,
+				E8B8284F1DC3E2A0008C1C53 /* Assets.xcassets in Resources */,
+				E8B828451DC2A1D5008C1C53 /* Pods-CometFall.debug.xcconfig in Resources */,
 				E8ACFB881D452876004F4C50 /* ChooseShipScene.sks in Resources */,
 				E8ACFB261D41DBF6004F4C50 /* MenuScene.sks in Resources */,
 				E8ACFAF61D41D4B9004F4C50 /* Main.storyboard in Resources */,
+				E8B828461DC2A1D9008C1C53 /* Pods-CometFall.release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +741,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8B828491DC2A1E3008C1C53 /* Pods-CometFallTests.debug.xcconfig in Resources */,
+				E8B8284A1DC2A1E6008C1C53 /* Pods-CometFallTests.release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +750,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8B8284B1DC2A1E9008C1C53 /* Pods-CometFallUITests.debug.xcconfig in Resources */,
+				E8B8284C1DC2A1EC008C1C53 /* Pods-CometFallUITests.release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +764,8 @@
 				E8ACFB651D43EA65004F4C50 /* SettingsScene.sks in Resources */,
 				E8ACFB931D4540D8004F4C50 /* ChooseShipScene.sks in Resources */,
 				E8ACFB3D1D43DA79004F4C50 /* LaunchScreen.storyboard in Resources */,
+				E8B828481DC2A1DF008C1C53 /* Pods-CometFall-DEV.release.xcconfig in Resources */,
+				E8B828471DC2A1DC008C1C53 /* Pods-CometFall-DEV.debug.xcconfig in Resources */,
 				E8ACFB3F1D43DA79004F4C50 /* MenuScene.sks in Resources */,
 				E8ACFB821D452758004F4C50 /* Assets.xcassets in Resources */,
 				E8ACFB401D43DA79004F4C50 /* Main.storyboard in Resources */,
@@ -656,6 +773,189 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		088367992845AAE20E5A12EF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CometFallTests/Pods-CometFallTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1108A31AEDADAC0A0E136789 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CometFall-DEV/Pods-CometFall-DEV-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32001ACB599F5EB1532FD405 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3435FD45937D31F05F4BCD1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CometFall-DEV/Pods-CometFall-DEV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B0575B29239F26BD33352B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CometFall/Pods-CometFall-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46F5D4FDE928BA41125801A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CometFallUITests/Pods-CometFallUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E0BD422B50876D4BE959502 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		75E3C58D4348F70BAA40E6BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		82F0398104F0EAAA6A1F25A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CometFallUITests/Pods-CometFallUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9470FF8007A4D53FFF0217F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CometFallTests/Pods-CometFallTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC6441D87C333FA55E90B32E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EDFCC1D77C8BB6207D65B91B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CometFall/Pods-CometFall-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E8ACFAE51D41D4B9004F4C50 /* Sources */ = {
@@ -675,6 +975,7 @@
 				E8ACFB771D442591004F4C50 /* LeaderboardsBackground.swift in Sources */,
 				E88760F91D70DE7B00CE4504 /* Boost.swift in Sources */,
 				E8ACFB241D41DBE5004F4C50 /* MenuScene.swift in Sources */,
+				E8B828521DC3E3AE008C1C53 /* Ships.swift in Sources */,
 				E8ACFAF31D41D4B9004F4C50 /* GameViewController.swift in Sources */,
 				E8ACFB5E1D43E970004F4C50 /* SettingsScene.swift in Sources */,
 				E8ACFB521D43E4D2004F4C50 /* SettingsLabels.swift in Sources */,
@@ -729,6 +1030,7 @@
 				E8ACFB7E1D4428FD004F4C50 /* LeaderboardsBackground.swift in Sources */,
 				E88760FA1D70DE7B00CE4504 /* Boost.swift in Sources */,
 				E8ACFB361D43DA79004F4C50 /* MenuScene.swift in Sources */,
+				E8B828531DC3E3AE008C1C53 /* Ships.swift in Sources */,
 				E8ACFB371D43DA79004F4C50 /* GameViewController.swift in Sources */,
 				E8ACFB5F1D43E978004F4C50 /* SettingsScene.swift in Sources */,
 				E8ACFB621D43E982004F4C50 /* SettingsLabels.swift in Sources */,
@@ -879,6 +1181,7 @@
 		};
 		E8ACFB161D41D4BA004F4C50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF0BDBABA1D863E15BFE2330 /* Pods-CometFall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -896,6 +1199,7 @@
 		};
 		E8ACFB171D41D4BA004F4C50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA876665C23485183CB48BED /* Pods-CometFall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -913,6 +1217,7 @@
 		};
 		E8ACFB191D41D4BA004F4C50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01FD9603AB98206B9C529381 /* Pods-CometFallTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -927,6 +1232,7 @@
 		};
 		E8ACFB1A1D41D4BA004F4C50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C35D72ABA6E3CB888AEC33D /* Pods-CometFallTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SpaceEliteTests/Info.plist;
@@ -940,6 +1246,7 @@
 		};
 		E8ACFB1C1D41D4BA004F4C50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40266E0A425BFBBF567869E5 /* Pods-CometFallUITests.debug.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = SpaceEliteUITests/Info.plist;
@@ -953,6 +1260,7 @@
 		};
 		E8ACFB1D1D41D4BA004F4C50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 139304DDB7B426FE7FAF5B89 /* Pods-CometFallUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SpaceEliteUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -965,6 +1273,7 @@
 		};
 		E8ACFB421D43DA79004F4C50 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E05E6560481014951C3E6F7 /* Pods-CometFall-DEV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-DEV";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -982,6 +1291,7 @@
 		};
 		E8ACFB431D43DA79004F4C50 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A98B4EC3BBC6105B6BBDD91 /* Pods-CometFall-DEV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-DEV";
 				CODE_SIGN_IDENTITY = "iPhone Developer";

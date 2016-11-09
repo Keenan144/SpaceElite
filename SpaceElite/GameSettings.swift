@@ -20,8 +20,8 @@ class GameSettings: SKNode {
     
     func setDifficulty(_ value: String) {
         settingsData.set("\(value)", forKey: "difficulity")
-        print("Game Difficulity set to: \(settingsData.object(forKey: "difficulity"))")
-        print("Game Difficulity sould have been set to: \(value)")
+        log.debug("Game Difficulity set to: \(settingsData.object(forKey: "difficulity"))")
+        log.debug("Game Difficulity sould have been set to: \(value)")
     }
     
     func getControlType() -> String {

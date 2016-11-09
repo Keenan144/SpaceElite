@@ -14,6 +14,7 @@ class ChooseShipScene: SKScene {
         loadBackground()
         loadButtons()
         loadLabels()
+        loadShips()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -21,52 +22,32 @@ class ChooseShipScene: SKScene {
             let node = self.atPoint(touch.location(in: self))
             if (node.name) != nil {
                 let array = node.name!.components(separatedBy: "-")
-                let action = array[1]
                 
-                TouchController().buttonPressed(action: action, view: self.view! as SKView, scene: self.scene! as SKScene, thing: self)
+                if array[0] == "BTN" {
+                    let action = array[1]
+                    TouchController().buttonPressed(action: action, view: self.view! as SKView, scene: self.scene! as SKScene, className: self)
+                } else {
+                    TouchController().chooseShip(ship: node.name!)
+                    log.warning("node: \(node.name)")
+                    log.warning("")
+                }
             }
         }
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        TouchController().touchesMoved(touches, with: event)
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        TouchController().touchesEnded(touches, with: event)
-    }
-    
-    override func update(_ currentTime: TimeInterval) {
-        /* Called before each frame is rendered */
-    }
-    
     func loadBackground() {
-        addBackground()
-        addGlitter()
-    }
-    
-    func loadButtons() {
-        addNavButtons()
-    }
-    
-    func loadLabels() {
-        addTitle()
-    }
-    
-    fileprivate func addBackground() {
         ChooseShipBackground(ChooseShipScene: self).addBackground()
     }
     
-    fileprivate func addGlitter() {
-        ChooseShipBackground(ChooseShipScene: self).addGlitter()
-        
-    }
-    
-    fileprivate func addNavButtons() {
+    func loadButtons() {
         ChooseShipButtons(ChooseShipScene: self).addButtons()
     }
     
-    fileprivate func addTitle() {
+    func loadLabels() {
         ChooseShipLabels(ChooseShipScene: self).addTitle()
+    }
+    
+    func loadShips() {
+        Ships(ChooseShipScene: self).renderShipsForSelection()
     }
 }

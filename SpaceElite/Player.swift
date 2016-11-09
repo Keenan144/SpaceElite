@@ -40,38 +40,40 @@ class Player: SKNode {
         ship.position = CGPoint(x: 0, y: (0 - size.height / 4))
         ship.zPosition = 20
         ship.name = "Ship"
+
+//        let ship = GameState().getUserShip()
         
-        print("SPACESHIP: spawn")
-        Background!.addChild(ship)
-        return ship
+        log.verbose("SPACESHIP: spawn")
+        Background!.addChild(ship as! SKNode)
+        return ship as! SKNode
     }
     
     class func deductHealth(_ damage: Int) {
         health = health - damage
-        print("Ship health --> {\(health)}")
+        log.verbose("Ship health --> {\(health)}")
     }
     
     class func shipHealth() -> Int {
-        print("SPACESHIP: shiphealth")
+        log.verbose("SPACESHIP: shiphealth")
         return health
     }
     
     class func dead() -> Bool {
-        print("SPACESHIP: dead")
+        log.verbose("SPACESHIP: dead")
         return checkHealth(health)
     }
     
     static func checkHealth(_ health: Int) -> Bool {
         if health > 1 {
-            print("SPACESHIP: checkHealth [FALSE]")
+            log.verbose("SPACESHIP: checkHealth [FALSE]")
             return false
         }
-        print("SPACESHIP: checkHealth [TRUE]")
+        log.verbose("SPACESHIP: checkHealth [TRUE]")
         return true
     }
     
     static func setShipHealth(_ newHealth: Int) {
-        print("SPACESHIP: setShipHealth")
+        log.verbose("SPACESHIP: setShipHealth")
         health = newHealth
     }
 }
